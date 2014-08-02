@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04CAC3AA198C78AC0031E956 /* ConvView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAC3A8198C78AC0031E956 /* ConvView.m */; };
+		04CAC3AB198C78AC0031E956 /* ConvView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CAC3A9198C78AC0031E956 /* ConvView.xib */; };
+		04CAC3B5198C78CB0031E956 /* conv_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CAC3AC198C78CB0031E956 /* conv_search@2x.png */; };
+		04CAC3B6198C78CB0031E956 /* conv_fix@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CAC3AD198C78CB0031E956 /* conv_fix@2x.png */; };
+		04CAC3B7198C78CB0031E956 /* conv_ homemaking@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CAC3AE198C78CB0031E956 /* conv_ homemaking@2x.png */; };
+		04CAC3B8198C78CB0031E956 /* conv_water@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CAC3AF198C78CB0031E956 /* conv_water@2x.png */; };
+		04CAC3B9198C78CB0031E956 /* conv_dry_clean@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CAC3B0198C78CB0031E956 /* conv_dry_clean@2x.png */; };
+		04CAC3BA198C78CB0031E956 /* conv_car@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CAC3B1198C78CB0031E956 /* conv_car@2x.png */; };
+		04CAC3BB198C78CB0031E956 /* conv_ tour@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CAC3B2198C78CB0031E956 /* conv_ tour@2x.png */; };
+		04CAC3BC198C78CB0031E956 /* conv_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CAC3B3198C78CB0031E956 /* conv_more@2x.png */; };
+		04CAC3BD198C78CB0031E956 /* conv_ finish@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CAC3B4198C78CB0031E956 /* conv_ finish@2x.png */; };
 		1419F409198881E200D3E5E3 /* LifePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1419F407198881E200D3E5E3 /* LifePageView.m */; };
 		1419F40A198881E200D3E5E3 /* LifePageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1419F408198881E200D3E5E3 /* LifePageView.xib */; };
 		1419F40C198882B800D3E5E3 /* lifetop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1419F40B198882B800D3E5E3 /* lifetop@2x.png */; };
@@ -252,6 +263,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04CAC3A7198C78AC0031E956 /* ConvView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvView.h; sourceTree = "<group>"; };
+		04CAC3A8198C78AC0031E956 /* ConvView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConvView.m; sourceTree = "<group>"; };
+		04CAC3A9198C78AC0031E956 /* ConvView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConvView.xib; sourceTree = "<group>"; };
+		04CAC3AC198C78CB0031E956 /* conv_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "conv_search@2x.png"; sourceTree = "<group>"; };
+		04CAC3AD198C78CB0031E956 /* conv_fix@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "conv_fix@2x.png"; sourceTree = "<group>"; };
+		04CAC3AE198C78CB0031E956 /* conv_ homemaking@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "conv_ homemaking@2x.png"; sourceTree = "<group>"; };
+		04CAC3AF198C78CB0031E956 /* conv_water@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "conv_water@2x.png"; sourceTree = "<group>"; };
+		04CAC3B0198C78CB0031E956 /* conv_dry_clean@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "conv_dry_clean@2x.png"; sourceTree = "<group>"; };
+		04CAC3B1198C78CB0031E956 /* conv_car@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "conv_car@2x.png"; sourceTree = "<group>"; };
+		04CAC3B2198C78CB0031E956 /* conv_ tour@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "conv_ tour@2x.png"; sourceTree = "<group>"; };
+		04CAC3B3198C78CB0031E956 /* conv_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "conv_more@2x.png"; sourceTree = "<group>"; };
+		04CAC3B4198C78CB0031E956 /* conv_ finish@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "conv_ finish@2x.png"; sourceTree = "<group>"; };
 		1419F406198881E200D3E5E3 /* LifePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LifePageView.h; sourceTree = "<group>"; };
 		1419F407198881E200D3E5E3 /* LifePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifePageView.m; sourceTree = "<group>"; };
 		1419F408198881E200D3E5E3 /* LifePageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LifePageView.xib; sourceTree = "<group>"; };
@@ -736,6 +759,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04CAC3A6198C78700031E956 /* ConvPage */ = {
+			isa = PBXGroup;
+			children = (
+				04CAC3A7198C78AC0031E956 /* ConvView.h */,
+				04CAC3A8198C78AC0031E956 /* ConvView.m */,
+				04CAC3A9198C78AC0031E956 /* ConvView.xib */,
+			);
+			name = ConvPage;
+			sourceTree = "<group>";
+		};
 		1419F405198881BA00D3E5E3 /* LifePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -819,6 +852,7 @@
 		1445B8CE1986269500C4417C /* BeautyLife */ = {
 			isa = PBXGroup;
 			children = (
+				04CAC3A6198C78700031E956 /* ConvPage */,
 				1445B8D71986269500C4417C /* AppDelegate.h */,
 				1445B8D81986269500C4417C /* AppDelegate.mm */,
 				1445B8DA1986269500C4417C /* Images.xcassets */,
@@ -1511,6 +1545,15 @@
 		149ED4A7198773170097F2AF /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				04CAC3AC198C78CB0031E956 /* conv_search@2x.png */,
+				04CAC3AD198C78CB0031E956 /* conv_fix@2x.png */,
+				04CAC3AE198C78CB0031E956 /* conv_ homemaking@2x.png */,
+				04CAC3AF198C78CB0031E956 /* conv_water@2x.png */,
+				04CAC3B0198C78CB0031E956 /* conv_dry_clean@2x.png */,
+				04CAC3B1198C78CB0031E956 /* conv_car@2x.png */,
+				04CAC3B2198C78CB0031E956 /* conv_ tour@2x.png */,
+				04CAC3B3198C78CB0031E956 /* conv_more@2x.png */,
+				04CAC3B4198C78CB0031E956 /* conv_ finish@2x.png */,
 				14262470198BEE0F00EA891F /* feelogo@2x.png */,
 				142277E9198A25FA007242A2 /* feeTypeBg.png */,
 				142277E21989E637007242A2 /* areaBtnBg.png */,
@@ -1672,17 +1715,21 @@
 				142277DB1989DED9007242A2 /* ChooseAreaView.xib in Resources */,
 				14EF64251987E5E00006257D /* cuttingline@2x.png in Resources */,
 				1419F4331988C5E100D3E5E3 /* RegisterView.xib in Resources */,
+				04CAC3BA198C78CB0031E956 /* conv_car@2x.png in Resources */,
 				1445BA9B19862EE100C4417C /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				1445BA5F19862E0E00C4417C /* LoadingCell.xib in Resources */,
 				1445BAA119862EE100C4417C /* ShareSDKFlatShareViewUI.bundle in Resources */,
 				14EF64351987F0700006257D /* rightarrows@2x.png in Resources */,
 				149ED4B0198776750097F2AF /* maingoodbg@2x.png in Resources */,
 				142277CC1989D5EC007242A2 /* UserInfoView.xib in Resources */,
+				04CAC3B7198C78CB0031E956 /* conv_ homemaking@2x.png in Resources */,
 				1419F42D19889CFB00D3E5E3 /* setting_push@2x.png in Resources */,
 				1419F40C198882B800D3E5E3 /* lifetop@2x.png in Resources */,
+				04CAC3BC198C78CB0031E956 /* conv_more@2x.png in Resources */,
 				14EF64291987E7E20006257D /* mail@2x.png in Resources */,
 				149ED4C119877E840097F2AF /* express@2x.png in Resources */,
 				1419F4181988974B00D3E5E3 /* SettingView.xib in Resources */,
+				04CAC3B5198C78CB0031E956 /* conv_search@2x.png in Resources */,
 				1419F4371988CBC700D3E5E3 /* securitycode@2x.png in Resources */,
 				1419F42619889CFB00D3E5E3 /* setting_info@2x.png in Resources */,
 				142277E11989E2D3007242A2 /* arealine.png in Resources */,
@@ -1703,16 +1750,20 @@
 				149ED4AD1987737D0097F2AF /* MainPageView.xib in Resources */,
 				149ED4B3198776BC0097F2AF /* main_topimage.png in Resources */,
 				1445BA9819862EE100C4417C /* Resource.bundle in Resources */,
+				04CAC3AB198C78AC0031E956 /* ConvView.xib in Resources */,
 				149ED4D1198790310097F2AF /* recharge.png in Resources */,
 				149ED4BA19877BF30097F2AF /* parkpay@2x.png in Resources */,
 				149ED4B6198778440097F2AF /* praise@2x.png in Resources */,
+				04CAC3B8198C78CB0031E956 /* conv_water@2x.png in Resources */,
 				1419F42819889CFB00D3E5E3 /* setting_propertyfee@2x.png in Resources */,
 				14262471198BEE0F00EA891F /* feelogo@2x.png in Resources */,
+				04CAC3BB198C78CB0031E956 /* conv_ tour@2x.png in Resources */,
 				149ED4B1198776750097F2AF /* topimage.png in Resources */,
 				1419F4351988C67000D3E5E3 /* beautylifelogo@2x.png in Resources */,
 				1419F4391988D49F00D3E5E3 /* registerbtn@2x.png in Resources */,
 				149ED4B7198778440097F2AF /* share@2x.png in Resources */,
 				142277E31989E637007242A2 /* areaBtnBg.png in Resources */,
+				04CAC3B9198C78CB0031E956 /* conv_dry_clean@2x.png in Resources */,
 				149ED4C019877E840097F2AF /* business@2x.png in Resources */,
 				1445B96A1986278A00C4417C /* LICENSE in Resources */,
 				1445BA9719862EE100C4417C /* ShareSDKLocalizable.strings in Resources */,
@@ -1723,6 +1774,7 @@
 				149ED4BB19877BF30097F2AF /* propertypay@2x.png in Resources */,
 				149ED4CD198790170097F2AF /* saleprice.png in Resources */,
 				1445BAF11986304700C4417C /* mapapi.bundle in Resources */,
+				04CAC3B6198C78CB0031E956 /* conv_fix@2x.png in Resources */,
 				14EF64311987EC100006257D /* stewardtop@2x.png in Resources */,
 				1419F40F1988950F00D3E5E3 /* top_bg7@2x.png in Resources */,
 				1445BA6E19862E5A00C4417C /* NotifyX@2x.png in Resources */,
@@ -1739,6 +1791,7 @@
 				1445BA171986294A00C4417C /* IQKeyboardManager.bundle in Resources */,
 				1419F412198896DC00D3E5E3 /* tabbar_bg@2x.png in Resources */,
 				1419F40A198881E200D3E5E3 /* LifePageView.xib in Resources */,
+				04CAC3BD198C78CB0031E956 /* conv_ finish@2x.png in Resources */,
 				1419F42719889CFB00D3E5E3 /* setting_order@2x.png in Resources */,
 				1445B96B1986278A00C4417C /* README.md in Resources */,
 				1445BA9D19862EE100C4417C /* WeiboSDK.bundle in Resources */,
@@ -1802,6 +1855,7 @@
 				1445B9A6198627A400C4417C /* ASIFormDataRequest.m in Sources */,
 				142277E7198A1CC5007242A2 /* StewardFeeFrameView.m in Sources */,
 				1445B9741986278A00C4417C /* SDWebImageManager.m in Sources */,
+				04CAC3AA198C78AC0031E956 /* ConvView.m in Sources */,
 				1445B8D51986269500C4417C /* main.m in Sources */,
 				1445B9DC1986288400C4417C /* EGOImageLoader.m in Sources */,
 				1445B9E31986289300C4417C /* IconDownloader.m in Sources */,
