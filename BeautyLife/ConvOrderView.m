@@ -1,18 +1,18 @@
 //
-//  ConvView.m
+//  ConvOrder.m
 //  BeautyLife
 //
-//  Created by mac on 14-7-31.
+//  Created by mac on 14-8-2.
 //  Copyright (c) 2014年 Seven. All rights reserved.
 //
 
-#import "ConvView.h"
+#import "ConvOrderView.h"
 
-@interface ConvView ()
+@interface ConvOrderView ()
 
 @end
 
-@implementation ConvView
+@implementation ConvOrderView
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,9 +32,9 @@
         UIBarButtonItem *btnBack = [[UIBarButtonItem alloc]initWithCustomView:lBtn];
         self.navigationItem.leftBarButtonItem = btnBack;
         
-        UIButton *rBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 65, 45)];
+        UIButton *rBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 65, 35)];
         //[rBtn addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
-        [rBtn setImage:[UIImage imageNamed:@"conv_search"] forState:UIControlStateNormal];
+        [rBtn setImage:[UIImage imageNamed:@"conv_order_share"] forState:UIControlStateNormal];
         UIBarButtonItem *btnSearch = [[UIBarButtonItem alloc]initWithCustomView:rBtn];
         self.navigationItem.rightBarButtonItem = btnSearch;
     }
@@ -46,11 +46,11 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    _scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.width, self.view.frame.size.height);
 }
 
 - (void)viewWillAppear:(BOOL)animated

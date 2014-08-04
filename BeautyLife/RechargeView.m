@@ -1,18 +1,18 @@
 //
-//  ConvView.m
+//  RechargeView.m
 //  BeautyLife
 //
-//  Created by mac on 14-7-31.
+//  Created by mac on 14-8-2.
 //  Copyright (c) 2014年 Seven. All rights reserved.
 //
 
-#import "ConvView.h"
+#import "RechargeView.h"
 
-@interface ConvView ()
+@interface RechargeView ()
 
 @end
 
-@implementation ConvView
+@implementation RechargeView
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -20,7 +20,7 @@
     if (self) {
         UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 44)];
         titleLabel.font = [UIFont boldSystemFontOfSize:18];
-        titleLabel.text = @"便民服务";
+        titleLabel.text = @"票务充值";
         titleLabel.backgroundColor = [UIColor clearColor];
         titleLabel.textColor = [UIColor whiteColor];
         titleLabel.textAlignment = UITextAlignmentCenter;
@@ -32,11 +32,6 @@
         UIBarButtonItem *btnBack = [[UIBarButtonItem alloc]initWithCustomView:lBtn];
         self.navigationItem.leftBarButtonItem = btnBack;
         
-        UIButton *rBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 65, 45)];
-        //[rBtn addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
-        [rBtn setImage:[UIImage imageNamed:@"conv_search"] forState:UIControlStateNormal];
-        UIBarButtonItem *btnSearch = [[UIBarButtonItem alloc]initWithCustomView:rBtn];
-        self.navigationItem.rightBarButtonItem = btnSearch;
     }
     return self;
 }
@@ -45,7 +40,6 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
-
 
 - (void)viewDidLoad
 {
