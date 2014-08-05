@@ -18,21 +18,65 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 44)];
+        titleLabel.font = [UIFont boldSystemFontOfSize:18];
+        titleLabel.text = @"物业通知公告";
+        titleLabel.backgroundColor = [UIColor clearColor];
+        titleLabel.textColor = [UIColor whiteColor];
+        titleLabel.textAlignment = UITextAlignmentCenter;
+        self.navigationItem.titleView = titleLabel;
+        
+        UIButton *lBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
+        [lBtn addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
+        [lBtn setImage:[UIImage imageNamed:@"backBtn"] forState:UIControlStateNormal];
+        UIBarButtonItem *btnBack = [[UIBarButtonItem alloc]initWithCustomView:lBtn];
+        self.navigationItem.leftBarButtonItem = btnBack;
     }
     return self;
+}
+
+- (void)backAction
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    //下属控件初始化
+    self.ticeView = [[NewsTableView alloc] init];
+    self.activityView = [[NewsTableView alloc] init];
+    self.activityView.view.hidden = YES;
+    [self addChildViewController:self.ticeView];
+    [self addChildViewController:self.activityView];
+    [self.mainView addSubview:self.ticeView.view];
+    [self.mainView addSubview:self.activityView.view];
+}
+
+- (IBAction)noticeAction:(id)sender {
+    [self.noticeBtn setTitleColor:[UIColor colorWithRed:255.0/255.0 green:127.0/255.0 blue:0.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+    [self.activityBtn setTitleColor:[UIColor scrollViewTexturedBackgroundColor] forState:UIControlStateNormal];
+    self.ticeView.view.hidden = NO;
+    self.activityView.view.hidden = YES;
+}
+
+- (IBAction)activityAction:(id)sender {
+    [self.noticeBtn setTitleColor:[UIColor scrollViewTexturedBackgroundColor] forState:UIControlStateNormal];
+    [self.activityBtn setTitleColor:[UIColor colorWithRed:255.0/255.0 green:127.0/255.0 blue:0.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+    self.ticeView.view.hidden = YES;
+    self.activityView.view.hidden = NO;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = NO;
 }
 
 @end

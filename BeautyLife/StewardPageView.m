@@ -55,4 +55,9 @@
     RepairsFrameView *repairsFrame = [[RepairsFrameView alloc] init];
     [self.navigationController pushViewController:repairsFrame animated:YES];
 }
+
+- (IBAction)noticeAction:(id)sender {
+    NoticeFrameView *noticeFrame = [[NoticeFrameView alloc] init];
+    [self.navigationController pushViewController:noticeFrame animated:YES];
+}
 @end

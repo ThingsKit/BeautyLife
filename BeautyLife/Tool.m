@@ -249,7 +249,7 @@
 + (UIColor *)getBackgroundColor
 {
 //    return [UIColor colorWithPatternImage:[UIImage imageNamed:@"fb_bg.jpg"]];
-    return [UIColor colorWithRed:221.0/255 green:221.0/255 blue:221.0/255 alpha:1.0];
+    return [UIColor colorWithRed:189.0/255 green:196.0/255 blue:204.0/255 alpha:1.0];
 }
 + (UIColor *)getCellBackgroundColor
 {

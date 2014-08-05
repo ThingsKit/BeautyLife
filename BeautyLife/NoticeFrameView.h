@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewsTableView.h"
 
 @interface NoticeFrameView : UIViewController
+
+@property (strong, nonatomic) NewsTableView *ticeView;
+@property (strong, nonatomic) NewsTableView *activityView;
+
+@property (strong, nonatomic) IBOutlet UIView *mainView;
+@property (strong, nonatomic) IBOutlet UIButton *noticeBtn;
+@property (strong, nonatomic) IBOutlet UIButton *activityBtn;
+
+- (IBAction)noticeAction:(id)sender;
+- (IBAction)activityAction:(id)sender;
 
 @end

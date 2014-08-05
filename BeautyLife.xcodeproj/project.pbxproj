@@ -246,6 +246,10 @@
 		14A32A2D198CBB2600497E5C /* onlineorderbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A32A2B198CBB2600497E5C /* onlineorderbtn@2x.png */; };
 		14AF581519908CF3000B4BB7 /* NoticeFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF581319908CF3000B4BB7 /* NoticeFrameView.m */; };
 		14AF581619908CF3000B4BB7 /* NoticeFrameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14AF581419908CF3000B4BB7 /* NoticeFrameView.xib */; };
+		14B56CFD1991188E00F7C601 /* NoticeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B56CFB1991188E00F7C601 /* NoticeTableCell.m */; };
+		14B56CFE1991188E00F7C601 /* NoticeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B56CFC1991188E00F7C601 /* NoticeTableCell.xib */; };
+		14B56D0219912D0000F7C601 /* NewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B56D0019912D0000F7C601 /* NewsTableView.m */; };
+		14B56D0319912D0000F7C601 /* NewsTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B56D0119912D0000F7C601 /* NewsTableView.xib */; };
 		14B9ACDC198F5A1F00F67E97 /* MyRepairsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B9ACDA198F5A1F00F67E97 /* MyRepairsView.m */; };
 		14B9ACDD198F5A1F00F67E97 /* MyRepairsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B9ACDB198F5A1F00F67E97 /* MyRepairsView.xib */; };
 		14B9ACE1198F5C3500F67E97 /* MyRepairsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B9ACDF198F5C3500F67E97 /* MyRepairsCell.m */; };
@@ -701,6 +705,12 @@
 		14AF581219908CF3000B4BB7 /* NoticeFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeFrameView.h; sourceTree = "<group>"; };
 		14AF581319908CF3000B4BB7 /* NoticeFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeFrameView.m; sourceTree = "<group>"; };
 		14AF581419908CF3000B4BB7 /* NoticeFrameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeFrameView.xib; sourceTree = "<group>"; };
+		14B56CFA1991188E00F7C601 /* NoticeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeTableCell.h; sourceTree = "<group>"; };
+		14B56CFB1991188E00F7C601 /* NoticeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeTableCell.m; sourceTree = "<group>"; };
+		14B56CFC1991188E00F7C601 /* NoticeTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeTableCell.xib; sourceTree = "<group>"; };
+		14B56CFF19912D0000F7C601 /* NewsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableView.h; sourceTree = "<group>"; };
+		14B56D0019912D0000F7C601 /* NewsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableView.m; sourceTree = "<group>"; };
+		14B56D0119912D0000F7C601 /* NewsTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTableView.xib; sourceTree = "<group>"; };
 		14B9ACD9198F5A1F00F67E97 /* MyRepairsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRepairsView.h; sourceTree = "<group>"; };
 		14B9ACDA198F5A1F00F67E97 /* MyRepairsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRepairsView.m; sourceTree = "<group>"; };
 		14B9ACDB198F5A1F00F67E97 /* MyRepairsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyRepairsView.xib; sourceTree = "<group>"; };
@@ -1658,6 +1668,12 @@
 				14AF581219908CF3000B4BB7 /* NoticeFrameView.h */,
 				14AF581319908CF3000B4BB7 /* NoticeFrameView.m */,
 				14AF581419908CF3000B4BB7 /* NoticeFrameView.xib */,
+				14B56CFF19912D0000F7C601 /* NewsTableView.h */,
+				14B56D0019912D0000F7C601 /* NewsTableView.m */,
+				14B56D0119912D0000F7C601 /* NewsTableView.xib */,
+				14B56CFA1991188E00F7C601 /* NoticeTableCell.h */,
+				14B56CFB1991188E00F7C601 /* NoticeTableCell.m */,
+				14B56CFC1991188E00F7C601 /* NoticeTableCell.xib */,
 			);
 			name = StewardPage;
 			sourceTree = "<group>";
@@ -1762,6 +1778,7 @@
 				149ED4CF1987901E0097F2AF /* publicservice.png in Resources */,
 				142277D21989DAAA007242A2 /* saveinfobtn@2x.png in Resources */,
 				1419F42419889CFB00D3E5E3 /* setting_register@2x.png in Resources */,
+				14B56D0319912D0000F7C601 /* NewsTableView.xib in Resources */,
 				142277CE1989D7AC007242A2 /* userface.png in Resources */,
 				149ED4C8198781750097F2AF /* tab_my@2x.png in Resources */,
 				1419F4101988950F00D3E5E3 /* top_bg@2x.png in Resources */,
@@ -1783,6 +1800,7 @@
 				1424A5D8198FDC0D00446273 /* repairspic@2x.png in Resources */,
 				1419F42819889CFB00D3E5E3 /* setting_propertyfee@2x.png in Resources */,
 				14262471198BEE0F00EA891F /* feelogo@2x.png in Resources */,
+				14B56CFE1991188E00F7C601 /* NoticeTableCell.xib in Resources */,
 				149ED4B1198776750097F2AF /* topimage.png in Resources */,
 				1419F4351988C67000D3E5E3 /* beautylifelogo@2x.png in Resources */,
 				1419F4391988D49F00D3E5E3 /* registerbtn@2x.png in Resources */,
@@ -1884,6 +1902,7 @@
 				1445BA0A1986290500C4417C /* AFNetworkActivityIndicatorManager.m in Sources */,
 				1445B9691986278A00C4417C /* PSTGridLayoutSection.m in Sources */,
 				1445B9A6198627A400C4417C /* ASIFormDataRequest.m in Sources */,
+				14B56CFD1991188E00F7C601 /* NoticeTableCell.m in Sources */,
 				142277E7198A1CC5007242A2 /* StewardFeeFrameView.m in Sources */,
 				1445B9741986278A00C4417C /* SDWebImageManager.m in Sources */,
 				1445B8D51986269500C4417C /* main.m in Sources */,
@@ -1901,6 +1920,7 @@
 				1445BA0C1986290500C4417C /* AFPropertyListRequestOperation.m in Sources */,
 				1445B97D1986278A00C4417C /* MWGridViewController.m in Sources */,
 				1445B9771986278A00C4417C /* UIImage+GIF.m in Sources */,
+				14B56D0219912D0000F7C601 /* NewsTableView.m in Sources */,
 				1445B9C41986281900C4417C /* NSData+CommonCrypto.m in Sources */,
 				1445BB041986315C00C4417C /* OpenUDID.m in Sources */,
 				1445BA6019862E0E00C4417C /* NdUncaughtExceptionHandler.m in Sources */,
@@ -2114,6 +2134,10 @@
 					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
 					Framework,
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeautyLife/BeautyLife-Prefix.pch";
@@ -2157,6 +2181,10 @@
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/Extend/QQConnectSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/UI",
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
 					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
