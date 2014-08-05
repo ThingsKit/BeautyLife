@@ -7,6 +7,9 @@
 //
 
 #import "MainPageView.h"
+#import "ConvView.h"
+#import "ConvOrderView.h"
+#import "RechargeView.h"
 
 @interface MainPageView ()
 
@@ -62,4 +65,19 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
 }
 
+- (IBAction)clickService:(UIButton *)sender
+{
+    ConvOrderView *convView = [[ConvOrderView alloc] init];
+    convView.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:convView animated:YES];
+}
+
+- (IBAction)clickRecharge:(UIButton *)sender
+{
+    RechargeView *rechargeView = [[RechargeView alloc] init];
+    rechargeView.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:rechargeView animated:YES];
+}
 @end

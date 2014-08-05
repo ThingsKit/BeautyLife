@@ -13,4 +13,8 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UILabel *menuBg;
 
+- (IBAction)clickService:(UIButton *)sender;
+
+- (IBAction)clickRecharge:(UIButton *)sender;
+
 @end

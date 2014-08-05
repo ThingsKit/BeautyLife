@@ -14,4 +14,6 @@
 @property (strong, nonatomic) IBOutlet UIView *menuBg;
 @property (strong, nonatomic) IBOutlet UILabel *telBg;
 
+- (IBAction)clickService:(UIButton *)sender;
+
 @end

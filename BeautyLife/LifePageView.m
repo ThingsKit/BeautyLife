@@ -7,6 +7,7 @@
 //
 
 #import "LifePageView.h"
+#import "ConvView.h"
 
 @interface LifePageView ()
 
@@ -46,4 +47,10 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
 }
 
+- (IBAction)clickService:(UIButton *)sender
+{
+    ConvView *convView = [[ConvView alloc] init];
+    convView.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:convView animated:YES];
+}
 @end
