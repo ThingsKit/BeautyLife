@@ -89,10 +89,26 @@
     [self.navigationController pushViewController:feeFrame animated:YES];
 }
 
+- (IBAction)clickSubtle:(UIButton *)sender
+{
+    SubtleView *subtleView = [[SubtleView alloc] init];
+    subtleView.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:subtleView animated:YES];
+}
+
 - (IBAction)repairsAction:(id)sender {
     RepairsFrameView *repairsFrame = [[RepairsFrameView alloc] init];
     repairsFrame.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:repairsFrame animated:YES];
+}
+
+- (IBAction)clickBusiness:(UIButton *)sender
+{
+    BusinessView *businessView = [[BusinessView alloc] init];
+    businessView.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:businessView animated:YES];
 }
 
 - (IBAction)noticeAction:(id)sender {
