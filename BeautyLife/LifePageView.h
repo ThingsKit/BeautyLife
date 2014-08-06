@@ -15,5 +15,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *telBg;
 
 - (IBAction)clickService:(UIButton *)sender;
+- (IBAction)clickRecharge:(UIButton *)sender;
+- (IBAction)clickSubtle:(UIButton *)sender;
+- (IBAction)clickBusiness:(UIButton *)sender;
 
 @end

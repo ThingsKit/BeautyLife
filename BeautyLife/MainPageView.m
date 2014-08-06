@@ -10,6 +10,8 @@
 #import "ConvView.h"
 #import "ConvOrderView.h"
 #import "RechargeView.h"
+#import "SubtleView.h"
+#import "BusinessView.h"
 
 @interface MainPageView ()
 
@@ -79,5 +81,21 @@
     rechargeView.hidesBottomBarWhenPushed = YES;
     
     [self.navigationController pushViewController:rechargeView animated:YES];
+}
+
+- (IBAction)clickSubtle:(UIButton *)sender
+{
+    SubtleView *subtleView = [[SubtleView alloc] init];
+    subtleView.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:subtleView animated:YES];
+}
+
+- (IBAction)clickBusiness:(UIButton *)sender
+{
+    BusinessView *businessView = [[BusinessView alloc] init];
+    businessView.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:businessView animated:YES];
 }
 @end
