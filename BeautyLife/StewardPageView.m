@@ -48,21 +48,26 @@
 
 - (IBAction)stewardFeeAction:(id)sender {
     StewardFeeFrameView *feeFrame = [[StewardFeeFrameView alloc] init];
+    feeFrame.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:feeFrame animated:YES];
 }
 
 - (IBAction)repairsAction:(id)sender {
     RepairsFrameView *repairsFrame = [[RepairsFrameView alloc] init];
+    repairsFrame.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:repairsFrame animated:YES];
 }
 
 - (IBAction)noticeAction:(id)sender {
     NoticeFrameView *noticeFrame = [[NoticeFrameView alloc] init];
+    noticeFrame.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:noticeFrame animated:YES];
 }
 
 - (IBAction)expressAction:(id)sender {
     ExpressView *expressView = [[ExpressView alloc] init];
+    expressView.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:expressView animated:YES];
 }
+
 @end
