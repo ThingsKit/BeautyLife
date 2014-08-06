@@ -18,6 +18,9 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UILabel *menuBg;
 
+#pragma mark -按钮点击事件
+
+#pragma mark 便民服务
 - (IBAction)clickService:(UIButton *)sender;
 - (IBAction)clickRecharge:(UIButton *)sender;
 

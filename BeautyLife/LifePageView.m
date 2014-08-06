@@ -8,6 +8,9 @@
 
 #import "LifePageView.h"
 #import "ConvView.h"
+#import "RechargeView.h"
+#import "SubtleView.h"
+#import "BusinessView.h"
 
 @interface LifePageView ()
 
@@ -52,5 +55,29 @@
     ConvView *convView = [[ConvView alloc] init];
     convView.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:convView animated:YES];
+}
+
+- (IBAction)clickRecharge:(UIButton *)sender
+{
+    RechargeView *rechargeView = [[RechargeView alloc] init];
+    rechargeView.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:rechargeView animated:YES];
+}
+
+- (IBAction)clickSubtle:(UIButton *)sender
+{
+    SubtleView *subtleView = [[SubtleView alloc] init];
+    subtleView.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:subtleView animated:YES];
+}
+
+- (IBAction)clickBusiness:(UIButton *)sender
+{
+    BusinessView *businessView = [[BusinessView alloc] init];
+    businessView.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:businessView animated:YES];
 }
 @end

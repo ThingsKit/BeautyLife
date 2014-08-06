@@ -10,6 +10,8 @@
 #import "ConvView.h"
 #import "ConvOrderView.h"
 #import "RechargeView.h"
+#import "SubtleView.h"
+#import "BusinessView.h"
 
 @interface MainPageView ()
 
