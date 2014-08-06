@@ -60,4 +60,9 @@
     NoticeFrameView *noticeFrame = [[NoticeFrameView alloc] init];
     [self.navigationController pushViewController:noticeFrame animated:YES];
 }
+
+- (IBAction)expressAction:(id)sender {
+    ExpressView *expressView = [[ExpressView alloc] init];
+    [self.navigationController pushViewController:expressView animated:YES];
+}
 @end

@@ -278,6 +278,15 @@
 		14B56CFE1991188E00F7C601 /* NoticeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B56CFC1991188E00F7C601 /* NoticeTableCell.xib */; };
 		14B56D0219912D0000F7C601 /* NewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B56D0019912D0000F7C601 /* NewsTableView.m */; };
 		14B56D0319912D0000F7C601 /* NewsTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B56D0119912D0000F7C601 /* NewsTableView.xib */; };
+		14B905791991C24E0087B09D /* ExpressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B905771991C24E0087B09D /* ExpressView.m */; };
+		14B9057A1991C24E0087B09D /* ExpressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B905781991C24E0087B09D /* ExpressView.xib */; };
+		14B9057C1991C3FC0087B09D /* maillogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14B9057B1991C3FC0087B09D /* maillogo@2x.png */; };
+		14B9057E1991CAC90087B09D /* topBtnBg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 14B9057D1991CAC90087B09D /* topBtnBg2.png */; };
+		14B905801991CEAD0087B09D /* queryImg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14B9057F1991CEAD0087B09D /* queryImg@2x.png */; };
+		14B905841991D7910087B09D /* MySendExpressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B905821991D7910087B09D /* MySendExpressView.m */; };
+		14B905851991D7910087B09D /* MySendExpressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B905831991D7910087B09D /* MySendExpressView.xib */; };
+		14B905891991DBB10087B09D /* MySendExpressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B905871991DBB00087B09D /* MySendExpressCell.m */; };
+		14B9058A1991DBB10087B09D /* MySendExpressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B905881991DBB10087B09D /* MySendExpressCell.xib */; };
 		14B9ACDC198F5A1F00F67E97 /* MyRepairsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B9ACDA198F5A1F00F67E97 /* MyRepairsView.m */; };
 		14B9ACDD198F5A1F00F67E97 /* MyRepairsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B9ACDB198F5A1F00F67E97 /* MyRepairsView.xib */; };
 		14B9ACE1198F5C3500F67E97 /* MyRepairsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B9ACDF198F5C3500F67E97 /* MyRepairsCell.m */; };
@@ -770,6 +779,18 @@
 		14B56CFF19912D0000F7C601 /* NewsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableView.h; sourceTree = "<group>"; };
 		14B56D0019912D0000F7C601 /* NewsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableView.m; sourceTree = "<group>"; };
 		14B56D0119912D0000F7C601 /* NewsTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTableView.xib; sourceTree = "<group>"; };
+		14B905761991C24E0087B09D /* ExpressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressView.h; sourceTree = "<group>"; };
+		14B905771991C24E0087B09D /* ExpressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpressView.m; sourceTree = "<group>"; };
+		14B905781991C24E0087B09D /* ExpressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpressView.xib; sourceTree = "<group>"; };
+		14B9057B1991C3FC0087B09D /* maillogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "maillogo@2x.png"; sourceTree = "<group>"; };
+		14B9057D1991CAC90087B09D /* topBtnBg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topBtnBg2.png; sourceTree = "<group>"; };
+		14B9057F1991CEAD0087B09D /* queryImg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "queryImg@2x.png"; sourceTree = "<group>"; };
+		14B905811991D7910087B09D /* MySendExpressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySendExpressView.h; sourceTree = "<group>"; };
+		14B905821991D7910087B09D /* MySendExpressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySendExpressView.m; sourceTree = "<group>"; };
+		14B905831991D7910087B09D /* MySendExpressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySendExpressView.xib; sourceTree = "<group>"; };
+		14B905861991DBB00087B09D /* MySendExpressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySendExpressCell.h; sourceTree = "<group>"; };
+		14B905871991DBB00087B09D /* MySendExpressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySendExpressCell.m; sourceTree = "<group>"; };
+		14B905881991DBB10087B09D /* MySendExpressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySendExpressCell.xib; sourceTree = "<group>"; };
 		14B9ACD9198F5A1F00F67E97 /* MyRepairsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRepairsView.h; sourceTree = "<group>"; };
 		14B9ACDA198F5A1F00F67E97 /* MyRepairsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRepairsView.m; sourceTree = "<group>"; };
 		14B9ACDB198F5A1F00F67E97 /* MyRepairsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyRepairsView.xib; sourceTree = "<group>"; };
@@ -831,8 +852,8 @@
 				1445B8CB1986269500C4417C /* CoreGraphics.framework in Frameworks */,
 				1445B8CD1986269500C4417C /* UIKit.framework in Frameworks */,
 				1445B8C91986269500C4417C /* Foundation.framework in Frameworks */,
-				1445BA9619862EE100C4417C /* AGCommon.framework in Frameworks */,
 				1445BA181986294A00C4417C /* KeyboardManager.framework in Frameworks */,
+				1445BA9619862EE100C4417C /* AGCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1641,6 +1662,9 @@
 		149ED4A7198773170097F2AF /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				14B9057F1991CEAD0087B09D /* queryImg@2x.png */,
+				14B9057D1991CAC90087B09D /* topBtnBg2.png */,
+				14B9057B1991C3FC0087B09D /* maillogo@2x.png */,
 				1424A5D7198FDC0D00446273 /* repairspic@2x.png */,
 				14A32A2A198CBB2600497E5C /* telorderbtn@2x.png */,
 				14A32A2B198CBB2600497E5C /* onlineorderbtn@2x.png */,
@@ -1772,6 +1796,15 @@
 				14B56CFA1991188E00F7C601 /* NoticeTableCell.h */,
 				14B56CFB1991188E00F7C601 /* NoticeTableCell.m */,
 				14B56CFC1991188E00F7C601 /* NoticeTableCell.xib */,
+				14B905761991C24E0087B09D /* ExpressView.h */,
+				14B905771991C24E0087B09D /* ExpressView.m */,
+				14B905781991C24E0087B09D /* ExpressView.xib */,
+				14B905811991D7910087B09D /* MySendExpressView.h */,
+				14B905821991D7910087B09D /* MySendExpressView.m */,
+				14B905831991D7910087B09D /* MySendExpressView.xib */,
+				14B905861991DBB00087B09D /* MySendExpressCell.h */,
+				14B905871991DBB00087B09D /* MySendExpressCell.m */,
+				14B905881991DBB10087B09D /* MySendExpressCell.xib */,
 			);
 			name = StewardPage;
 			sourceTree = "<group>";
@@ -1877,7 +1910,9 @@
 				04CAC3B5198C78CB0031E956 /* conv_search.png in Resources */,
 				1419F4371988CBC700D3E5E3 /* securitycode@2x.png in Resources */,
 				1419F42619889CFB00D3E5E3 /* setting_info@2x.png in Resources */,
+				14B9057A1991C24E0087B09D /* ExpressView.xib in Resources */,
 				14A32A29198C979600497E5C /* repairslogo@2x.png in Resources */,
+				14B905801991CEAD0087B09D /* queryImg@2x.png in Resources */,
 				142277E11989E2D3007242A2 /* arealine.png in Resources */,
 				149ED4CF1987901E0097F2AF /* publicservice.png in Resources */,
 				142277D21989DAAA007242A2 /* saveinfobtn@2x.png in Resources */,
@@ -1893,10 +1928,12 @@
 				149ED4CB198781750097F2AF /* tab_main@2x.png in Resources */,
 				142277D61989DD0D007242A2 /* backBtn.png in Resources */,
 				14EF642E1987EB960006257D /* StewardPageView.xib in Resources */,
+				14B9057E1991CAC90087B09D /* topBtnBg2.png in Resources */,
 				149ED4CA198781750097F2AF /* tab_steward@2x.png in Resources */,
 				14A32A0E198C87C600497E5C /* payfeequery@2x.png in Resources */,
 				14EF64331987EEB00006257D /* tellogo@2x.png in Resources */,
 				1419F42E19889CFB00D3E5E3 /* setting_logout@2x.png in Resources */,
+				14B9057C1991C3FC0087B09D /* maillogo@2x.png in Resources */,
 				149ED4AD1987737D0097F2AF /* MainPageView.xib in Resources */,
 				149ED4B3198776BC0097F2AF /* main_topimage.png in Resources */,
 				1445BA9819862EE100C4417C /* Resource.bundle in Resources */,
@@ -1915,6 +1952,7 @@
 				04CAC3BB198C78CB0031E956 /* conv_ tour@2x.png in Resources */,
 				149ED4B1198776750097F2AF /* topimage.png in Resources */,
 				04CAC3CC198C92540031E956 /* conv_order_online@2x.png in Resources */,
+				14B9058A1991DBB10087B09D /* MySendExpressCell.xib in Resources */,
 				1419F4351988C67000D3E5E3 /* beautylifelogo@2x.png in Resources */,
 				04CAC3C4198C85C30031E956 /* ConvOrderView.xib in Resources */,
 				1419F4391988D49F00D3E5E3 /* registerbtn@2x.png in Resources */,
@@ -1961,6 +1999,7 @@
 				1445B96B1986278A00C4417C /* README.md in Resources */,
 				1445BA9D19862EE100C4417C /* WeiboSDK.bundle in Resources */,
 				149ED4C319877E990097F2AF /* message@2x.png in Resources */,
+				14B905851991D7910087B09D /* MySendExpressView.xib in Resources */,
 				1445B8DB1986269500C4417C /* Images.xcassets in Resources */,
 				1445BA6D19862E5A00C4417C /* NotifyCheck@2x.png in Resources */,
 				04CAC3CD198C92540031E956 /* conv_order_share.png in Resources */,
@@ -2020,6 +2059,7 @@
 				1445BA091986290500C4417C /* AFJSONUtilities.m in Sources */,
 				14A32A12198C8D3B00497E5C /* ParkFeeView.m in Sources */,
 				1445B96F1986278A00C4417C /* SDImageCache.m in Sources */,
+				14B905791991C24E0087B09D /* ExpressView.m in Sources */,
 				1445B9801986278A00C4417C /* MWTapDetectingImageView.m in Sources */,
 				1445BA081986290500C4417C /* AFJSONRequestOperation.m in Sources */,
 				1445B95E1986278A00C4417C /* PSTCollectionView.m in Sources */,
@@ -2052,6 +2092,7 @@
 				1445BA6019862E0E00C4417C /* NdUncaughtExceptionHandler.m in Sources */,
 				1419F409198881E200D3E5E3 /* LifePageView.m in Sources */,
 				1445B8FA1986274800C4417C /* VPImageCropperViewController.m in Sources */,
+				14B905891991DBB10087B09D /* MySendExpressCell.m in Sources */,
 				1445B9811986278A00C4417C /* MWTapDetectingView.m in Sources */,
 				1445B9A9198627A400C4417C /* ASINetworkQueue.m in Sources */,
 				1445B9DA1986288400C4417C /* EGOImageButton.m in Sources */,
@@ -2071,6 +2112,7 @@
 				1426246E198BEBBF00EA891F /* StewardFeeView.m in Sources */,
 				1445BAFF1986315C00C4417C /* Base64.m in Sources */,
 				1445B9A8198627A400C4417C /* ASIInputStream.m in Sources */,
+				14B905841991D7910087B09D /* MySendExpressView.m in Sources */,
 				149ED4AC1987737D0097F2AF /* MainPageView.m in Sources */,
 				1445BA6719862E4B00C4417C /* TQImageCache.m in Sources */,
 				1445BA6119862E0E00C4417C /* Tool.m in Sources */,
@@ -2266,6 +2308,8 @@
 					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
 					Framework,
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeautyLife/BeautyLife-Prefix.pch";
@@ -2309,6 +2353,8 @@
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/Extend/QQConnectSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/UI",
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
 					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",

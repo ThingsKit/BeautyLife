@@ -10,6 +10,7 @@
 #import "StewardFeeFrameView.h"
 #import "RepairsFrameView.h"
 #import "NoticeFrameView.h"
+#import "ExpressView.h"
 
 @interface StewardPageView : UIViewController
 
@@ -20,5 +21,6 @@
 - (IBAction)stewardFeeAction:(id)sender;
 - (IBAction)repairsAction:(id)sender;
 - (IBAction)noticeAction:(id)sender;
+- (IBAction)expressAction:(id)sender;
 
 @end
