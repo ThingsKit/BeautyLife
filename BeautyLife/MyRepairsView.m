@@ -67,6 +67,13 @@
         }
     }
     [Tool borderView:cell.bgLb];
+    AMRatingControl *gradeControl = [[AMRatingControl alloc] initWithLocation:CGPointMake(0, 0)
+                                                                           emptyColor:[UIColor colorWithRed:245.0/255 green:130.0/255 blue:33.0/255 alpha:1.0]
+                                                                           solidColor:[UIColor colorWithRed:245.0/255 green:130.0/255 blue:33.0/255 alpha:1.0]
+                                                                         andMaxRating:5  andStarSize:15 andStarWidthAndHeight:15];
+    
+    [gradeControl setRating:2];
+    [cell.gradeLb addSubview:gradeControl];
     return cell;
 }
 

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MyRepairsCell.h"
+#import "AMRatingControl.h"
 
 @interface MyRepairsView : UIViewController<UITableViewDataSource, UITableViewDelegate>
 

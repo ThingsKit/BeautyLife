@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SubtleCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UIImageView *showImg;
 
 - (void)setImg:(int)ID;

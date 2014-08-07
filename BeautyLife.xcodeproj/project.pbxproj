@@ -91,6 +91,7 @@
 		1426246E198BEBBF00EA891F /* StewardFeeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1426246C198BEBBF00EA891F /* StewardFeeView.m */; };
 		1426246F198BEBBF00EA891F /* StewardFeeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1426246D198BEBBF00EA891F /* StewardFeeView.xib */; };
 		14262471198BEE0F00EA891F /* feelogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14262470198BEE0F00EA891F /* feelogo@2x.png */; };
+		1437BD521993417600E467DC /* AMRatingControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437BD511993417600E467DC /* AMRatingControl.m */; };
 		1445B8C91986269500C4417C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1445B8C81986269500C4417C /* Foundation.framework */; };
 		1445B8CB1986269500C4417C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1445B8CA1986269500C4417C /* CoreGraphics.framework */; };
 		1445B8CD1986269500C4417C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1445B8CC1986269500C4417C /* UIKit.framework */; };
@@ -423,6 +424,8 @@
 		1426246C198BEBBF00EA891F /* StewardFeeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StewardFeeView.m; sourceTree = "<group>"; };
 		1426246D198BEBBF00EA891F /* StewardFeeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StewardFeeView.xib; sourceTree = "<group>"; };
 		14262470198BEE0F00EA891F /* feelogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feelogo@2x.png"; sourceTree = "<group>"; };
+		1437BD501993417600E467DC /* AMRatingControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMRatingControl.h; sourceTree = "<group>"; };
+		1437BD511993417600E467DC /* AMRatingControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMRatingControl.m; sourceTree = "<group>"; };
 		1445B8C51986269500C4417C /* BeautyLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautyLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1445B8C81986269500C4417C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1445B8CA1986269500C4417C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -950,6 +953,15 @@
 			name = SettingPage;
 			sourceTree = "<group>";
 		};
+		1437BD4F1993417600E467DC /* AMRatingControl */ = {
+			isa = PBXGroup;
+			children = (
+				1437BD501993417600E467DC /* AMRatingControl.h */,
+				1437BD511993417600E467DC /* AMRatingControl.m */,
+			);
+			path = AMRatingControl;
+			sourceTree = "<group>";
+		};
 		1445B8BC1986269500C4417C = {
 			isa = PBXGroup;
 			children = (
@@ -1016,6 +1028,7 @@
 				1445BAF21986315C00C4417C /* BaiduPush */,
 				1445BAAB1986303600C4417C /* BaiduMapSDK */,
 				1445BA4B19862DC700C4417C /* Helper */,
+				1437BD4F1993417600E467DC /* AMRatingControl */,
 				1445BA6F19862EE100C4417C /* ShareSDK */,
 				1445B8FB1986276A00C4417C /* ZjSwitch */,
 				1445B8F71986274800C4417C /* VPImageCropper */,
@@ -2074,6 +2087,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1437BD521993417600E467DC /* AMRatingControl.m in Sources */,
 				1445B95F1986278A00C4417C /* PSTCollectionViewCell.m in Sources */,
 				1445B9B7198627D000C4417C /* NSUserDefaults+RMSaveCustomObject.m in Sources */,
 				1445BA6C19862E5A00C4417C /* JSNotifier.m in Sources */,
@@ -2364,6 +2378,10 @@
 					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
 					Framework,
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeautyLife/BeautyLife-Prefix.pch";
@@ -2407,6 +2425,10 @@
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/Extend/QQConnectSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/UI",
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
 					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",

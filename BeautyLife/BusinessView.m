@@ -32,7 +32,7 @@
         UIBarButtonItem *btnBack = [[UIBarButtonItem alloc]initWithCustomView:lBtn];
         self.navigationItem.leftBarButtonItem = btnBack;
         
-        UIButton *rBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 65, 45)];
+        UIButton *rBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 63, 22)];
         //[rBtn addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
         [rBtn setImage:[UIImage imageNamed:@"conv_search"] forState:UIControlStateNormal];
         UIBarButtonItem *btnSearch = [[UIBarButtonItem alloc]initWithCustomView:rBtn];

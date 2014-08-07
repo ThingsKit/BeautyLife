@@ -11,5 +11,6 @@
 @interface MyRepairsCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *bgLb;
+@property (weak, nonatomic) IBOutlet UILabel *gradeLb;
 
 @end
