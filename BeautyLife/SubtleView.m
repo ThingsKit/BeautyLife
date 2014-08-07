@@ -68,7 +68,7 @@
     SubtleCell *cell = [_tableView dequeueReusableCellWithIdentifier:[SubtleCell identifyID]];
     if(cell == nil)
     {
-       SubtleCell *cell = [SubtleCell init];
+        cell = [SubtleCell init];
     }
     [cell setImg:indexPath.row];
     return cell;
