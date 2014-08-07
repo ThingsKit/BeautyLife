@@ -7,8 +7,10 @@
 //
 
 #import "BusinessView.h"
+#import "BusinessCell.h"
+#import "BusinessDetailView.h"
 
-@interface BusinessView ()
+@interface BusinessView () <UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -50,7 +52,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.74 green:0.78 blue:0.81 alpha:1];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -63,6 +68,35 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 4;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    BusinessCell *cell = [_tableView dequeueReusableCellWithIdentifier:[BusinessCell ID]];
+    if(cell == nil)
+    {
+        cell = [BusinessCell initWith];
+    }
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 131;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BusinessDetailView *businessDetailView = [[BusinessDetailView alloc] init];
+    businessDetailView.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:businessDetailView animated:YES];
 }
 
 /*

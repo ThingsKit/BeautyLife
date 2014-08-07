@@ -8,7 +8,6 @@
 
 #import "MainPageView.h"
 #import "ConvView.h"
-#import "ConvOrderView.h"
 #import "RechargeView.h"
 #import "SubtleView.h"
 #import "BusinessView.h"
@@ -69,7 +68,7 @@
 
 - (IBAction)clickService:(UIButton *)sender
 {
-    ConvOrderView *convView = [[ConvOrderView alloc] init];
+    ConvView *convView = [[ConvView alloc] init];
     convView.hidesBottomBarWhenPushed = YES;
     
     [self.navigationController pushViewController:convView animated:YES];

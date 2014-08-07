@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BusinessView">
             <connections>
+                <outlet property="tableView" destination="frl-xI-agz" id="c9A-M6-sCK"/>
                 <outlet property="view" destination="hCI-n5-6oN" id="eIp-2k-8eH"/>
             </connections>
         </placeholder>
