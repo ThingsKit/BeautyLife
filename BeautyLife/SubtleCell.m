@@ -10,7 +10,7 @@
 
 @implementation SubtleCell
 
-+ (id)init
++ (id)initWith
 {
     UINib *nib = [UINib nibWithNibName:@"SubtleCell" bundle:nil];
     SubtleCell *cell = [nib instantiateWithOwner:nil options:nil][0];

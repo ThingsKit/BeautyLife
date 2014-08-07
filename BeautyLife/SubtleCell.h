@@ -13,7 +13,7 @@
 
 - (void)setImg:(int)ID;
 
-+ (id)init;
++ (id)initWith;
 
 + (NSString *)identifyID;
 @end

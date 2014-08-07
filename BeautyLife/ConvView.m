@@ -7,8 +7,10 @@
 //
 
 #import "ConvView.h"
+#import "ConvCell.h"
+#import "ConvOrderView.h"
 
-@interface ConvView ()
+@interface ConvView () <UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -50,7 +52,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.74 green:0.78 blue:0.81 alpha:1];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -63,6 +68,35 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 4;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    ConvCell *cell = [_tableView dequeueReusableCellWithIdentifier:[ConvCell ID]];
+    if(cell == nil)
+    {
+        cell = [ConvCell initWith];
+    }
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ConvOrderView *convView = [[ConvOrderView alloc] init];
+    convView.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:convView animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 140;
 }
 
 /*
