@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface BusinessDetailView : UIViewController
+{
+    int cellIndex;
+}
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 

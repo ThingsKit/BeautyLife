@@ -64,10 +64,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SubtleCell *cell = [_tableView dequeueReusableCellWithIdentifier:[SubtleCell identifyID]];
-    if(cell == nil)
-    {
-       cell = [SubtleCell init];
+    SubtleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SubtleCell"];
+    if (!cell) {
+        NSArray *objects = [[NSBundle mainBundle] loadNibNamed:@"SubtleCell" owner:self options:nil];
+        for (NSObject *o in objects) {
+            if ([o isKindOfClass:[SubtleCell class]]) {
+                cell = (SubtleCell *)o;
+                break;
+            }
+        }
     }
     [cell setImg:indexPath.row];
     return cell;

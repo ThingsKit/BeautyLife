@@ -33,7 +33,7 @@
         UIBarButtonItem *btnBack = [[UIBarButtonItem alloc]initWithCustomView:lBtn];
         self.navigationItem.leftBarButtonItem = btnBack;
         
-        UIButton *rBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 63.5, 22)];
+        UIButton *rBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 63, 22)];
         //[rBtn addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
         [rBtn setImage:[UIImage imageNamed:@"business_map"] forState:UIControlStateNormal];
         UIBarButtonItem *btnSearch = [[UIBarButtonItem alloc]initWithCustomView:rBtn];
@@ -52,9 +52,11 @@
 {
     [super viewDidLoad];
     
+    cellIndex = 0;
+    
     self.collectionView.backgroundColor = [UIColor colorWithRed:0.74 green:0.78 blue:0.81 alpha:1];
     
-    [self.collectionView registerClass:[BusinessDetailCell class] forCellWithReuseIdentifier:[BusinessDetailCell ID]];
+    [self.collectionView registerClass:[BusinessDetailCell class] forCellWithReuseIdentifier:BusinessDetailCellIdentifier];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     //[self reload];
@@ -74,12 +76,16 @@
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-//    BusinessDetailCell *cell = [_collectionView dequeueReusableCellWithReuseIdentifier:[BusinessDetailCell ID] forIndexPath:indexPath];
-//    
-//    if(cell == nil)
-//    {
-        BusinessDetailCell *cell = [BusinessDetailCell inits];
-//   }
+    BusinessDetailCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:BusinessDetailCellIdentifier forIndexPath:indexPath];
+    if (!cell) {
+        NSArray *objects = [[NSBundle mainBundle] loadNibNamed:@"BusinessDetailCell" owner:self options:nil];
+        for (NSObject *o in objects) {
+            if ([o isKindOfClass:[BusinessDetailCell class]]) {
+                cell = (BusinessDetailCell *)o;
+                break;
+            }
+        }
+    }
     return cell;
 }
 
@@ -107,6 +113,12 @@
     GoodsDetailView *goodsDetailView = [[GoodsDetailView alloc] init];
     goodsDetailView.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:goodsDetailView animated:YES];
+}
+
+//返回这个UICollectionView是否可以被选择
+-(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning

@@ -10,7 +10,5 @@
 
 @interface BusinessDetailCell : UICollectionViewCell
 
-+ (id)inits;
-+ (NSString *)ID;
 
 @end
