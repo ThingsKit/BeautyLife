@@ -52,4 +52,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)selectHomeAddressAction:(id)sender {
+    ChooseAreaView *chooseView = [[ChooseAreaView alloc] init];
+    chooseView.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:chooseView animated:YES];
+}
 @end

@@ -1,25 +1,21 @@
 //
-//  RegisterView.m
+//  LoginView.m
 //  BeautyLife
 //
-//  Created by Seven on 14-7-30.
+//  Created by Seven on 14-8-12.
 //  Copyright (c) 2014年 Seven. All rights reserved.
 //
 
-#import "RegisterView.h"
+#import "LoginView.h"
 
-@interface RegisterView ()
+@interface LoginView ()
 
 @end
 
-@implementation RegisterView
+@implementation LoginView
 @synthesize scrollView;
 @synthesize mobileTf;
 @synthesize pwdTf;
-@synthesize pwdAgainTf;
-@synthesize securityCodeTf;
-@synthesize securityCodeBtn;
-@synthesize registerBtn;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +23,7 @@
     if (self) {
         UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 44)];
         titleLabel.font = [UIFont boldSystemFontOfSize:18];
-        titleLabel.text = @"注册";
+        titleLabel.text = @"登录";
         titleLabel.backgroundColor = [UIColor clearColor];
         titleLabel.textColor = [UIColor whiteColor];
         titleLabel.textAlignment = UITextAlignmentCenter;
@@ -59,13 +55,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)sendSecurityCodeAction:(id)sender {
-}
-
-- (IBAction)registerAction:(id)sender {
+- (IBAction)loginAction:(id)sender {
     NSString *mobileStr = self.mobileTf.text;
     NSString *pwdStr = self.pwdTf.text;
-    NSString *pwdAgainStr = self.pwdAgainTf.text;
     if (![mobileStr isValidPhoneNum]) {
         [Tool showCustomHUD:@"手机号错误" andView:self.view  andImage:@"37x-Failure.png" andAfterDelay:1];
         return;
@@ -74,13 +66,8 @@
         [Tool showCustomHUD:@"请输入密码" andView:self.view  andImage:@"37x-Failure.png" andAfterDelay:1];
         return;
     }
-    if (![pwdStr isEqualToString:pwdAgainStr]) {
-        [Tool showCustomHUD:@"密码确认不一致" andView:self.view  andImage:@"37x-Failure.png" andAfterDelay:1];
-        self.pwdAgainTf.text = @"";
-        return;
-    }
-    self.registerBtn.enabled = NO;
-    NSString *regUrl = [NSString stringWithFormat:@"%@%@", api_base_url, api_register];
+    self.loginBtn.enabled = NO;
+    NSString *regUrl = [NSString stringWithFormat:@"%@%@", api_base_url, api_login];
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:regUrl]];
     [request setUseCookiePersistence:NO];
     [request setPostValue:appkey forKey:@"APPKey"];
@@ -88,11 +75,11 @@
     [request setPostValue:pwdStr forKey:@"pwd"];
     [request setDelegate:self];
     [request setDidFailSelector:@selector(requestFailed:)];
-    [request setDidFinishSelector:@selector(requestRegister:)];
+    [request setDidFinishSelector:@selector(requestLogin:)];
     [request startAsynchronous];
     
     request.hud = [[MBProgressHUD alloc] initWithView:self.view];
-    [Tool showHUD:@"正在注册" andView:self.view andHUD:request.hud];
+    [Tool showHUD:@"登录中..." andView:self.view andHUD:request.hud];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request
@@ -101,7 +88,7 @@
         [request.hud hide:NO];
     }
 }
-- (void)requestRegister:(ASIHTTPRequest *)request
+- (void)requestLogin:(ASIHTTPRequest *)request
 {
     if (request.hud) {
         [request.hud hide:YES];
@@ -120,16 +107,35 @@
         [av show];
         return;
     }
+    NSLog(request.responseString);
     User *user = [Tool readJsonStrToUser:request.responseString];
     int errorCode = [user.status intValue];
     NSString *errorMessage = user.info;
     switch (errorCode) {
         case 1:
         {
-            [[UserModel Instance] saveIsLogin:YES];
-            [[UserModel Instance] saveAccount:self.mobileTf.text andPwd:self.pwdTf.text];
-            UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"注册提醒"
-                                                         message:[NSString stringWithFormat:@"%@，%@", errorMessage, @"并已登录"]
+            //设置登录并保存用户信息
+            UserModel *userModel = [UserModel Instance];
+            [userModel saveIsLogin:YES];
+            [userModel saveAccount:self.mobileTf.text andPwd:self.pwdTf.text];
+            [userModel saveValue:user.id ForKey:@"id"];
+            [userModel saveValue:user.cid ForKey:@"cid"];
+            [userModel saveValue:user.build_id ForKey:@"build_id"];
+            [userModel saveValue:user.house_number ForKey:@"house_number"];
+            [userModel saveValue:user.carport_number ForKey:@"carport_number"];
+            [userModel saveValue:user.name ForKey:@"name"];
+            [userModel saveValue:user.tel ForKey:@"tel"];
+            [userModel saveValue:user.pwd ForKey:@"pwd"];
+            [userModel saveValue:user.avatar ForKey:@"avatar"];
+            [userModel saveValue:user.email ForKey:@"email"];
+            [userModel saveValue:user.card_id ForKey:@"card_id"];
+            [userModel saveValue:user.property ForKey:@"property"];
+            [userModel saveValue:user.plate_number ForKey:@"plate_number"];
+            [userModel saveValue:user.credits ForKey:@"credits"];
+            [userModel saveValue:user.remark ForKey:@"remark"];
+            
+            UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"登录提醒"
+                                                         message:errorMessage
                                                         delegate:nil
                                                cancelButtonTitle:@"确定"
                                                otherButtonTitles:nil];
@@ -140,10 +146,11 @@
         case 0:
         {
             [Tool showCustomHUD:errorMessage andView:self.view  andImage:@"37x-Failure.png" andAfterDelay:3];
-            self.registerBtn.enabled = YES;
+            self.loginBtn.enabled = YES;
         }
             break;
     }
+    self.loginBtn.enabled = YES;
 }
 
 @end

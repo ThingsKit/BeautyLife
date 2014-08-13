@@ -20,7 +20,7 @@
     if (self) {
         UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 44)];
         titleLabel.font = [UIFont boldSystemFontOfSize:18];
-        titleLabel.text = @"小区选择";
+        titleLabel.text = @"住址选择";
         titleLabel.backgroundColor = [UIColor clearColor];
         titleLabel.textColor = [UIColor whiteColor];
         titleLabel.textAlignment = UITextAlignmentCenter;
@@ -53,4 +53,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)selectHomeAddressForCityAction:(id)sender {
+    SelectHomeAddressView *selectForCityView = [[SelectHomeAddressView alloc] init];
+    selectForCityView.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:selectForCityView animated:YES];
+}
 @end

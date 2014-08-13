@@ -518,6 +518,44 @@
                             }];
 }
 
++ (User *)readJsonStrToUser:(NSString *)str
+{
+    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSDictionary *detailDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if ( detailDic == nil) {
+        return nil;
+    }
+    User *user = [RMMapper objectWithClass:[User class] fromDictionary:detailDic];
+    return user;
+}
 
++ (NSMutableArray *)readJsonStrToRegionArray:(NSString *)str
+{
+    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSArray *areaArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if ( [areaArray count] <= 0) {
+        return nil;
+    }
+    NSMutableArray *provinceArray;
+    if ([areaArray count] >= 1) {
+        NSDictionary *areaDic = [areaArray objectAtIndex:0];
+        id areaJSON = [areaDic objectForKey:@"_child"];
+        provinceArray = [RMMapper mutableArrayOfClass:[ProvinceModel class]
+                                                fromArrayOfDictionary:areaJSON];
+        for (ProvinceModel *p in provinceArray) {
+            NSMutableArray *cityArray = [RMMapper mutableArrayOfClass:[CityModel class]
+                                                fromArrayOfDictionary:p._child];
+            for (CityModel *c in cityArray) {
+                NSMutableArray *regionArray = [RMMapper mutableArrayOfClass:[RegionModel class]
+                                                    fromArrayOfDictionary:c._child];
+                c.regionArray = regionArray;
+            }
+            p.cityArray = cityArray;
+        }
+    }
+    return provinceArray;
+}
 
 @end

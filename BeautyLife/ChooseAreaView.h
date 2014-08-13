@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SelectHomeAddressView.h"
 
 @interface ChooseAreaView : UIViewController
+
+- (IBAction)selectHomeAddressForCityAction:(id)sender;
 
 @end

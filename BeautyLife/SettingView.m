@@ -103,7 +103,18 @@
             break;
         case 2:
         {
-
+            if ([[UserModel Instance] isLogin]) {
+                UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"温馨提示"
+                                                             message:@"您已登录"
+                                                            delegate:nil
+                                                   cancelButtonTitle:@"确定"
+                                                   otherButtonTitles:nil];
+                [av show];
+                return;
+            }
+            LoginView *loginView = [[LoginView alloc] init];
+            loginView.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:loginView animated:YES];
         }
             break;
         case 3:

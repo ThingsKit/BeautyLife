@@ -35,6 +35,14 @@
 #import "AFHTTPRequestOperation.h"
 #import "AFXMLRequestOperation.h"
 
+#define appkey @"UfeTdaI9m2esqgHQZfKT1xTsUqdwTs2z"
+#define api_base_url @"http://114.215.145.29:8900"
+#define api_register @"/api/register"
+#define api_login @"/api/login"
+#define api_getregion @"/api/get_region"
+
+#define AreaListKey @"AreList"
+
 #define SettingTableIdentifier @"SettingTableIdentifier"
 #define MyRepairsCellIdentifier @"MyRepairsCellIdentifier"
 #define NoticeTableCellIdentifier @"NoticeTableCellIdentifier"

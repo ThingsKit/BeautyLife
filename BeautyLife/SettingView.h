@@ -12,6 +12,7 @@
 #import "RegisterView.h"
 #import "UserInfoView.h"
 #import "ChooseAreaView.h"
+#import "LoginView.h"
 
 @interface SettingView : UIViewController<UITableViewDataSource, UITableViewDelegate,UIAlertViewDelegate>
 {

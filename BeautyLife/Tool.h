@@ -14,6 +14,10 @@
 #import <CommonCrypto/CommonCryptor.h>
 #import "RMMapper.h"
 #import <ShareSDK/ShareSDK.h>
+#import "User.h"
+#import "ProvinceModel.h"
+#import "CityModel.h"
+#import "RegionModel.h"
 
 @interface Tool : NSObject
 
@@ -90,5 +94,8 @@
 + (void)saveCache:(NSString *)catalog andType:(int)type andID:(int)_id andString:(NSString *)str;
 + (NSString *)getCache:(NSString *)catalog andType:(int)type andID:(int)_id;
 + (void)shareAction:(UIButton *)sender andShowView:(UIView *)view andContent:(NSDictionary *)shareContent;
+
++ (User *)readJsonStrToUser:(NSString *)str;
++ (NSMutableArray *)readJsonStrToRegionArray:(NSString *)str;
 
 @end
