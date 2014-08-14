@@ -558,4 +558,28 @@
     return provinceArray;
 }
 
++ (NSMutableArray *)readJsonStrToCommunityArray:(NSString *)str
+{
+    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSArray *commJsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if ( [commJsonArray count] <= 0) {
+        return nil;
+    }
+    NSMutableArray *commArray = [RMMapper mutableArrayOfClass:[CommunityModel class]
+                                fromArrayOfDictionary:commJsonArray];
+        for (CommunityModel *c in commArray) {
+            NSMutableArray *buildArray = [RMMapper mutableArrayOfClass:[BuildModel class]
+                                                fromArrayOfDictionary:c.build_list];
+            for (BuildModel *b in buildArray) {
+                NSMutableArray *houseArray = [RMMapper mutableArrayOfClass:[HouseModel class]
+                                                      fromArrayOfDictionary:b.house_list];
+                b.houseArray = houseArray;
+            }
+            c.buildArray = buildArray;
+        }
+
+    return commArray;
+}
+
 @end

@@ -124,6 +124,8 @@
             [userModel saveValue:user.house_number ForKey:@"house_number"];
             [userModel saveValue:user.carport_number ForKey:@"carport_number"];
             [userModel saveValue:user.name ForKey:@"name"];
+            [userModel saveValue:user.nickname ForKey:@"nickname"];
+            [userModel saveValue:user.address ForKey:@"address"];
             [userModel saveValue:user.tel ForKey:@"tel"];
             [userModel saveValue:user.pwd ForKey:@"pwd"];
             [userModel saveValue:user.avatar ForKey:@"avatar"];
@@ -133,6 +135,7 @@
             [userModel saveValue:user.plate_number ForKey:@"plate_number"];
             [userModel saveValue:user.credits ForKey:@"credits"];
             [userModel saveValue:user.remark ForKey:@"remark"];
+            [userModel saveValue:user.checkin ForKey:@"checkin"];
             
             UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"登录提醒"
                                                          message:errorMessage

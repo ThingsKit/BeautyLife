@@ -18,6 +18,9 @@
 #import "ProvinceModel.h"
 #import "CityModel.h"
 #import "RegionModel.h"
+#import "CommunityModel.h"
+#import "BuildModel.h"
+#import "HouseModel.h"
 
 @interface Tool : NSObject
 
@@ -97,5 +100,6 @@
 
 + (User *)readJsonStrToUser:(NSString *)str;
 + (NSMutableArray *)readJsonStrToRegionArray:(NSString *)str;
++ (NSMutableArray *)readJsonStrToCommunityArray:(NSString *)str;
 
 @end

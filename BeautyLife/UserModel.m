@@ -91,7 +91,11 @@ static UserModel * instance = nil;
 -(NSString *)getUserValueForKey:(NSString *)key
 {
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    return [user objectForKey:key];
+    NSString *value = [user objectForKey:key];
+    if (value == nil) {
+        value = @"";
+    }
+    return value;
 }
 
 -(void)removeUserValueForKey:(NSString *)key

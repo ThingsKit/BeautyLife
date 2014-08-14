@@ -126,8 +126,9 @@
     switch (errorCode) {
         case 1:
         {
-            [[UserModel Instance] saveIsLogin:YES];
+//            [[UserModel Instance] saveIsLogin:YES];
             [[UserModel Instance] saveAccount:self.mobileTf.text andPwd:self.pwdTf.text];
+            [[UserModel Instance] saveValue:self.mobileTf.text ForKey:@"tel"];
             UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"注册提醒"
                                                          message:[NSString stringWithFormat:@"%@，%@", errorMessage, @"并已登录"]
                                                         delegate:nil

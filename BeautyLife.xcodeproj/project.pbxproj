@@ -322,6 +322,9 @@
 		14A32A2D198CBB2600497E5C /* onlineorderbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A32A2B198CBB2600497E5C /* onlineorderbtn@2x.png */; };
 		14AF581519908CF3000B4BB7 /* NoticeFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF581319908CF3000B4BB7 /* NoticeFrameView.m */; };
 		14AF581619908CF3000B4BB7 /* NoticeFrameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14AF581419908CF3000B4BB7 /* NoticeFrameView.xib */; };
+		14B4C39D199AFD2000D8591F /* CommunityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B4C39C199AFD2000D8591F /* CommunityModel.m */; };
+		14B4C3A0199AFDCF00D8591F /* BuildModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B4C39F199AFDCF00D8591F /* BuildModel.m */; };
+		14B4C3A3199AFE1300D8591F /* HouseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B4C3A2199AFE1300D8591F /* HouseModel.m */; };
 		14B56CFD1991188E00F7C601 /* NoticeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B56CFB1991188E00F7C601 /* NoticeTableCell.m */; };
 		14B56CFE1991188E00F7C601 /* NoticeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B56CFC1991188E00F7C601 /* NoticeTableCell.xib */; };
 		14B56D0219912D0000F7C601 /* NewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B56D0019912D0000F7C601 /* NewsTableView.m */; };
@@ -885,6 +888,12 @@
 		14AF581219908CF3000B4BB7 /* NoticeFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeFrameView.h; sourceTree = "<group>"; };
 		14AF581319908CF3000B4BB7 /* NoticeFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeFrameView.m; sourceTree = "<group>"; };
 		14AF581419908CF3000B4BB7 /* NoticeFrameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeFrameView.xib; sourceTree = "<group>"; };
+		14B4C39B199AFD2000D8591F /* CommunityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityModel.h; sourceTree = "<group>"; };
+		14B4C39C199AFD2000D8591F /* CommunityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityModel.m; sourceTree = "<group>"; };
+		14B4C39E199AFDCF00D8591F /* BuildModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildModel.h; sourceTree = "<group>"; };
+		14B4C39F199AFDCF00D8591F /* BuildModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildModel.m; sourceTree = "<group>"; };
+		14B4C3A1199AFE1300D8591F /* HouseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseModel.h; sourceTree = "<group>"; };
+		14B4C3A2199AFE1300D8591F /* HouseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseModel.m; sourceTree = "<group>"; };
 		14B56CFA1991188E00F7C601 /* NoticeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeTableCell.h; sourceTree = "<group>"; };
 		14B56CFB1991188E00F7C601 /* NoticeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeTableCell.m; sourceTree = "<group>"; };
 		14B56CFC1991188E00F7C601 /* NoticeTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeTableCell.xib; sourceTree = "<group>"; };
@@ -964,8 +973,8 @@
 				1445B8CB1986269500C4417C /* CoreGraphics.framework in Frameworks */,
 				1445B8CD1986269500C4417C /* UIKit.framework in Frameworks */,
 				1445B8C91986269500C4417C /* Foundation.framework in Frameworks */,
-				1445BA181986294A00C4417C /* KeyboardManager.framework in Frameworks */,
 				1445BA9619862EE100C4417C /* AGCommon.framework in Frameworks */,
+				1445BA181986294A00C4417C /* KeyboardManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1715,6 +1724,7 @@
 		1445BAA419862F0900C4417C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				14B4C39A199AFCEE00D8591F /* CommunityModel */,
 				141D9893199A632B00E15C61 /* AreaModel */,
 				1445BAA519862F1A00C4417C /* SettingModel.h */,
 				1445BAA619862F1A00C4417C /* SettingModel.m */,
@@ -1942,6 +1952,19 @@
 				149ED4AB1987737D0097F2AF /* MainPageView.xib */,
 			);
 			name = MainPage;
+			sourceTree = "<group>";
+		};
+		14B4C39A199AFCEE00D8591F /* CommunityModel */ = {
+			isa = PBXGroup;
+			children = (
+				14B4C39B199AFD2000D8591F /* CommunityModel.h */,
+				14B4C39C199AFD2000D8591F /* CommunityModel.m */,
+				14B4C39E199AFDCF00D8591F /* BuildModel.h */,
+				14B4C39F199AFDCF00D8591F /* BuildModel.m */,
+				14B4C3A1199AFE1300D8591F /* HouseModel.h */,
+				14B4C3A2199AFE1300D8591F /* HouseModel.m */,
+			);
+			name = CommunityModel;
 			sourceTree = "<group>";
 		};
 		14EF642F1987EBA20006257D /* StewardPage */ = {
@@ -2247,6 +2270,7 @@
 				1445B9B7198627D000C4417C /* NSUserDefaults+RMSaveCustomObject.m in Sources */,
 				1445BA6C19862E5A00C4417C /* JSNotifier.m in Sources */,
 				1445BA131986291700C4417C /* StrikeThroughLabel.m in Sources */,
+				14B4C39D199AFD2000D8591F /* CommunityModel.m in Sources */,
 				1445BA071986290500C4417C /* AFImageRequestOperation.m in Sources */,
 				143069581999BF2500A1F1B1 /* LoginView.m in Sources */,
 				1445B97C1986278A00C4417C /* MWGridCell.m in Sources */,
@@ -2335,6 +2359,7 @@
 				1445BA5E19862E0E00C4417C /* LoadingCell.m in Sources */,
 				04952CBB199321F80030534B /* BusinessCell.m in Sources */,
 				141D988C199A493400E15C61 /* ProvinceModel.m in Sources */,
+				14B4C3A0199AFDCF00D8591F /* BuildModel.m in Sources */,
 				1445B97E1986278A00C4417C /* MWPhoto.m in Sources */,
 				1445BB021986315C00C4417C /* JSONKit.m in Sources */,
 				1445B8FE1986276A00C4417C /* ZJSwitch.m in Sources */,
@@ -2344,6 +2369,7 @@
 				14B905841991D7910087B09D /* MySendExpressView.m in Sources */,
 				149ED4AC1987737D0097F2AF /* MainPageView.m in Sources */,
 				1445BA6719862E4B00C4417C /* TQImageCache.m in Sources */,
+				14B4C3A3199AFE1300D8591F /* HouseModel.m in Sources */,
 				1445BA6119862E0E00C4417C /* Tool.m in Sources */,
 				04952CD6199364250030534B /* GoodsDetailView.m in Sources */,
 				1445B9611986278A00C4417C /* PSTCollectionViewData.m in Sources */,
@@ -2530,6 +2556,12 @@
 					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
 					Framework,
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeautyLife/BeautyLife-Prefix.pch";
@@ -2573,6 +2605,12 @@
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/Extend/QQConnectSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/UI",
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
 					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",

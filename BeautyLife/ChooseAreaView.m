@@ -13,6 +13,8 @@
 @end
 
 @implementation ChooseAreaView
+@synthesize communityLb;
+@synthesize regionLb;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -45,6 +47,21 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    UserModel *usermodel = [UserModel Instance];
+    NSString *provinceStr = [usermodel getUserValueForKey:@"selectProvinceStr"];
+    NSString *cityStr = [usermodel getUserValueForKey:@"selectCityStr"];
+    NSString *regionStr = [usermodel getUserValueForKey:@"selectRegionStr"];
+    NSString *communityStr = [usermodel getUserValueForKey:@"selectCommunityStr"];
+    if (regionStr != nil && [regionStr length] > 0)
+    {
+        self.regionLb.text = [NSString stringWithFormat:@"%@%@%@", provinceStr, cityStr, regionStr];
+        self.communityLb.text = communityStr;
+    }
 }
 
 - (void)didReceiveMemoryWarning

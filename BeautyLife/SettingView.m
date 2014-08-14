@@ -119,6 +119,11 @@
             break;
         case 3:
         {
+            if (![[UserModel Instance] isLogin])
+            {
+                [Tool showCustomHUD:@"请先登录" andView:self.view andImage:@"37x-Failure.png" andAfterDelay:2];
+                return;
+            }
             UserInfoView *userinfoView = [[UserInfoView alloc] init];
             userinfoView.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:userinfoView animated:YES];
@@ -150,9 +155,35 @@
         {
 
         }
+            break;
         case 9:
         {
 
+        }
+            break;
+        case 10:
+        {
+            
+        }
+            break;
+        case 11:
+        {
+            
+        }
+            break;
+        case 12:
+        {
+            if (![[UserModel Instance] isLogin])
+            {
+                [Tool showCustomHUD:@"请先登录" andView:self.view andImage:@"37x-Failure.png" andAfterDelay:2];
+            }
+            else
+            {
+                [ASIHTTPRequest setSessionCookies:nil];
+                [ASIHTTPRequest clearSession];
+                [[UserModel Instance] saveIsLogin:NO];
+                [Tool showCustomHUD:@"注销成功" andView:self.view andImage:@"37x-Checkmark.png" andAfterDelay:2];
+            }
         }
             break;
         default:

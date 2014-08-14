@@ -15,6 +15,8 @@
 @property (nonatomic, retain) NSString *house_number;
 @property (nonatomic, retain) NSString *carport_number;
 @property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *nickname;
+@property (nonatomic, retain) NSString *address;
 @property (nonatomic, retain) NSString *tel;
 @property (nonatomic, retain) NSString *pwd;
 @property (nonatomic, retain) NSString *avatar;
@@ -27,6 +29,7 @@
 @property (nonatomic, retain) NSString *remark;
 @property (nonatomic, retain) NSString *login_times;
 @property (nonatomic, retain) NSString *last_login_time;
+@property (nonatomic, retain) NSString *checkin;
 
 @property (nonatomic, retain) NSString *info;
 @property (nonatomic, retain) NSNumber *status;
