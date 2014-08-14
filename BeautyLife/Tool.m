@@ -582,4 +582,16 @@
     return commArray;
 }
 
++ (NSMutableArray *)readJsonStrToADV:(NSString *)str
+{
+    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSArray *advJsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if ( advJsonArray == nil || [advJsonArray count] <= 0) {
+        return nil;
+    }
+    NSMutableArray *advs = [RMMapper mutableArrayOfClass:[Advertisement class] fromArrayOfDictionary:advJsonArray];
+    return advs;
+}
+
 @end

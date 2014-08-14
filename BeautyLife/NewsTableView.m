@@ -14,6 +14,9 @@
 
 @implementation NewsTableView
 
+@synthesize newsTable;
+@synthesize catalog;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -28,7 +31,6 @@
     [super viewDidLoad];
     self.newsTable.dataSource = self;
     self.newsTable.delegate = self;
-//    self.view.backgroundColor = [Tool getBackgroundColor];
     //    设置无分割线
     self.newsTable.separatorStyle = UITableViewCellSeparatorStyleNone;
 }

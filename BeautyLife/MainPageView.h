@@ -11,11 +11,21 @@
 #import "RepairsFrameView.h"
 #import "NoticeFrameView.h"
 #import "ExpressView.h"
+#import "SGFocusImageFrame.h"
+#import "SGFocusImageItem.h"
+#import "ADVDetailView.h"
 
-
-@interface MainPageView : UIViewController
+@interface MainPageView : UIViewController<SGFocusImageFrameDelegate>
+{
+    NSMutableArray *advDatas;
+    SGFocusImageFrame *bannerView;
+    int advIndex;
+    
+    MBProgressHUD *hud;
+}
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIImageView *advIv;
 @property (strong, nonatomic) IBOutlet UILabel *menuBg;
 
 #pragma mark -按钮点击事件
@@ -35,4 +45,7 @@
 
 #pragma mark 联盟商家
 - (IBAction)clickBusiness:(UIButton *)sender;
+
+- (IBAction)advDetailAction:(id)sender;
+
 @end

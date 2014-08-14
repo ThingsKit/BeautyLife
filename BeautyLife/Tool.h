@@ -21,6 +21,7 @@
 #import "CommunityModel.h"
 #import "BuildModel.h"
 #import "HouseModel.h"
+#import "Advertisement.h"
 
 @interface Tool : NSObject
 
@@ -101,5 +102,6 @@
 + (User *)readJsonStrToUser:(NSString *)str;
 + (NSMutableArray *)readJsonStrToRegionArray:(NSString *)str;
 + (NSMutableArray *)readJsonStrToCommunityArray:(NSString *)str;
++ (NSMutableArray *)readJsonStrToADV:(NSString *)str;
 
 @end

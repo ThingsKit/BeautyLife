@@ -286,6 +286,8 @@
 		1445BB021986315C00C4417C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445BAFB1986315C00C4417C /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1445BB031986315C00C4417C /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1445BAFC1986315C00C4417C /* libBPush.a */; };
 		1445BB041986315C00C4417C /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445BAFE1986315C00C4417C /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		145049EF199CEFF100C24440 /* ADVDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145049ED199CEFF100C24440 /* ADVDetailView.m */; };
+		145049F0199CEFF100C24440 /* ADVDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145049EE199CEFF100C24440 /* ADVDetailView.xib */; };
 		149ED4AC1987737D0097F2AF /* MainPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 149ED4AA1987737D0097F2AF /* MainPageView.m */; };
 		149ED4AD1987737D0097F2AF /* MainPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 149ED4AB1987737D0097F2AF /* MainPageView.xib */; };
 		149ED4B0198776750097F2AF /* maingoodbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 149ED4AE198776750097F2AF /* maingoodbg@2x.png */; };
@@ -322,6 +324,7 @@
 		14A32A2D198CBB2600497E5C /* onlineorderbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A32A2B198CBB2600497E5C /* onlineorderbtn@2x.png */; };
 		14AF581519908CF3000B4BB7 /* NoticeFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF581319908CF3000B4BB7 /* NoticeFrameView.m */; };
 		14AF581619908CF3000B4BB7 /* NoticeFrameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14AF581419908CF3000B4BB7 /* NoticeFrameView.xib */; };
+		14B26779199C9B7F005159EA /* Advertisement.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B26778199C9B7F005159EA /* Advertisement.m */; };
 		14B4C39D199AFD2000D8591F /* CommunityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B4C39C199AFD2000D8591F /* CommunityModel.m */; };
 		14B4C3A0199AFDCF00D8591F /* BuildModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B4C39F199AFDCF00D8591F /* BuildModel.m */; };
 		14B4C3A3199AFE1300D8591F /* HouseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B4C3A2199AFE1300D8591F /* HouseModel.m */; };
@@ -846,6 +849,9 @@
 		1445BAFC1986315C00C4417C /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
 		1445BAFD1986315C00C4417C /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
 		1445BAFE1986315C00C4417C /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		145049EC199CEFF100C24440 /* ADVDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADVDetailView.h; sourceTree = "<group>"; };
+		145049ED199CEFF100C24440 /* ADVDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADVDetailView.m; sourceTree = "<group>"; };
+		145049EE199CEFF100C24440 /* ADVDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADVDetailView.xib; sourceTree = "<group>"; };
 		149ED4A91987737D0097F2AF /* MainPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageView.h; sourceTree = "<group>"; };
 		149ED4AA1987737D0097F2AF /* MainPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageView.m; sourceTree = "<group>"; };
 		149ED4AB1987737D0097F2AF /* MainPageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainPageView.xib; sourceTree = "<group>"; };
@@ -888,6 +894,8 @@
 		14AF581219908CF3000B4BB7 /* NoticeFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeFrameView.h; sourceTree = "<group>"; };
 		14AF581319908CF3000B4BB7 /* NoticeFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeFrameView.m; sourceTree = "<group>"; };
 		14AF581419908CF3000B4BB7 /* NoticeFrameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeFrameView.xib; sourceTree = "<group>"; };
+		14B26777199C9B7F005159EA /* Advertisement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Advertisement.h; sourceTree = "<group>"; };
+		14B26778199C9B7F005159EA /* Advertisement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Advertisement.m; sourceTree = "<group>"; };
 		14B4C39B199AFD2000D8591F /* CommunityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityModel.h; sourceTree = "<group>"; };
 		14B4C39C199AFD2000D8591F /* CommunityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityModel.m; sourceTree = "<group>"; };
 		14B4C39E199AFDCF00D8591F /* BuildModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildModel.h; sourceTree = "<group>"; };
@@ -973,8 +981,8 @@
 				1445B8CB1986269500C4417C /* CoreGraphics.framework in Frameworks */,
 				1445B8CD1986269500C4417C /* UIKit.framework in Frameworks */,
 				1445B8C91986269500C4417C /* Foundation.framework in Frameworks */,
-				1445BA9619862EE100C4417C /* AGCommon.framework in Frameworks */,
 				1445BA181986294A00C4417C /* KeyboardManager.framework in Frameworks */,
+				1445BA9619862EE100C4417C /* AGCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1732,6 +1740,8 @@
 				1445BAA819862F1A00C4417C /* UserModel.m */,
 				143069521999BD0300A1F1B1 /* User.h */,
 				143069531999BD0300A1F1B1 /* User.m */,
+				14B26777199C9B7F005159EA /* Advertisement.h */,
+				14B26778199C9B7F005159EA /* Advertisement.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1950,6 +1960,9 @@
 				149ED4A91987737D0097F2AF /* MainPageView.h */,
 				149ED4AA1987737D0097F2AF /* MainPageView.m */,
 				149ED4AB1987737D0097F2AF /* MainPageView.xib */,
+				145049EC199CEFF100C24440 /* ADVDetailView.h */,
+				145049ED199CEFF100C24440 /* ADVDetailView.m */,
+				145049EE199CEFF100C24440 /* ADVDetailView.xib */,
 			);
 			name = MainPage;
 			sourceTree = "<group>";
@@ -2095,6 +2108,7 @@
 				04CED72619908BC600E35D7C /* SubtleView.xib in Resources */,
 				1430694F1999B7DF00A1F1B1 /* 37x-Failure.png in Resources */,
 				142277DB1989DED9007242A2 /* ChooseAreaView.xib in Resources */,
+				145049F0199CEFF100C24440 /* ADVDetailView.xib in Resources */,
 				04952CD2199354110030534B /* business_buy.png in Resources */,
 				14EF64251987E5E00006257D /* cuttingline@2x.png in Resources */,
 				1419F4331988C5E100D3E5E3 /* RegisterView.xib in Resources */,
@@ -2385,6 +2399,7 @@
 				1445BA0D1986290500C4417C /* AFURLConnectionOperation.m in Sources */,
 				1445BA5B19862E0E00C4417C /* DataSingleton.m in Sources */,
 				1445B96C1986278A00C4417C /* MKAnnotationView+WebCache.m in Sources */,
+				14B26779199C9B7F005159EA /* Advertisement.m in Sources */,
 				1445BA0F1986290500C4417C /* UIImageView+AFNetworking.m in Sources */,
 				1445B9701986278A00C4417C /* SDWebImageCompat.m in Sources */,
 				1445B9841986278A00C4417C /* NSString+STRegex.m in Sources */,
@@ -2395,6 +2410,7 @@
 				1445BAAA19862F1A00C4417C /* UserModel.m in Sources */,
 				14B9ACE1198F5C3500F67E97 /* MyRepairsCell.m in Sources */,
 				1445B9AB198627A400C4417C /* Reachability.m in Sources */,
+				145049EF199CEFF100C24440 /* ADVDetailView.m in Sources */,
 				1445B9B8198627D000C4417C /* RMMapper.m in Sources */,
 				1445B9761986278A00C4417C /* UIButton+WebCache.m in Sources */,
 				1445BAA919862F1A00C4417C /* SettingModel.m in Sources */,
@@ -2562,6 +2578,8 @@
 					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
 					Framework,
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeautyLife/BeautyLife-Prefix.pch";
@@ -2605,6 +2623,8 @@
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/Extend/QQConnectSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/UI",
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
 					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",

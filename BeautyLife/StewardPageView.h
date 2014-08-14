@@ -11,10 +11,20 @@
 #import "RepairsFrameView.h"
 #import "NoticeFrameView.h"
 #import "ExpressView.h"
+#import "SGFocusImageFrame.h"
+#import "SGFocusImageItem.h"
 
-@interface StewardPageView : UIViewController
+@interface StewardPageView : UIViewController<SGFocusImageFrameDelegate>
+{
+    NSMutableArray *advDatas;
+    SGFocusImageFrame *bannerView;
+    int advIndex;
+    
+    MBProgressHUD *hud;
+}
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIImageView *advIv;
 @property (strong, nonatomic) IBOutlet UIView *menuBg;
 @property (strong, nonatomic) IBOutlet UILabel *telBg;
 

@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StewardPageView">
             <connections>
+                <outlet property="advIv" destination="Mel-l9-Y9T" id="6uS-Cs-Wqf"/>
                 <outlet property="menuBg" destination="KGA-PO-UCw" id="vWP-OA-YfH"/>
                 <outlet property="scrollView" destination="uXJ-vK-0aR" id="JyA-sQ-bXj"/>
                 <outlet property="telBg" destination="jvY-K9-OvP" id="HxL-t0-86D"/>
@@ -22,7 +23,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="328" height="494"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stewardtop.png" id="Mel-l9-Y9T">
+                        <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stewardtop.png" id="Mel-l9-Y9T">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="145"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
