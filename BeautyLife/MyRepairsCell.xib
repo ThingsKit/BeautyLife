@@ -22,20 +22,20 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2014年8月4日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I7w-eu-WMF">
-                        <rect key="frame" x="13" y="11" width="134" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I7w-eu-WMF">
+                        <rect key="frame" x="13" y="11" width="161" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="家中门锁需要更换，请及时上门维修。家中门锁需要更换，请及时上门维修。" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UNG-md-jRx">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UNG-md-jRx">
                         <rect key="frame" x="13" y="33" width="211" height="36"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="维修人：周大伟" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PKx-KT-QH4">
-                        <rect key="frame" x="13" y="69" width="202" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PKx-KT-QH4">
+                        <rect key="frame" x="13" y="69" width="218" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.094117647060000004" green="0.31372549020000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -68,6 +68,10 @@
             <connections>
                 <outlet property="bgLb" destination="Fyj-Wk-cV8" id="3PE-qy-j62"/>
                 <outlet property="gradeLb" destination="mMe-5M-qVz" id="EuT-aH-RaI"/>
+                <outlet property="repairsNoLb" destination="I7w-eu-WMF" id="aGV-G5-8ZL"/>
+                <outlet property="statusTextLb" destination="Emo-w6-8sK" id="ISA-fe-sen"/>
+                <outlet property="summaryLb" destination="UNG-md-jRx" id="bWt-4e-wOT"/>
+                <outlet property="weixiuInfoLb" destination="PKx-KT-QH4" id="yF7-cj-bgX"/>
             </connections>
         </tableViewCell>
     </objects>

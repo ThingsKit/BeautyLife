@@ -45,6 +45,7 @@
     [super viewDidLoad];
     //下属控件初始化
     self.repairsView = [[RepairsFormView alloc] init];
+    self.repairsView.parentView = self.view;
     self.myRepairsView = [[MyRepairsView alloc] init];
     self.myRepairsView.view.hidden = YES;
     [self addChildViewController:self.repairsView];

@@ -7,9 +7,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepairsFormView">
             <connections>
+                <outlet property="addressLb" destination="0r4-Dv-IiK" id="i7g-Ps-FeT"/>
                 <outlet property="bgView" destination="rxq-OG-AZu" id="vSE-YW-u7p"/>
                 <outlet property="descTv" destination="Ias-Zg-Fbx" id="7w3-3x-Bnh"/>
+                <outlet property="nameLb" destination="jGN-6L-eSb" id="yQT-l5-nK4"/>
                 <outlet property="scrollView" destination="CqX-nv-fsi" id="0lK-Qz-CGA"/>
+                <outlet property="selectCateBtn" destination="Nf3-VL-1CO" id="iSd-cb-NUu"/>
+                <outlet property="selectPhoneBtn" destination="ShG-dY-EBt" id="D9R-Ic-v6p"/>
+                <outlet property="submitBtn" destination="EwS-Qi-zje" id="gXT-jz-Ob5"/>
+                <outlet property="timeLb" destination="52j-Xa-PY8" id="JDw-YK-KgD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,7 +46,7 @@
                                     <rect key="frame" x="0.0" y="39" width="300" height="5"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2014年08月01日 12:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="52j-Xa-PY8">
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="52j-Xa-PY8">
                                     <rect key="frame" x="150" y="10" width="141" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -52,13 +58,13 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张建军（13777777777）" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jGN-6L-eSb">
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jGN-6L-eSb">
                                     <rect key="frame" x="72" y="52" width="206" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="双湾国际2栋202室" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0r4-Dv-IiK">
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0r4-Dv-IiK">
                                     <rect key="frame" x="72" y="68" width="219" height="37"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -74,10 +80,13 @@
                                     <rect key="frame" x="73" y="112" width="207" height="27"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <state key="normal" title="照明设置" backgroundImage="prepayBtnBg.png">
+                                    <state key="normal" title="选择类型" backgroundImage="prepayBtnBg.png">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="selectTypeAction:" destination="-1" eventType="touchUpInside" id="fLP-Tg-sqF"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="维修描述：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ks1-Ab-mv3">
                                     <rect key="frame" x="0.0" y="147" width="72" height="21"/>
@@ -104,6 +113,9 @@
                                     <state key="normal" image="onlineorderbtn.png">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="submitAction:" destination="-1" eventType="touchUpInside" id="19q-le-LTh"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NyM-P7-BVb">
                                     <rect key="frame" x="9" y="301" width="136" height="50"/>
@@ -125,6 +137,9 @@
                                     <state key="normal" image="repairspic.png">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="selectPhoneAction:" destination="-1" eventType="touchUpInside" id="VKk-xq-HsX"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

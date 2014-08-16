@@ -10,10 +10,12 @@
 #import "CheckNetwork.h"
 #import "MainPageView.h"
 #import "StewardPageView.h"
+#import "BMapKit.h"
+#import <sys/xattr.h>
 #import "LifePageView.h"
 #import "SettingView.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, BMKGeneralDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UITabBarController *tabBarController;

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BMapKit.h"
 
-@interface BusinessView : UIViewController
+@interface BusinessView : UIViewController<UITableViewDelegate,UITableViewDataSource,BMKLocationServiceDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

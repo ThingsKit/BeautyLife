@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NoticeTableCell.h"
+#import "NewsDetailView.h"
 
 @interface NewsTableView : UIViewController<UITableViewDelegate,UITableViewDataSource,EGORefreshTableHeaderDelegate,MBProgressHUDDelegate>
 {

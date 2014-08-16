@@ -40,6 +40,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.74117647058823533" green="0.76862745098039209" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
+                <outlet property="summaryLb" destination="OCn-Xu-XNC" id="s79-Zf-eAg"/>
                 <outlet property="titleLb" destination="p95-Rg-Jdc" id="dYS-bp-h22"/>
             </connections>
         </tableViewCell>

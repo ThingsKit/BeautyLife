@@ -45,6 +45,14 @@
 #define api_upload_avatar @"/upload_avatar"
 #define api_getadv @"/get_adv"
 #define api_getadvinfo @"/get_adv_info"
+#define api_getnoticelist @"/get_notice_list"
+#define api_getactivitylist @"/get_activity_list"
+#define api_getnoticeinfo @"/get_notice_info"
+#define api_getbaixiucate @"/get_baoxiu_cate"
+#define api_addbaoxiu @"/add_baoxiu"
+#define api_mybaoxiu @"/my_baoxiu_list"
+#define api_getbaoxiuinfo @"/get_baoxiu_info"
+
 
 #define AreaListKey @"AreList"
 
@@ -53,6 +61,9 @@
 #define NoticeTableCellIdentifier @"NoticeTableCellIdentifier"
 #define MySendExpressCellIdentifier @"MySendExpressCellIdentifier"
 #define BusinessDetailCellIdentifier @"BusinessDetailCellIdentifier"
+#define RepairsItemCellIdentifier @"RepairsItemCellIdentifier"
+
+#define Notification_RefreshMyRepairs @"Notification_RefreshMyRepairs"
 
 #define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 

@@ -44,26 +44,28 @@
 {
     [super viewDidLoad];
     //下属控件初始化
-    self.ticeView = [[NewsTableView alloc] init];
+    self.noticeView = [[NewsTableView alloc] init];
+    self.noticeView.catalog = 1;
     self.activityView = [[NewsTableView alloc] init];
+    self.activityView.catalog = 2;
     self.activityView.view.hidden = YES;
-    [self addChildViewController:self.ticeView];
+    [self addChildViewController:self.noticeView];
     [self addChildViewController:self.activityView];
-    [self.mainView addSubview:self.ticeView.view];
+    [self.mainView addSubview:self.noticeView.view];
     [self.mainView addSubview:self.activityView.view];
 }
 
 - (IBAction)noticeAction:(id)sender {
     [self.noticeBtn setTitleColor:[UIColor colorWithRed:255.0/255.0 green:127.0/255.0 blue:0.0/255.0 alpha:1.0] forState:UIControlStateNormal];
     [self.activityBtn setTitleColor:[UIColor scrollViewTexturedBackgroundColor] forState:UIControlStateNormal];
-    self.ticeView.view.hidden = NO;
+    self.noticeView.view.hidden = NO;
     self.activityView.view.hidden = YES;
 }
 
 - (IBAction)activityAction:(id)sender {
     [self.noticeBtn setTitleColor:[UIColor scrollViewTexturedBackgroundColor] forState:UIControlStateNormal];
     [self.activityBtn setTitleColor:[UIColor colorWithRed:255.0/255.0 green:127.0/255.0 blue:0.0/255.0 alpha:1.0] forState:UIControlStateNormal];
-    self.ticeView.view.hidden = YES;
+    self.noticeView.view.hidden = YES;
     self.activityView.view.hidden = NO;
 }
 

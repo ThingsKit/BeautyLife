@@ -22,6 +22,10 @@
 #import "BuildModel.h"
 #import "HouseModel.h"
 #import "Advertisement.h"
+#import "News.h"
+#import "RepairsCate.h"
+#import "RepairsList.h"
+#import "RepairsItem.h"
 
 @interface Tool : NSObject
 
@@ -103,5 +107,9 @@
 + (NSMutableArray *)readJsonStrToRegionArray:(NSString *)str;
 + (NSMutableArray *)readJsonStrToCommunityArray:(NSString *)str;
 + (NSMutableArray *)readJsonStrToADV:(NSString *)str;
++ (NSMutableArray *)readJsonStrToNews:(NSString *)str;
++ (NSMutableArray *)readJsonStrToRepairsCate:(NSString *)str;
++ (NSMutableArray *)readJsonStrToMyRepairs:(NSString *)str;
++ (NSMutableArray *)readJsonStrToRepairItems:(NSString *)str;
 
 @end

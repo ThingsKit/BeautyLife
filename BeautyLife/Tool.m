@@ -594,4 +594,52 @@
     return advs;
 }
 
++ (NSMutableArray *)readJsonStrToNews:(NSString *)str
+{
+    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSArray *newsJsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if ( newsJsonArray == nil || [newsJsonArray count] <= 0) {
+        return nil;
+    }
+    NSMutableArray *newsArray = [RMMapper mutableArrayOfClass:[News class] fromArrayOfDictionary:newsJsonArray];
+    return newsArray;
+}
+
++ (NSMutableArray *)readJsonStrToRepairsCate:(NSString *)str
+{
+    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSArray *cateJsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if ( cateJsonArray == nil || [cateJsonArray count] <= 0) {
+        return nil;
+    }
+    NSMutableArray *cateArray = [RMMapper mutableArrayOfClass:[RepairsCate class] fromArrayOfDictionary:cateJsonArray];
+    return cateArray;
+}
+
++ (NSMutableArray *)readJsonStrToMyRepairs:(NSString *)str
+{
+    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSArray *myJsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if ( myJsonArray == nil || [myJsonArray count] <= 0) {
+        return nil;
+    }
+    NSMutableArray *myArray = [RMMapper mutableArrayOfClass:[RepairsList class] fromArrayOfDictionary:myJsonArray];
+    return myArray;
+}
+
++ (NSMutableArray *)readJsonStrToRepairItems:(NSString *)str
+{
+    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSArray *itemJsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if ( itemJsonArray == nil || [itemJsonArray count] <= 0) {
+        return nil;
+    }
+    NSMutableArray *itemArray = [RMMapper mutableArrayOfClass:[RepairsItem class] fromArrayOfDictionary:itemJsonArray];
+    return itemArray;
+}
+
 @end

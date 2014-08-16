@@ -113,11 +113,11 @@
     NSString *homeAddressStr = self.homeAddressLb.text;
     NSString *emailStr = self.emailTf.text;
     NSString *idcodeStr = self.idCodeTf.text;
-    if ([emailStr length] > 0 && [emailStr isValidEmail]) {
+    if ([emailStr length] > 0 && ![emailStr isValidEmail]) {
         [Tool showCustomHUD:@"邮箱格式错误" andView:self.view  andImage:@"37x-Failure.png" andAfterDelay:1];
         return;
     }
-    if ([idcodeStr length] > 0 && [idcodeStr isValidIdCardNum]) {
+    if ([idcodeStr length] > 0 && ![idcodeStr isValidIdCardNum]) {
         [Tool showCustomHUD:@"身份证格式错误" andView:self.view  andImage:@"37x-Failure.png" andAfterDelay:1];
         return;
     }
@@ -131,7 +131,7 @@
     [request setPostValue:[usermodel getUserValueForKey:@"tel"] forKey:@"tel"];
     [request setPostValue:[usermodel getUserValueForKey:@"selectCommunityId"] forKey:@"cid"];
     [request setPostValue:[usermodel getUserValueForKey:@"selectBuildId"] forKey:@"build_id"];
-    [request setPostValue:[usermodel getUserValueForKey:@"selectHouseId"] forKey:@"house_number"];
+    [request setPostValue:[usermodel getUserValueForKey:@"selectHouseStr"] forKey:@"house_number"];
     [request setPostValue:emailStr forKey:@"email"];
     [request setPostValue:idcodeStr forKey:@"card_id"];
     [request setPostValue:nameStr forKey:@"name"];
@@ -182,7 +182,7 @@
             UserModel *userModel = [UserModel Instance];
             [userModel saveValue:[userModel getUserValueForKey:@"selectCommunityId"] ForKey:@"cid"];
             [userModel saveValue:[userModel getUserValueForKey:@"selectBuildId"] ForKey:@"build_id"];
-            [userModel saveValue:[userModel getUserValueForKey:@"selectHouseId"] ForKey:@"house_number"];
+            [userModel saveValue:[userModel getUserValueForKey:@"selectHouseStr"] ForKey:@"house_number"];
             [userModel saveValue:self.nameTf.text ForKey:@"name"];
             [userModel saveValue:self.nicknameTf.text ForKey:@"nickname"];
             [userModel saveValue:self.homeAddressLb.text ForKey:@"address"];

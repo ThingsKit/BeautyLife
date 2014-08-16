@@ -32,7 +32,7 @@
         UIBarButtonItem *btnBack = [[UIBarButtonItem alloc]initWithCustomView:lBtn];
         self.navigationItem.leftBarButtonItem = btnBack;
         
-        UIButton *rBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 63, 22)];
+        UIButton *rBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 58, 26)];
         //[rBtn addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
         [rBtn setImage:[UIImage imageNamed:@"conv_order_share"] forState:UIControlStateNormal];
         UIBarButtonItem *btnShare = [[UIBarButtonItem alloc]initWithCustomView:rBtn];

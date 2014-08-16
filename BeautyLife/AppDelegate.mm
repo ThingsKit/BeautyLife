@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+BMKMapManager* _mapManager;
+
 @implementation AppDelegate
 @synthesize mainPage;
 @synthesize stewardPage;
@@ -29,7 +31,7 @@
     //精管家
     self.stewardPage = [[StewardPageView alloc] initWithNibName:@"StewardPageView" bundle:nil];
     stewardPage.tabBarItem.image = [UIImage imageNamed:@"tab_steward"];
-    stewardPage.tabBarItem.title = @"精管家";
+    stewardPage.tabBarItem.title = @"金管家";
     UINavigationController *stewardPageNav = [[UINavigationController alloc] initWithRootViewController:self.stewardPage];
     //精管家
     self.lifePage = [[LifePageView alloc] initWithNibName:@"LifePageView" bundle:nil];
@@ -59,6 +61,19 @@
         [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"top_bg"]  forBarMetrics:UIBarMetricsDefault];
         [[self.tabBarController tabBar] setBackgroundImage:[UIImage imageNamed:@"tabbar_bg"]];
     }
+    
+    // 要使用百度地图，请先启动BaiduMapManager
+	_mapManager = [[BMKMapManager alloc]init];
+	BOOL ret = [_mapManager start:@"mHvrWc0BMGNrMAjqGhGQvNpr" generalDelegate:self];
+	if (!ret) {
+		NSLog(@"manager start failed!");
+	}
+    //设置目录不进行IOS自动同步！否则审核不能通过
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *directory = [NSString stringWithFormat:@"%@/cfg", [paths objectAtIndex:0]];
+    NSURL *dbURLPath = [NSURL fileURLWithPath:directory];
+    [self addSkipBackupAttributeToItemAtURL:dbURLPath];
+    [self addSkipBackupAttributeToPath:directory];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setRootViewController:self.tabBarController ];
@@ -92,6 +107,24 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)addSkipBackupAttributeToItemAtURL:(NSURL *)URL
+{
+    assert([[NSFileManager defaultManager] fileExistsAtPath: [URL path]]);
+    
+    NSError *error = nil;
+    BOOL success = [URL setResourceValue: [NSNumber numberWithBool: YES]
+                                  forKey: NSURLIsExcludedFromBackupKey error: &error];
+    if(!success){
+        NSLog(@"Error excluding %@ from backup %@", [URL lastPathComponent], error);
+    }
+    return success;
+}
+
+- (void)addSkipBackupAttributeToPath:(NSString*)path {
+    u_int8_t b = 1;
+    setxattr([path fileSystemRepresentation], "com.apple.MobileBackup", &b, 1, 0, 0);
 }
 
 @end

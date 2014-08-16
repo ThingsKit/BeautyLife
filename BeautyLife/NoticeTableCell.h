@@ -11,5 +11,6 @@
 @interface NoticeTableCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLb;
+@property (weak, nonatomic) IBOutlet UILabel *summaryLb;
 
 @end
