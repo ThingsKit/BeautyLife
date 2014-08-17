@@ -128,12 +128,20 @@
 }
 
 - (IBAction)stewardFeeAction:(id)sender {
+    if ([UserModel Instance].isLogin == NO) {
+        [Tool noticeLogin:self.view andDelegate:self andTitle:@""];
+        return;
+    }
     StewardFeeFrameView *feeFrame = [[StewardFeeFrameView alloc] init];
     feeFrame.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:feeFrame animated:YES];
 }
 
 - (IBAction)repairsAction:(id)sender {
+    if ([UserModel Instance].isLogin == NO) {
+        [Tool noticeLogin:self.view andDelegate:self andTitle:@""];
+        return;
+    }
     RepairsFrameView *repairsFrame = [[RepairsFrameView alloc] init];
     repairsFrame.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:repairsFrame animated:YES];
@@ -149,6 +157,11 @@
     ExpressView *expressView = [[ExpressView alloc] init];
     expressView.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:expressView animated:YES];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [Tool processLoginNotice:actionSheet andButtonIndex:buttonIndex andNav:self.navigationController andParent:nil];
 }
 
 @end

@@ -21,4 +21,8 @@
 @property (nonatomic, retain) NSString *comment;
 @property (nonatomic, retain) NSString *type_text;
 
+@property (nonatomic, retain) NSString *thumb;
+@property (nonatomic, retain) NSString *accept_time;
+@property (nonatomic, retain) NSString *weixiu_time;
+
 @end

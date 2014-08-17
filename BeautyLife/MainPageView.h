@@ -15,7 +15,7 @@
 #import "SGFocusImageItem.h"
 #import "ADVDetailView.h"
 
-@interface MainPageView : UIViewController<SGFocusImageFrameDelegate>
+@interface MainPageView : UIViewController<SGFocusImageFrameDelegate, UIActionSheetDelegate>
 {
     NSMutableArray *advDatas;
     SGFocusImageFrame *bannerView;

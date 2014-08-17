@@ -14,6 +14,8 @@
 #import <CommonCrypto/CommonCryptor.h>
 #import "RMMapper.h"
 #import <ShareSDK/ShareSDK.h>
+#import "LoginView.h"
+#import "RegisterView.h"
 #import "User.h"
 #import "ProvinceModel.h"
 #import "CityModel.h"

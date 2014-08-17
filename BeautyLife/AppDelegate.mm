@@ -23,6 +23,8 @@ BMKMapManager* _mapManager;
     [UserModel Instance].isNetworkRunning = [CheckNetwork isExistenceNetwork];
     //显示系统托盘
     [application setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+    //获取并保存用户信息
+    [self saveUserInfo];
     //首页
     self.mainPage = [[MainPageView alloc] initWithNibName:@"MainPageView" bundle:nil];
     mainPage.tabBarItem.image = [UIImage imageNamed:@"tab_main"];
@@ -107,6 +109,59 @@ BMKMapManager* _mapManager;
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)saveUserInfo
+{
+    UserModel *usermodel = [UserModel Instance];
+    if ([usermodel isLogin]) {
+        NSString *userinfoUrl = [NSString stringWithFormat:@"%@%@?APPKey=%@&tel=%@", api_base_url, api_getuserinfo, appkey, [usermodel getUserValueForKey:@"tel"]];
+        ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:userinfoUrl]];
+        [request setDelegate:self];
+        [request setDidFailSelector:@selector(requestFailed:)];
+        [request setDidFinishSelector:@selector(requestUserinfo:)];
+        [request startAsynchronous];
+    }
+}
+
+- (void)requestFailed:(ASIHTTPRequest *)request
+{
+
+}
+- (void)requestUserinfo:(ASIHTTPRequest *)request
+{
+    [request setUseCookiePersistence:YES];
+    NSData *data = [request.responseString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if (!json) {
+        return;
+    }
+    User *user = [Tool readJsonStrToUser:request.responseString];
+    int userid = [user.id intValue];
+    if (userid > 0) {
+        //设置登录并保存用户信息
+        UserModel *userModel = [UserModel Instance];
+        [userModel saveIsLogin:YES];
+        [userModel saveValue:user.id ForKey:@"id"];
+        [userModel saveValue:user.cid ForKey:@"cid"];
+        [userModel saveValue:user.build_id ForKey:@"build_id"];
+        [userModel saveValue:user.house_number ForKey:@"house_number"];
+        [userModel saveValue:user.carport_number ForKey:@"carport_number"];
+        [userModel saveValue:user.name ForKey:@"name"];
+        [userModel saveValue:user.nickname ForKey:@"nickname"];
+        [userModel saveValue:user.address ForKey:@"address"];
+        [userModel saveValue:user.tel ForKey:@"tel"];
+        [userModel saveValue:user.pwd ForKey:@"pwd"];
+        [userModel saveValue:user.avatar ForKey:@"avatar"];
+        [userModel saveValue:user.email ForKey:@"email"];
+        [userModel saveValue:user.card_id ForKey:@"card_id"];
+        [userModel saveValue:user.property ForKey:@"property"];
+        [userModel saveValue:user.plate_number ForKey:@"plate_number"];
+        [userModel saveValue:user.credits ForKey:@"credits"];
+        [userModel saveValue:user.remark ForKey:@"remark"];
+        [userModel saveValue:user.checkin ForKey:@"checkin"];
+    }
 }
 
 - (BOOL)addSkipBackupAttributeToItemAtURL:(NSURL *)URL

@@ -155,13 +155,13 @@
 {
     NSString *buttonTitle = [actionSheet buttonTitleAtIndex:buttonIndex];
     if ([buttonTitle isEqualToString:@"登录"]) {
-//        LoginView *loginView = [[LoginView alloc] init];
-//        [nav pushViewController:loginView animated:YES];
+        LoginView *loginView = [[LoginView alloc] init];
+        [nav pushViewController:loginView animated:YES];
     }
     else if([buttonTitle isEqualToString:@"注册"])
     {
-//        RegisterView *regView = [[RegisterView alloc] init];
-//        [nav pushViewController:regView animated:YES];
+        RegisterView *regView = [[RegisterView alloc] init];
+        [nav pushViewController:regView animated:YES];
     }
 }
 

@@ -93,6 +93,8 @@
 		1419F4351988C67000D3E5E3 /* beautylifelogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1419F4341988C67000D3E5E3 /* beautylifelogo@2x.png */; };
 		1419F4371988CBC700D3E5E3 /* securitycode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1419F4361988CBC700D3E5E3 /* securitycode@2x.png */; };
 		1419F4391988D49F00D3E5E3 /* registerbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1419F4381988D49F00D3E5E3 /* registerbtn@2x.png */; };
+		141D62E819A09F4E008B0945 /* RepairsRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 141D62E619A09F4E008B0945 /* RepairsRateView.m */; };
+		141D62E919A09F4E008B0945 /* RepairsRateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 141D62E719A09F4E008B0945 /* RepairsRateView.xib */; };
 		141D988C199A493400E15C61 /* ProvinceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 141D988B199A493400E15C61 /* ProvinceModel.m */; };
 		141D988F199A497700E15C61 /* CityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 141D988E199A497700E15C61 /* CityModel.m */; };
 		141D9892199A49A300E15C61 /* RegionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 141D9891199A49A300E15C61 /* RegionModel.m */; };
@@ -489,6 +491,9 @@
 		1419F4341988C67000D3E5E3 /* beautylifelogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beautylifelogo@2x.png"; sourceTree = "<group>"; };
 		1419F4361988CBC700D3E5E3 /* securitycode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "securitycode@2x.png"; sourceTree = "<group>"; };
 		1419F4381988D49F00D3E5E3 /* registerbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "registerbtn@2x.png"; sourceTree = "<group>"; };
+		141D62E519A09F4E008B0945 /* RepairsRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepairsRateView.h; sourceTree = "<group>"; };
+		141D62E619A09F4E008B0945 /* RepairsRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepairsRateView.m; sourceTree = "<group>"; };
+		141D62E719A09F4E008B0945 /* RepairsRateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepairsRateView.xib; sourceTree = "<group>"; };
 		141D988A199A493400E15C61 /* ProvinceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvinceModel.h; sourceTree = "<group>"; };
 		141D988B199A493400E15C61 /* ProvinceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvinceModel.m; sourceTree = "<group>"; };
 		141D988D199A497700E15C61 /* CityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityModel.h; sourceTree = "<group>"; };
@@ -1035,8 +1040,8 @@
 				1445B8CB1986269500C4417C /* CoreGraphics.framework in Frameworks */,
 				1445B8CD1986269500C4417C /* UIKit.framework in Frameworks */,
 				1445B8C91986269500C4417C /* Foundation.framework in Frameworks */,
-				1445BA9619862EE100C4417C /* AGCommon.framework in Frameworks */,
 				1445BA181986294A00C4417C /* KeyboardManager.framework in Frameworks */,
+				1445BA9619862EE100C4417C /* AGCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2089,6 +2094,9 @@
 				146F7C30199FB90500926CA2 /* RepairsItemCell.h */,
 				146F7C31199FB90500926CA2 /* RepairsItemCell.m */,
 				146F7C32199FB90500926CA2 /* RepairsItemCell.xib */,
+				141D62E519A09F4E008B0945 /* RepairsRateView.h */,
+				141D62E619A09F4E008B0945 /* RepairsRateView.m */,
+				141D62E719A09F4E008B0945 /* RepairsRateView.xib */,
 				14AF581219908CF3000B4BB7 /* NoticeFrameView.h */,
 				14AF581319908CF3000B4BB7 /* NoticeFrameView.m */,
 				14AF581419908CF3000B4BB7 /* NoticeFrameView.xib */,
@@ -2291,6 +2299,7 @@
 				04CAC3CC198C92540031E956 /* conv_order_online@2x.png in Resources */,
 				146F7C34199FB90500926CA2 /* RepairsItemCell.xib in Resources */,
 				14B9058A1991DBB10087B09D /* MySendExpressCell.xib in Resources */,
+				141D62E919A09F4E008B0945 /* RepairsRateView.xib in Resources */,
 				04CED7451990B6EA00E35D7C /* jingxuan3.png in Resources */,
 				04952CC719932C3C0030534B /* business_map.png in Resources */,
 				146F7C3B199FBB9B00926CA2 /* ritem-1@2x.png in Resources */,
@@ -2454,6 +2463,7 @@
 				1445B9771986278A00C4417C /* UIImage+GIF.m in Sources */,
 				14B56D0219912D0000F7C601 /* NewsTableView.m in Sources */,
 				04CAC3D1198CB9B40031E956 /* RechargeView.m in Sources */,
+				141D62E819A09F4E008B0945 /* RepairsRateView.m in Sources */,
 				04952CCC19934FBF0030534B /* BusinessDetailCell.m in Sources */,
 				04952CE9199373090030534B /* BusinessDetailView.m in Sources */,
 				1445B9C41986281900C4417C /* NSData+CommonCrypto.m in Sources */,
@@ -2694,6 +2704,8 @@
 					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
 					Framework,
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeautyLife/BeautyLife-Prefix.pch";
@@ -2737,6 +2749,8 @@
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/Extend/QQConnectSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/UI",
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
 					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",

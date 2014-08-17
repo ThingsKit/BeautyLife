@@ -29,6 +29,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    usermodel = [UserModel Instance];
+    //用户是否已认证，已认证后才能报修
+    if (![[usermodel getUserValueForKey:@"checkin"] isEqualToString:@"1"]) {
+        self.payfeeBtn.enabled = NO;
+        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"温馨提醒"
+                                                     message:@"您的入住信息暂未审核通过，暂未能在线费，请联系客户服务中心！"
+                                                    delegate:nil
+                                           cancelButtonTitle:@"确定"
+                                           otherButtonTitles:nil];
+        [av show];
+    }
     [Tool roundView:self.bgView andCornerRadius:3.0];
     self.scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.width, self.view.frame.size.height);
 }

@@ -14,7 +14,7 @@
 #import "SGFocusImageFrame.h"
 #import "SGFocusImageItem.h"
 
-@interface StewardPageView : UIViewController<SGFocusImageFrameDelegate>
+@interface StewardPageView : UIViewController<SGFocusImageFrameDelegate, UIActionSheetDelegate>
 {
     NSMutableArray *advDatas;
     SGFocusImageFrame *bannerView;

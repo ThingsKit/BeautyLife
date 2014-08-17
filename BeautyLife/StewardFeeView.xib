@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StewardFeeView">
             <connections>
                 <outlet property="bgView" destination="mLc-qf-4ta" id="yEp-Ly-nye"/>
+                <outlet property="payfeeBtn" destination="LLP-dI-zif" id="5Wd-0q-P5w"/>
                 <outlet property="scrollView" destination="Lmt-kA-nrH" id="iq8-kc-8nZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

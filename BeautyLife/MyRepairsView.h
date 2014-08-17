@@ -11,6 +11,7 @@
 #import "RepairsList.h"
 #import "AMRatingControl.h"
 #import "RepairsItemView.h"
+#import "RepairsRateView.h"
 
 @interface MyRepairsView : UIViewController<UITableViewDataSource, UITableViewDelegate>
 {

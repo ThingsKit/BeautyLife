@@ -125,9 +125,17 @@
 {
     RepairsList *myRepair = [myRepairsData objectAtIndex:[indexPath row]];
     if (myRepair) {
-        RepairsItemView *repairsItem = [[RepairsItemView alloc] init];
-        repairsItem.repair = myRepair;
-        [self.navigationController pushViewController:repairsItem animated:YES];
+        if ([myRepair.status isEqualToString:@"维修完成"]) {
+            RepairsRateView *rateView = [[RepairsRateView alloc] init];
+            rateView.repair = myRepair;
+            [self.navigationController pushViewController:rateView animated:YES];
+        }
+        else
+        {
+            RepairsItemView *repairsItem = [[RepairsItemView alloc] init];
+            repairsItem.repair = myRepair;
+            [self.navigationController pushViewController:repairsItem animated:YES];
+        }
     }
 }
 

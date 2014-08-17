@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface StewardFeeView : UIViewController
+{
+    UserModel *usermodel;
+}
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIView *bgView;
+@property (weak, nonatomic) IBOutlet UIButton *payfeeBtn;
 
 @end

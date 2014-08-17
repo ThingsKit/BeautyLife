@@ -28,10 +28,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    usermodel = [UserModel Instance];
+    
+    //用户是否已认证，已认证后才能报修
+    if (![[usermodel getUserValueForKey:@"checkin"] isEqualToString:@"1"]) {
+        self.submitBtn.enabled = NO;
+        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"温馨提醒"
+                                                     message:@"您的入住信息暂未审核通过，暂未能提交报修信息，请联系客户服务中心！"
+                                                    delegate:nil
+                                           cancelButtonTitle:@"确定"
+                                           otherButtonTitles:nil];
+        [av show];
+    }
+    
     [Tool roundView:self.bgView andCornerRadius:3.0];
     [Tool roundTextView:self.descTv andBorderWidth:1 andCornerRadius:4.0];
     self.scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.width, self.view.frame.size.height);
-    usermodel = [UserModel Instance];
+    
     self.nameLb.text = [NSString stringWithFormat:@"%@（%@）", [usermodel getUserValueForKey:@"name"], [usermodel getUserValueForKey:@"tel"]];
     self.addressLb.text = [usermodel getUserValueForKey:@"address"];
     _timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(timerFunc) userInfo:nil repeats:YES];
