@@ -8,7 +8,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExpressView">
             <connections>
                 <outlet property="bgView" destination="rqX-Wx-WuD" id="EIg-tO-CnU"/>
+                <outlet property="descTv" destination="wwt-po-swu" id="6o7-bw-vvf"/>
+                <outlet property="faceIv" destination="LVj-iz-OhM" id="DDo-9p-C2J"/>
+                <outlet property="nameLb" destination="8om-7Z-vQB" id="hIK-Vf-VQU"/>
                 <outlet property="scrollView" destination="RRx-Pd-CVW" id="x6V-eX-27e"/>
+                <outlet property="sendBtn" destination="ilK-Wk-21N" id="nWT-KL-cSO"/>
+                <outlet property="typeBtn" destination="tww-dw-m9d" id="fJg-P2-HbM"/>
+                <outlet property="userInfoLb" destination="lTf-zZ-1t1" id="QdG-Y5-NC3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -51,13 +57,6 @@
                                     <color key="textColor" red="0.094117647060000004" green="0.31372549020000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(zhangkai1234)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z9w-nn-tVw">
-                                    <rect key="frame" x="143" y="53" width="123" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13777777777    5栋1515业主(142.34㎡)" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lTf-zZ-1t1">
                                     <rect key="frame" x="77" y="74" width="216" height="34"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -77,6 +76,9 @@
                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="selectTypeAction:" destination="-1" eventType="touchUpInside" id="JGx-x5-ML9"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您的快递类型" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HgH-cL-aCK">
                                     <rect key="frame" x="20" y="129" width="182" height="21"/>
@@ -104,6 +106,9 @@
                                     <state key="normal" image="onlineorderbtn.png">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="sendAction:" destination="-1" eventType="touchUpInside" id="6bf-x7-5Ky"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Jhb-Tk-9s1">
                                     <rect key="frame" x="9" y="281" width="136" height="50"/>

@@ -8,12 +8,25 @@
 
 #import <UIKit/UIKit.h>
 #import "MySendExpressView.h"
+#import "EGOImageView.h"
 
-@interface ExpressView : UIViewController
+@interface ExpressView : UIViewController<UIActionSheetDelegate, UIPickerViewDelegate>
+{
+    NSArray *typeData;
+    NSString *typeStr;
+}
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *bgView;
+@property (weak, nonatomic) IBOutlet UIImageView *faceIv;
+@property (weak, nonatomic) IBOutlet UILabel *nameLb;
+@property (weak, nonatomic) IBOutlet UILabel *userInfoLb;
+@property (weak, nonatomic) IBOutlet UIButton *typeBtn;
+@property (weak, nonatomic) IBOutlet UITextField *descTv;
+@property (weak, nonatomic) IBOutlet UIButton *sendBtn;
 
 - (IBAction)mySendExpressAction:(id)sender;
+- (IBAction)sendAction:(id)sender;
+- (IBAction)selectTypeAction:(id)sender;
 
 @end

@@ -56,6 +56,8 @@
 #define api_commentbaoxiu @"/comment_baoxiu"
 #define api_mypropertyfee @"/my_property_fee"
 #define api_myparkfee @"/my_car_fee"
+#define api_addmyoutbox @"/add_my_outbox"
+#define api_myoutbox @"my_outbox“
 
 #define AreaListKey @"AreList"
 

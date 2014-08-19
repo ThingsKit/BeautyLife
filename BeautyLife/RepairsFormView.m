@@ -216,7 +216,7 @@
     switch (errorCode) {
         case 1:
         {
-            [Tool showCustomHUD:@"已提交报修" andView:self.view  andImage:@"37x-Checkmark.png" andAfterDelay:3];
+            [Tool showCustomHUD:@"提交报修成功" andView:self.view  andImage:@"37x-Checkmark.png" andAfterDelay:3];
             self.descTv.text = @"";
             [self.selectPhoneBtn setImage:[UIImage imageNamed:@"repairspic.png"] forState:UIControlStateNormal];
             //通知刷新我的保修单
