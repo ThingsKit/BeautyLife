@@ -28,6 +28,8 @@
 #import "RepairsCate.h"
 #import "RepairsList.h"
 #import "RepairsItem.h"
+#import "PropertyFeeInfo.h"
+#import "CarFeeInfo.h"
 
 @interface Tool : NSObject
 
@@ -103,6 +105,8 @@
 
 + (void)saveCache:(NSString *)catalog andType:(int)type andID:(int)_id andString:(NSString *)str;
 + (NSString *)getCache:(NSString *)catalog andType:(int)type andID:(int)_id;
+//保留数值几位小数
++ (NSString *)notRounding:(float)price afterPoint:(int)position;
 + (void)shareAction:(UIButton *)sender andShowView:(UIView *)view andContent:(NSDictionary *)shareContent;
 
 + (User *)readJsonStrToUser:(NSString *)str;
@@ -113,5 +117,7 @@
 + (NSMutableArray *)readJsonStrToRepairsCate:(NSString *)str;
 + (NSMutableArray *)readJsonStrToMyRepairs:(NSString *)str;
 + (NSMutableArray *)readJsonStrToRepairItems:(NSString *)str;
++ (PropertyFeeInfo *)readJsonStrToPropertyFeeInfo:(NSString *)str;
++ (NSMutableArray *)readJsonStrToPropertyCarFeeInfo:(NSString *)str;
 
 @end

@@ -54,6 +54,8 @@
 #define api_mybaoxiu @"/my_baoxiu_list"
 #define api_getbaoxiuinfo @"/get_baoxiu_info"
 #define api_commentbaoxiu @"/comment_baoxiu"
+#define api_mypropertyfee @"/my_property_fee"
+#define api_myparkfee @"/my_car_fee"
 
 #define AreaListKey @"AreList"
 
@@ -65,6 +67,7 @@
 #define RepairsItemCellIdentifier @"RepairsItemCellIdentifier"
 
 #define Notification_RefreshMyRepairs @"Notification_RefreshMyRepairs"
+#define Notification_ShowPackAlertView @"Notification_ShowPackAlertView"
 
 #define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 

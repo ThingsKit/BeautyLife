@@ -394,6 +394,17 @@
     return value;
 }
 
++ (NSString *)notRounding:(float)price afterPoint:(int)position
+{
+    NSDecimalNumberHandler* roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundDown scale:position raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:NO];
+    NSDecimalNumber *ouncesDecimal;
+    NSDecimalNumber *roundedOunces;
+    
+    ouncesDecimal = [[NSDecimalNumber alloc] initWithFloat:price];
+    roundedOunces = [ouncesDecimal decimalNumberByRoundingAccordingToBehavior:roundingBehavior];
+    return [NSString stringWithFormat:@"%@",roundedOunces];
+}
+
 + (void)shareAction:(UIButton *)sender andShowView:(UIView *)view andContent:(NSDictionary *)shareContent {
 //    Activity *activity = [[Activity alloc] init];
     //构造分享内容
@@ -640,6 +651,30 @@
     }
     NSMutableArray *itemArray = [RMMapper mutableArrayOfClass:[RepairsItem class] fromArrayOfDictionary:itemJsonArray];
     return itemArray;
+}
+
++ (PropertyFeeInfo *)readJsonStrToPropertyFeeInfo:(NSString *)str
+{
+    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSDictionary *feeJsondDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if ( feeJsondDic == nil ) {
+        return nil;
+    }
+    PropertyFeeInfo *feeInfo = [RMMapper objectWithClass:[PropertyFeeInfo class] fromDictionary:feeJsondDic];
+    return feeInfo;
+}
+
++ (NSMutableArray *)readJsonStrToPropertyCarFeeInfo:(NSString *)str
+{
+    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSArray *feeJsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if ( feeJsonArray == nil || [feeJsonArray count] <= 0) {
+        return nil;
+    }
+    NSMutableArray *feeInfoArray = [RMMapper mutableArrayOfClass:[CarFeeInfo class] fromArrayOfDictionary:feeJsonArray];
+    return feeInfoArray;
 }
 
 @end

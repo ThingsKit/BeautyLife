@@ -44,7 +44,9 @@
     [super viewDidLoad];
     //下属控件初始化
     self.stewardView = [[StewardFeeView alloc] init];
+    self.stewardView.parentView = self.view;
     self.parkView = [[ParkFeeView alloc] init];
+    self.parkView.parentView = self.view;
     self.parkView.view.hidden = YES;
     [self addChildViewController:self.parkView];
     [self addChildViewController:self.stewardView];
@@ -83,5 +85,7 @@
     [self.stewardFeeBtn setTitleColor:[UIColor scrollViewTexturedBackgroundColor] forState:UIControlStateNormal];
     self.stewardView.view.hidden = YES;
     self.parkView.view.hidden = NO;
+    //如无停车费则提示
+    [[NSNotificationCenter defaultCenter] postNotificationName:Notification_ShowPackAlertView object:nil];
 }
 @end
