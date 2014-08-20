@@ -7,21 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0411558319A4208D00226B13 /* AlipayRsaLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0411558219A4208D00226B13 /* AlipayRsaLib.a */; };
-		048570C819A39D6E00AB28FC /* Alixpay.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 048570BD19A39D6E00AB28FC /* Alixpay.bundle */; };
-		048570CA19A39D6E00AB28FC /* PayOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 048570C019A39D6E00AB28FC /* PayOrder.m */; };
-		048570CB19A39D6E00AB28FC /* AlipayUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 048570C219A39D6E00AB28FC /* AlipayUtils.m */; };
-		048570CC19A39D6E00AB28FC /* AlixPayOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 048570C519A39D6E00AB28FC /* AlixPayOrder.m */; };
-		048570CD19A39D6E00AB28FC /* AlixPayResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 048570C719A39D6E00AB28FC /* AlixPayResult.m */; };
 		048570E619A39D9600AB28FC /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 048570E319A39D9600AB28FC /* libcrypto.a */; };
 		048570E719A39D9600AB28FC /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 048570E419A39D9600AB28FC /* libssl.a */; };
 		048570E819A39D9600AB28FC /* AlixPaylib_arc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 048570E519A39D9600AB28FC /* AlixPaylib_arc.a */; };
-		048570F719A3A24900AB28FC /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 048570EC19A3A24900AB28FC /* NSObject+SBJSON.m */; };
-		048570F819A3A24900AB28FC /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 048570EE19A3A24900AB28FC /* NSString+SBJSON.m */; };
-		048570F919A3A24900AB28FC /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 048570F019A3A24900AB28FC /* SBJSON.m */; };
-		048570FA19A3A24900AB28FC /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 048570F219A3A24900AB28FC /* SBJsonBase.m */; };
-		048570FB19A3A24900AB28FC /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 048570F419A3A24900AB28FC /* SBJsonParser.m */; };
-		048570FC19A3A24900AB28FC /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 048570F619A3A24900AB28FC /* SBJsonWriter.m */; };
 		04952CAB199313620030534B /* conv_cell_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 04952CAA199313620030534B /* conv_cell_left.png */; };
 		04952CAD1993142A0030534B /* conv_cell_loc.png in Resources */ = {isa = PBXBuildFile; fileRef = 04952CAC1993142A0030534B /* conv_cell_loc.png */; };
 		04952CBB199321F80030534B /* BusinessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952CB9199321F80030534B /* BusinessCell.m */; };
@@ -312,6 +300,18 @@
 		1445BB031986315C00C4417C /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1445BAFC1986315C00C4417C /* libBPush.a */; };
 		1445BB041986315C00C4417C /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445BAFE1986315C00C4417C /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1448A1E0199EF74900C3A1EE /* RepairsCate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448A1DF199EF74900C3A1EE /* RepairsCate.m */; };
+		1448EDB719A43AFF00361C51 /* AlipayRsaLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1448ED9B19A43AFE00361C51 /* AlipayRsaLib.a */; };
+		1448EDB819A43AFF00361C51 /* AlipayUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448ED9D19A43AFE00361C51 /* AlipayUtils.m */; };
+		1448EDB919A43AFF00361C51 /* Alixpay.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1448ED9F19A43AFE00361C51 /* Alixpay.bundle */; };
+		1448EDBA19A43AFF00361C51 /* AlixPayOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448EDA119A43AFF00361C51 /* AlixPayOrder.m */; };
+		1448EDBB19A43AFF00361C51 /* AlixPayResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448EDA319A43AFF00361C51 /* AlixPayResult.m */; };
+		1448EDBC19A43AFF00361C51 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448EDA719A43AFF00361C51 /* NSObject+SBJSON.m */; };
+		1448EDBD19A43AFF00361C51 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448EDA919A43AFF00361C51 /* NSString+SBJSON.m */; };
+		1448EDBE19A43AFF00361C51 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448EDAB19A43AFF00361C51 /* SBJSON.m */; };
+		1448EDBF19A43AFF00361C51 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448EDAD19A43AFF00361C51 /* SBJsonBase.m */; };
+		1448EDC019A43AFF00361C51 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448EDAF19A43AFF00361C51 /* SBJsonParser.m */; };
+		1448EDC119A43AFF00361C51 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448EDB119A43AFF00361C51 /* SBJsonWriter.m */; };
+		1448EDC219A43AFF00361C51 /* PayOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448EDB319A43AFF00361C51 /* PayOrder.m */; };
 		145049EF199CEFF100C24440 /* ADVDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145049ED199CEFF100C24440 /* ADVDetailView.m */; };
 		145049F0199CEFF100C24440 /* ADVDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145049EE199CEFF100C24440 /* ADVDetailView.xib */; };
 		145049F3199D080E00C24440 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 145049F2199D080E00C24440 /* News.m */; };
@@ -408,35 +408,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0411558219A4208D00226B13 /* AlipayRsaLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlipayRsaLib.a; sourceTree = "<group>"; };
-		048570BD19A39D6E00AB28FC /* Alixpay.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Alixpay.bundle; sourceTree = "<group>"; };
-		048570BF19A39D6E00AB28FC /* PayOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayOrder.h; sourceTree = "<group>"; };
-		048570C019A39D6E00AB28FC /* PayOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayOrder.m; sourceTree = "<group>"; };
-		048570C119A39D6E00AB28FC /* AlipayUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlipayUtils.h; sourceTree = "<group>"; };
-		048570C219A39D6E00AB28FC /* AlipayUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlipayUtils.m; sourceTree = "<group>"; };
-		048570C319A39D6E00AB28FC /* AlixLibService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlixLibService.h; sourceTree = "<group>"; };
-		048570C419A39D6E00AB28FC /* AlixPayOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlixPayOrder.h; sourceTree = "<group>"; };
-		048570C519A39D6E00AB28FC /* AlixPayOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlixPayOrder.m; sourceTree = "<group>"; };
-		048570C619A39D6E00AB28FC /* AlixPayResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlixPayResult.h; sourceTree = "<group>"; };
-		048570C719A39D6E00AB28FC /* AlixPayResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlixPayResult.m; sourceTree = "<group>"; };
 		048570E319A39D9600AB28FC /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		048570E419A39D9600AB28FC /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		048570E519A39D9600AB28FC /* AlixPaylib_arc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlixPaylib_arc.a; sourceTree = "<group>"; };
-		048570EA19A3A24900AB28FC /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		048570EB19A3A24900AB28FC /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
-		048570EC19A3A24900AB28FC /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
-		048570ED19A3A24900AB28FC /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
-		048570EE19A3A24900AB28FC /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
-		048570EF19A3A24900AB28FC /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
-		048570F019A3A24900AB28FC /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
-		048570F119A3A24900AB28FC /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
-		048570F219A3A24900AB28FC /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
-		048570F319A3A24900AB28FC /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
-		048570F419A3A24900AB28FC /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
-		048570F519A3A24900AB28FC /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
-		048570F619A3A24900AB28FC /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		048570FD19A3A29B00AB28FC /* DataSigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSigner.h; sourceTree = "<group>"; };
-		048570FE19A3A29B00AB28FC /* DataVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataVerifier.h; sourceTree = "<group>"; };
 		04952CAA199313620030534B /* conv_cell_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = conv_cell_left.png; sourceTree = "<group>"; };
 		04952CAC1993142A0030534B /* conv_cell_loc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = conv_cell_loc.png; sourceTree = "<group>"; };
 		04952CB8199321F80030534B /* BusinessCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessCell.h; sourceTree = "<group>"; };
@@ -936,6 +910,32 @@
 		1445BAFE1986315C00C4417C /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
 		1448A1DE199EF74900C3A1EE /* RepairsCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepairsCate.h; sourceTree = "<group>"; };
 		1448A1DF199EF74900C3A1EE /* RepairsCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepairsCate.m; sourceTree = "<group>"; };
+		1448ED9B19A43AFE00361C51 /* AlipayRsaLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlipayRsaLib.a; sourceTree = "<group>"; };
+		1448ED9C19A43AFE00361C51 /* AlipayUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlipayUtils.h; sourceTree = "<group>"; };
+		1448ED9D19A43AFE00361C51 /* AlipayUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlipayUtils.m; sourceTree = "<group>"; };
+		1448ED9E19A43AFE00361C51 /* AlixLibService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlixLibService.h; sourceTree = "<group>"; };
+		1448ED9F19A43AFE00361C51 /* Alixpay.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Alixpay.bundle; sourceTree = "<group>"; };
+		1448EDA019A43AFE00361C51 /* AlixPayOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlixPayOrder.h; sourceTree = "<group>"; };
+		1448EDA119A43AFF00361C51 /* AlixPayOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlixPayOrder.m; sourceTree = "<group>"; };
+		1448EDA219A43AFF00361C51 /* AlixPayResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlixPayResult.h; sourceTree = "<group>"; };
+		1448EDA319A43AFF00361C51 /* AlixPayResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlixPayResult.m; sourceTree = "<group>"; };
+		1448EDA519A43AFF00361C51 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		1448EDA619A43AFF00361C51 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		1448EDA719A43AFF00361C51 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		1448EDA819A43AFF00361C51 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		1448EDA919A43AFF00361C51 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		1448EDAA19A43AFF00361C51 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		1448EDAB19A43AFF00361C51 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		1448EDAC19A43AFF00361C51 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		1448EDAD19A43AFF00361C51 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		1448EDAE19A43AFF00361C51 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		1448EDAF19A43AFF00361C51 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		1448EDB019A43AFF00361C51 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		1448EDB119A43AFF00361C51 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		1448EDB219A43AFF00361C51 /* PayOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayOrder.h; sourceTree = "<group>"; };
+		1448EDB319A43AFF00361C51 /* PayOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayOrder.m; sourceTree = "<group>"; };
+		1448EDB519A43AFF00361C51 /* DataSigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSigner.h; sourceTree = "<group>"; };
+		1448EDB619A43AFF00361C51 /* DataVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataVerifier.h; sourceTree = "<group>"; };
 		145049EC199CEFF100C24440 /* ADVDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADVDetailView.h; sourceTree = "<group>"; };
 		145049ED199CEFF100C24440 /* ADVDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADVDetailView.m; sourceTree = "<group>"; };
 		145049EE199CEFF100C24440 /* ADVDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADVDetailView.xib; sourceTree = "<group>"; };
@@ -1066,7 +1066,7 @@
 				1445BA3F19862C8C00C4417C /* CoreData.framework in Frameworks */,
 				1445BAA219862EE100C4417C /* ShareSDKFlatShareViewUI.framework in Frameworks */,
 				1445BA9F19862EE100C4417C /* libWeChatSDK.a in Frameworks */,
-				0411558319A4208D00226B13 /* AlipayRsaLib.a in Frameworks */,
+				1448EDB719A43AFF00361C51 /* AlipayRsaLib.a in Frameworks */,
 				1445BA3D19862C7F00C4417C /* AVFoundation.framework in Frameworks */,
 				1445BA3B19862C7600C4417C /* AudioToolbox.framework in Frameworks */,
 				1445BA3919862C6900C4417C /* CoreText.framework in Frameworks */,
@@ -1094,8 +1094,8 @@
 				1445B8CB1986269500C4417C /* CoreGraphics.framework in Frameworks */,
 				1445B8CD1986269500C4417C /* UIKit.framework in Frameworks */,
 				1445B8C91986269500C4417C /* Foundation.framework in Frameworks */,
-				1445BA9619862EE100C4417C /* AGCommon.framework in Frameworks */,
 				1445BA181986294A00C4417C /* KeyboardManager.framework in Frameworks */,
+				1445BA9619862EE100C4417C /* AGCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1112,55 +1112,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0411558419A4209300226B13 /* json */ = {
-			isa = PBXGroup;
-			children = (
-				048570EA19A3A24900AB28FC /* JSON.h */,
-				048570EB19A3A24900AB28FC /* NSObject+SBJSON.h */,
-				048570EC19A3A24900AB28FC /* NSObject+SBJSON.m */,
-				048570ED19A3A24900AB28FC /* NSString+SBJSON.h */,
-				048570EE19A3A24900AB28FC /* NSString+SBJSON.m */,
-				048570EF19A3A24900AB28FC /* SBJSON.h */,
-				048570F019A3A24900AB28FC /* SBJSON.m */,
-				048570F119A3A24900AB28FC /* SBJsonBase.h */,
-				048570F219A3A24900AB28FC /* SBJsonBase.m */,
-				048570F319A3A24900AB28FC /* SBJsonParser.h */,
-				048570F419A3A24900AB28FC /* SBJsonParser.m */,
-				048570F519A3A24900AB28FC /* SBJsonWriter.h */,
-				048570F619A3A24900AB28FC /* SBJsonWriter.m */,
-			);
-			name = json;
-			sourceTree = "<group>";
-		};
-		0411558519A4209800226B13 /* RSA */ = {
-			isa = PBXGroup;
-			children = (
-				048570FD19A3A29B00AB28FC /* DataSigner.h */,
-				048570FE19A3A29B00AB28FC /* DataVerifier.h */,
-			);
-			name = RSA;
-			sourceTree = "<group>";
-		};
-		048570BA19A39D4B00AB28FC /* alipay */ = {
-			isa = PBXGroup;
-			children = (
-				048570BD19A39D6E00AB28FC /* Alixpay.bundle */,
-				0411558219A4208D00226B13 /* AlipayRsaLib.a */,
-				048570BF19A39D6E00AB28FC /* PayOrder.h */,
-				048570C019A39D6E00AB28FC /* PayOrder.m */,
-				048570C119A39D6E00AB28FC /* AlipayUtils.h */,
-				048570C219A39D6E00AB28FC /* AlipayUtils.m */,
-				048570C319A39D6E00AB28FC /* AlixLibService.h */,
-				048570C419A39D6E00AB28FC /* AlixPayOrder.h */,
-				048570C519A39D6E00AB28FC /* AlixPayOrder.m */,
-				048570C619A39D6E00AB28FC /* AlixPayResult.h */,
-				048570C719A39D6E00AB28FC /* AlixPayResult.m */,
-				0411558519A4209800226B13 /* RSA */,
-				0411558419A4209300226B13 /* json */,
-			);
-			name = alipay;
-			sourceTree = "<group>";
-		};
 		1419F405198881BA00D3E5E3 /* LifePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1313,11 +1264,11 @@
 				1445B8D71986269500C4417C /* AppDelegate.h */,
 				1445B8D81986269500C4417C /* AppDelegate.mm */,
 				1445B8DA1986269500C4417C /* Images.xcassets */,
+				1448ED9A19A43AFE00361C51 /* alipay */,
 				149ED4A81987733F0097F2AF /* MainPage */,
 				14EF642F1987EBA20006257D /* StewardPage */,
 				1419F405198881BA00D3E5E3 /* LifePage */,
 				1419F4131988972600D3E5E3 /* SettingPage */,
-				048570BA19A39D4B00AB28FC /* alipay */,
 				149ED4A7198773170097F2AF /* Resource */,
 				1445BAA419862F0900C4417C /* Model */,
 				1445BA4B19862DC700C4417C /* Helper */,
@@ -2021,6 +1972,55 @@
 			path = BaiduPush;
 			sourceTree = "<group>";
 		};
+		1448ED9A19A43AFE00361C51 /* alipay */ = {
+			isa = PBXGroup;
+			children = (
+				1448ED9B19A43AFE00361C51 /* AlipayRsaLib.a */,
+				1448ED9C19A43AFE00361C51 /* AlipayUtils.h */,
+				1448ED9D19A43AFE00361C51 /* AlipayUtils.m */,
+				1448ED9E19A43AFE00361C51 /* AlixLibService.h */,
+				1448ED9F19A43AFE00361C51 /* Alixpay.bundle */,
+				1448EDA019A43AFE00361C51 /* AlixPayOrder.h */,
+				1448EDA119A43AFF00361C51 /* AlixPayOrder.m */,
+				1448EDA219A43AFF00361C51 /* AlixPayResult.h */,
+				1448EDA319A43AFF00361C51 /* AlixPayResult.m */,
+				1448EDA419A43AFF00361C51 /* json */,
+				1448EDB219A43AFF00361C51 /* PayOrder.h */,
+				1448EDB319A43AFF00361C51 /* PayOrder.m */,
+				1448EDB419A43AFF00361C51 /* RSA */,
+			);
+			path = alipay;
+			sourceTree = "<group>";
+		};
+		1448EDA419A43AFF00361C51 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				1448EDA519A43AFF00361C51 /* JSON.h */,
+				1448EDA619A43AFF00361C51 /* NSObject+SBJSON.h */,
+				1448EDA719A43AFF00361C51 /* NSObject+SBJSON.m */,
+				1448EDA819A43AFF00361C51 /* NSString+SBJSON.h */,
+				1448EDA919A43AFF00361C51 /* NSString+SBJSON.m */,
+				1448EDAA19A43AFF00361C51 /* SBJSON.h */,
+				1448EDAB19A43AFF00361C51 /* SBJSON.m */,
+				1448EDAC19A43AFF00361C51 /* SBJsonBase.h */,
+				1448EDAD19A43AFF00361C51 /* SBJsonBase.m */,
+				1448EDAE19A43AFF00361C51 /* SBJsonParser.h */,
+				1448EDAF19A43AFF00361C51 /* SBJsonParser.m */,
+				1448EDB019A43AFF00361C51 /* SBJsonWriter.h */,
+				1448EDB119A43AFF00361C51 /* SBJsonWriter.m */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		1448EDB419A43AFF00361C51 /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				1448EDB519A43AFF00361C51 /* DataSigner.h */,
+				1448EDB619A43AFF00361C51 /* DataVerifier.h */,
+			);
+			path = RSA;
+			sourceTree = "<group>";
+		};
 		149ED4A7198773170097F2AF /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -2335,7 +2335,7 @@
 				142277CC1989D5EC007242A2 /* UserInfoView.xib in Resources */,
 				04952CC519932A4B0030534B /* BusinessDetailView.xib in Resources */,
 				04CAC3B7198C78CB0031E956 /* conv_ homemaking@2x.png in Resources */,
-				048570C819A39D6E00AB28FC /* Alixpay.bundle in Resources */,
+				1448EDB919A43AFF00361C51 /* Alixpay.bundle in Resources */,
 				04C9CD851991CCFA000DCDEF /* ConvCell.xib in Resources */,
 				1419F42D19889CFB00D3E5E3 /* setting_push@2x.png in Resources */,
 				14A32A0A198C85A900497E5C /* prepayBtnBg.png in Resources */,
@@ -2514,13 +2514,13 @@
 				141D9896199A635C00E15C61 /* AreaListModel.m in Sources */,
 				1445B9DB1986288400C4417C /* EGOImageLoadConnection.m in Sources */,
 				1445B9751986278A00C4417C /* SDWebImagePrefetcher.m in Sources */,
-				048570CB19A39D6E00AB28FC /* AlipayUtils.m in Sources */,
 				14343CF5199DF7F400947080 /* Shop.m in Sources */,
 				14AF581519908CF3000B4BB7 /* NoticeFrameView.m in Sources */,
 				1445B9601986278A00C4417C /* PSTCollectionViewController.m in Sources */,
 				1445B9791986278A00C4417C /* UIImage+WebP.m in Sources */,
 				1445B9731986278A00C4417C /* SDWebImageDownloaderOperation.m in Sources */,
 				143069541999BD0300A1F1B1 /* User.m in Sources */,
+				1448EDBA19A43AFF00361C51 /* AlixPayOrder.m in Sources */,
 				1445B9C91986285E00C4417C /* GCDiscreetNotificationView.m in Sources */,
 				1445B95C1986278A00C4417C /* DACircularProgressView.m in Sources */,
 				1445B9681986278A00C4417C /* PSTGridLayoutRow.m in Sources */,
@@ -2529,9 +2529,8 @@
 				1445B96E1986278A00C4417C /* NSData+ImageContentType.m in Sources */,
 				1445BA6219862E0E00C4417C /* UITap.m in Sources */,
 				1445B9B5198627D000C4417C /* NSObject+RMArchivable.m in Sources */,
-				048570FB19A3A24900AB28FC /* SBJsonParser.m in Sources */,
 				04CAC3C0198C856D0031E956 /* ConvOrderView.m in Sources */,
-				048570F719A3A24900AB28FC /* NSObject+SBJSON.m in Sources */,
+				1448EDBD19A43AFF00361C51 /* NSString+SBJSON.m in Sources */,
 				1445BA1E1986298900C4417C /* SGFocusImageFrame.m in Sources */,
 				1445B9631986278A00C4417C /* PSTCollectionViewItemKey.m in Sources */,
 				1445B8D91986269500C4417C /* AppDelegate.mm in Sources */,
@@ -2542,11 +2541,11 @@
 				1445BA091986290500C4417C /* AFJSONUtilities.m in Sources */,
 				14A32A12198C8D3B00497E5C /* ParkFeeView.m in Sources */,
 				1445B96F1986278A00C4417C /* SDImageCache.m in Sources */,
+				1448EDBC19A43AFF00361C51 /* NSObject+SBJSON.m in Sources */,
 				14B905791991C24E0087B09D /* ExpressView.m in Sources */,
 				1445B9801986278A00C4417C /* MWTapDetectingImageView.m in Sources */,
 				04CED72E1990AB9900E35D7C /* BusinessView.m in Sources */,
 				1445BA081986290500C4417C /* AFJSONRequestOperation.m in Sources */,
-				048570FC19A3A24900AB28FC /* SBJsonWriter.m in Sources */,
 				14343CE9199D9C4A00947080 /* NewsDetailView.m in Sources */,
 				1445B95E1986278A00C4417C /* PSTCollectionView.m in Sources */,
 				1445BA0A1986290500C4417C /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -2556,8 +2555,6 @@
 				04CED74B1990B7F700E35D7C /* SubtleCell.m in Sources */,
 				142277E7198A1CC5007242A2 /* StewardFeeFrameView.m in Sources */,
 				1445B9741986278A00C4417C /* SDWebImageManager.m in Sources */,
-				048570F919A3A24900AB28FC /* SBJSON.m in Sources */,
-				048570F819A3A24900AB28FC /* NSString+SBJSON.m in Sources */,
 				145049F3199D080E00C24440 /* News.m in Sources */,
 				04CAC3AA198C78AC0031E956 /* ConvView.m in Sources */,
 				1445B8D51986269500C4417C /* main.m in Sources */,
@@ -2565,7 +2562,6 @@
 				1445B9DC1986288400C4417C /* EGOImageLoader.m in Sources */,
 				1445B9E31986289300C4417C /* IconDownloader.m in Sources */,
 				146F7C27199F9CD700926CA2 /* RepairsList.m in Sources */,
-				048570CA19A39D6E00AB28FC /* PayOrder.m in Sources */,
 				14B9ACDC198F5A1F00F67E97 /* MyRepairsView.m in Sources */,
 				1445B9821986278A00C4417C /* MWZoomingScrollView.m in Sources */,
 				1445B9A2198627A400C4417C /* ASIAuthenticationDialog.m in Sources */,
@@ -2577,6 +2573,7 @@
 				141D9892199A49A300E15C61 /* RegionModel.m in Sources */,
 				1445B9DD1986288400C4417C /* EGOImageView.m in Sources */,
 				149FDA7C199A03D500BAA6D4 /* SelectHomeAddressView.m in Sources */,
+				1448EDBB19A43AFF00361C51 /* AlixPayResult.m in Sources */,
 				1445BA0C1986290500C4417C /* AFPropertyListRequestOperation.m in Sources */,
 				1445B97D1986278A00C4417C /* MWGridViewController.m in Sources */,
 				1445B9771986278A00C4417C /* UIImage+GIF.m in Sources */,
@@ -2586,6 +2583,7 @@
 				04952CCC19934FBF0030534B /* BusinessDetailCell.m in Sources */,
 				04952CE9199373090030534B /* BusinessDetailView.m in Sources */,
 				1445B9C41986281900C4417C /* NSData+CommonCrypto.m in Sources */,
+				1448EDC219A43AFF00361C51 /* PayOrder.m in Sources */,
 				14B652C119A2E1A300E49EFF /* CarFeeInfo.m in Sources */,
 				1445BB041986315C00C4417C /* OpenUDID.m in Sources */,
 				1445BA6019862E0E00C4417C /* NdUncaughtExceptionHandler.m in Sources */,
@@ -2604,6 +2602,7 @@
 				1445B9EC198628E400C4417C /* MBProgressHUD.m in Sources */,
 				1445BA1F1986298900C4417C /* SGFocusImageItem.m in Sources */,
 				1445BA051986290500C4417C /* AFHTTPClient.m in Sources */,
+				1448EDB819A43AFF00361C51 /* AlipayUtils.m in Sources */,
 				1445BA5E19862E0E00C4417C /* LoadingCell.m in Sources */,
 				04952CBB199321F80030534B /* BusinessCell.m in Sources */,
 				141D988C199A493400E15C61 /* ProvinceModel.m in Sources */,
@@ -2617,6 +2616,7 @@
 				14B905841991D7910087B09D /* MySendExpressView.m in Sources */,
 				149ED4AC1987737D0097F2AF /* MainPageView.m in Sources */,
 				1445BA6719862E4B00C4417C /* TQImageCache.m in Sources */,
+				1448EDBF19A43AFF00361C51 /* SBJsonBase.m in Sources */,
 				14B4C3A3199AFE1300D8591F /* HouseModel.m in Sources */,
 				146F7C2A199FB26500926CA2 /* RepairsItem.m in Sources */,
 				1445BA6119862E0E00C4417C /* Tool.m in Sources */,
@@ -2636,24 +2636,24 @@
 				1445BA5B19862E0E00C4417C /* DataSingleton.m in Sources */,
 				1445B96C1986278A00C4417C /* MKAnnotationView+WebCache.m in Sources */,
 				141D62EC19A108BF008B0945 /* PropertyFeeInfo.m in Sources */,
+				1448EDC019A43AFF00361C51 /* SBJsonParser.m in Sources */,
 				14B26779199C9B7F005159EA /* Advertisement.m in Sources */,
 				1445BA0F1986290500C4417C /* UIImageView+AFNetworking.m in Sources */,
 				1445B9701986278A00C4417C /* SDWebImageCompat.m in Sources */,
 				1445B9841986278A00C4417C /* NSString+STRegex.m in Sources */,
 				1445B9641986278A00C4417C /* PSTCollectionViewLayout.m in Sources */,
 				1445B9A4198627A400C4417C /* ASIDataDecompressor.m in Sources */,
-				048570CC19A39D6E00AB28FC /* AlixPayOrder.m in Sources */,
 				1445B9C31986281900C4417C /* NSData+Base64.m in Sources */,
 				1445B9651986278A00C4417C /* PSTCollectionViewUpdateItem.m in Sources */,
 				1445BAAA19862F1A00C4417C /* UserModel.m in Sources */,
+				1448EDBE19A43AFF00361C51 /* SBJSON.m in Sources */,
 				14B9ACE1198F5C3500F67E97 /* MyRepairsCell.m in Sources */,
 				1445B9AB198627A400C4417C /* Reachability.m in Sources */,
 				145049EF199CEFF100C24440 /* ADVDetailView.m in Sources */,
-				048570CD19A39D6E00AB28FC /* AlixPayResult.m in Sources */,
+				1448EDC119A43AFF00361C51 /* SBJsonWriter.m in Sources */,
 				1445B9B8198627D000C4417C /* RMMapper.m in Sources */,
 				1445B9761986278A00C4417C /* UIButton+WebCache.m in Sources */,
 				1445BAA919862F1A00C4417C /* SettingModel.m in Sources */,
-				048570FA19A3A24900AB28FC /* SBJsonBase.m in Sources */,
 				1445B9B6198627D000C4417C /* NSObject+RMCopyable.m in Sources */,
 				1445B9E41986289300C4417C /* ImgRecord.m in Sources */,
 				146F7C2E199FB48200926CA2 /* RepairsItemView.m in Sources */,
@@ -2790,7 +2790,10 @@
 		1445B8F21986269500C4417C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2803,6 +2806,8 @@
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/Extend/QQConnectSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/UI",
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
 					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
@@ -2850,8 +2855,6 @@
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/Extend/WeChatSDK",
 					"$(PROJECT_DIR)/BeautyLife",
 					"$(PROJECT_DIR)/BeautyLife/BaiduPush",
-					/Users/mac/Desktop/alipay,
-					/Users/mac/Downloads/ssllibs/merge,
 					"$(PROJECT_DIR)/BeautyLife/alipay",
 					"$(PROJECT_DIR)",
 				);
@@ -2864,7 +2867,10 @@
 		1445B8F31986269500C4417C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2877,6 +2883,8 @@
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/Extend/QQConnectSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/UI",
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
 					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
@@ -2924,8 +2932,6 @@
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/Extend/WeChatSDK",
 					"$(PROJECT_DIR)/BeautyLife",
 					"$(PROJECT_DIR)/BeautyLife/BaiduPush",
-					/Users/mac/Desktop/alipay,
-					/Users/mac/Downloads/ssllibs/merge,
 					"$(PROJECT_DIR)/BeautyLife/alipay",
 					"$(PROJECT_DIR)",
 				);
