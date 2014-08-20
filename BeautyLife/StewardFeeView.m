@@ -7,6 +7,12 @@
 //
 
 #import "StewardFeeView.h"
+#import "DataSigner.h"
+#import "AlixPayResult.h"
+#import "DataVerifier.h"
+#import "AlixPayOrder.h"
+#import "AlipayUtils.h"
+#import "PayOrder.h"
 
 @interface StewardFeeView ()
 
@@ -145,6 +151,20 @@
     catePicker.delegate = self;
     catePicker.showsSelectionIndicator = YES;
     [actionSheet addSubview:catePicker];
+}
+
+#pragma mark 付费按钮事件处理
+- (IBAction)payFeeAction:(UIButton *)sender
+{
+    PayOrder *pro = [[PayOrder alloc] init];
+    pro.subject = @"美世界物业费";
+    pro.body = @"美世界物业费在线缴纳,是美世界公司针对业主提供的便民服务,采用支付宝进行付费";
+    pro.price = 0.01;
+    pro.partnerID = @"2088511309376197";
+    pro.partnerPrivKey = @"MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBANOdyYRppMpdZI0JNEMmNA2yo0HkaP9KjcBtzvg12DmYXlQwqERSKG5ybkbiTbnow9YeE/+rjxfHMegz8ja1Q+6/1E2BTmHZItYP/2x3faD+oDLarlCuCA1NEf7qvgKIedw5kNTiAmDZtc3uaau3inZ6g9leWvBrYPJW4IdcqPmZAgMBAAECgYEAt1L/S/XVa/aCcGgj3XRQLfmu0xuUFm245ZZ7ca371tF4DolkjGN8YUpC3KeaXE8YsPq3qosuWJQZWSb/U4OvB6etpwu5aFOKd6E3D0FZqm1nfQFl9FlfalO6qiVnmJEAlEF9SYuRoDEYrGr4cFT27BB6f8dSIHd8nR6ztKYmcO0CQQDwX0dsnyMnu4YpV7aLJRL8QvBuU1NdigVAXmkzBnACRzgSKjwNp1dP6posxcfQA0pTTM7irm5/aonkrjc8nyYXAkEA4V/mc+nEb3pe+eINAjurwB44ryzEw+bj5UUlU0i/56VwnGTf18N/vBDFBnwS/YfqlMOHDN+8SvZ9rXtkymlbzwJAJL1bbGXSeMM32V/XveLXyQjuON6xkk2DSfhkOfFU83QxRM2BylB2jvd7wzYjuU6XcK3/vTQOHZmKJBLgzHpC1wJAOJxsOMWJkC7+2GnNtrfiZnmw51+pdUP0Ds0VmRv3CGroJIC6MWpsFYNo2j4kTwbrB78tlzBEDdhorUEHikh4xQJARuQ3Gs+a3/aYcUejhpSDiG6xdfhhFDBgMfpkauUvaZQB0OwTYMD6zDYvh+QHeEhAU4+jX5CM1HJchp9MMRS2Zw==";
+    pro.sellerID = @"meishenghuo@mmshijie.com";
+    
+    [AlipayUtils doPay:pro AndScheme:@"BeautyLifeAlipay" seletor:nil target:nil];
 }
 
 #pragma mark UIActionSheetDelegate
