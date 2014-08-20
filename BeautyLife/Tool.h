@@ -30,6 +30,8 @@
 #import "RepairsItem.h"
 #import "PropertyFeeInfo.h"
 #import "CarFeeInfo.h"
+#import "AlipayInfo.h"
+#import "OutExpress.h"
 
 @interface Tool : NSObject
 
@@ -110,6 +112,7 @@
 + (void)shareAction:(UIButton *)sender andShowView:(UIView *)view andContent:(NSDictionary *)shareContent;
 
 + (User *)readJsonStrToUser:(NSString *)str;
++ (AlipayInfo *)readJsonStrToAliPay:(NSString *)str;
 + (NSMutableArray *)readJsonStrToRegionArray:(NSString *)str;
 + (NSMutableArray *)readJsonStrToCommunityArray:(NSString *)str;
 + (NSMutableArray *)readJsonStrToADV:(NSString *)str;
@@ -119,5 +122,6 @@
 + (NSMutableArray *)readJsonStrToRepairItems:(NSString *)str;
 + (PropertyFeeInfo *)readJsonStrToPropertyFeeInfo:(NSString *)str;
 + (NSMutableArray *)readJsonStrToPropertyCarFeeInfo:(NSString *)str;
++ (NSMutableArray *)readJsonStrToMyOutBox:(NSString *)str;
 
 @end

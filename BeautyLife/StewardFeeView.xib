@@ -15,6 +15,7 @@
                 <outlet property="scrollView" destination="Lmt-kA-nrH" id="iq8-kc-8nZ"/>
                 <outlet property="shouldPayLb" destination="a1c-ta-pnu" id="Lg2-GL-bWM"/>
                 <outlet property="sumMoneyLb" destination="C4h-Ye-aLb" id="xd8-pD-K0y"/>
+                <outlet property="telLb" destination="x1S-Kq-okQ" id="igM-6l-fNs"/>
                 <outlet property="userInfoLb" destination="1V5-oA-xIo" id="8TX-yn-91w"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -58,7 +59,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1V5-oA-xIo">
-                                    <rect key="frame" x="77" y="76" width="216" height="34"/>
+                                    <rect key="frame" x="87" y="76" width="203" height="34"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -164,6 +165,12 @@
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                 </button>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x1S-Kq-okQ">
+                                    <rect key="frame" x="151" y="55" width="129" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>

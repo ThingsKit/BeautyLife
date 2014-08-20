@@ -43,7 +43,7 @@
 {
     //如果有网络连接
     if ([UserModel Instance].isNetworkRunning) {
-        [Tool showHUD:@"数据加载" andView:self.view andHUD:hud];
+//        [Tool showHUD:@"数据加载" andView:self.view andHUD:hud];
         NSMutableString *tempUrl = [NSMutableString stringWithFormat:@"%@%@?APPKey=%@&spaceid=2", api_base_url, api_getadv, appkey];
         NSString *cid = [[UserModel Instance] getUserValueForKey:@"cid"];
         if (cid != nil && [cid length] > 0) {
@@ -84,9 +84,9 @@
                                            [NdUncaughtExceptionHandler TakeException:exception];
                                        }
                                        @finally {
-                                           if (hud != nil) {
-                                               [hud hide:YES];
-                                           }
+//                                           if (hud != nil) {
+//                                               [hud hide:YES];
+//                                           }
                                        }
                                    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                        if ([UserModel Instance].isNetworkRunning == NO) {

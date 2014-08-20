@@ -11,5 +11,7 @@
 @interface MySendExpressCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *bgLb;
+@property (weak, nonatomic) IBOutlet UILabel *boxInfoLb;
+@property (weak, nonatomic) IBOutlet UILabel *expInfoLb;
 
 @end

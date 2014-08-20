@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *faceIv;
 @property (strong, nonatomic) UIView *parentView;
 
+@property (weak, nonatomic) IBOutlet UILabel *telLb;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIView *bgView;
 @property (weak, nonatomic) IBOutlet UIButton *payfeeBtn;

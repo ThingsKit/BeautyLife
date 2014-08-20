@@ -26,6 +26,7 @@ BMKMapManager* _mapManager;
     [application setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
     //获取并保存用户信息
     [self saveUserInfo];
+    [self saveAlipayKeyInfo];
     //首页
     self.mainPage = [[MainPageView alloc] initWithNibName:@"MainPageView" bundle:nil];
     mainPage.tabBarItem.image = [UIImage imageNamed:@"tab_main"];
@@ -129,6 +130,7 @@ BMKMapManager* _mapManager;
 {
 
 }
+
 - (void)requestUserinfo:(ASIHTTPRequest *)request
 {
     [request setUseCookiePersistence:YES];
@@ -162,6 +164,36 @@ BMKMapManager* _mapManager;
         [userModel saveValue:user.credits ForKey:@"credits"];
         [userModel saveValue:user.remark ForKey:@"remark"];
         [userModel saveValue:user.checkin ForKey:@"checkin"];
+    }
+}
+
+- (void)saveAlipayKeyInfo
+{
+    NSString *userinfoUrl = [NSString stringWithFormat:@"%@%@?APPKey=%@", api_base_url, api_getAlipay, appkey];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:userinfoUrl]];
+    [request setDelegate:self];
+    [request setDidFailSelector:@selector(requestFailed:)];
+    [request setDidFinishSelector:@selector(requestAlipayInfo:)];
+    [request startAsynchronous];
+}
+
+- (void)requestAlipayInfo:(ASIHTTPRequest *)request
+{
+    [request setUseCookiePersistence:YES];
+    NSData *data = [request.responseString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if (!json) {
+        return;
+    }
+    AlipayInfo *alipay = [Tool readJsonStrToAliPay:request.responseString];
+    if (alipay) {
+        //保存支付宝信息
+        UserModel *userModel = [UserModel Instance];
+        [userModel saveValue:alipay.DEFAULT_PARTNER ForKey:@"DEFAULT_PARTNER"];
+        [userModel saveValue:alipay.DEFAULT_SELLER ForKey:@"DEFAULT_SELLER"];
+        [userModel saveValue:alipay.PRIVATE ForKey:@"PRIVATE"];
+        [userModel saveValue:alipay.PUBLIC ForKey:@"PUBLIC"];
     }
 }
 

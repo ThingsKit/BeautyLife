@@ -46,6 +46,7 @@
     self.myExpressTable.delegate = self;
     //    设置无分割线
     self.myExpressTable.separatorStyle = UITableViewCellSeparatorStyleNone;
+    hud = [[MBProgressHUD alloc] initWithView:self.view];
     
     //设置图形上部圆角
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bgView.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(3, 3)];
@@ -53,13 +54,45 @@
     maskLayer.frame = self.bgView.bounds;
     maskLayer.path = maskPath.CGPath;
     self.bgView.layer.mask = maskLayer;
-    
+    [self reload];
+}
+
+- (void)reload
+{
+    UserModel *usermodel = [UserModel Instance];
+    [Tool showHUD:@"数据加载" andView:self.view andHUD:hud];
+    //如果有网络连接
+    if ([UserModel Instance].isNetworkRunning) {
+        NSString *url = [NSString stringWithFormat:@"%@%@?APPKey=%@&cid=%@&build_id=%@&house_number=%@", api_base_url, api_myoutbox, appkey, [usermodel getUserValueForKey:@"cid"], [usermodel getUserValueForKey:@"build_id"], [usermodel getUserValueForKey:@"house_number"]];
+        [[AFOSCClient sharedClient]getPath:url parameters:Nil
+                                   success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                       @try {
+                                           myOutExpressData = [Tool readJsonStrToMyOutBox:operation.responseString];
+                                           [self.myExpressTable reloadData];
+                                       }
+                                       @catch (NSException *exception) {
+                                           [NdUncaughtExceptionHandler TakeException:exception];
+                                       }
+                                       @finally {
+                                           if (hud != nil) {
+                                               [hud hide:YES];
+                                           }
+                                       }
+                                   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                       if ([UserModel Instance].isNetworkRunning == NO) {
+                                           return;
+                                       }
+                                       if ([UserModel Instance].isNetworkRunning) {
+                                           [Tool ToastNotification:@"错误 网络无连接" andView:self.view andLoading:NO andIsBottom:NO];
+                                       }
+                                   }];
+    }
 }
 
 #pragma TableView的处理
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return [myOutExpressData count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -85,7 +118,15 @@
             }
         }
     }
+    
     [Tool borderView:cell.bgLb];
+    OutExpress *exp = [myOutExpressData objectAtIndex:[indexPath row]];
+    NSString *timeStr = [Tool TimestampToDateStr:exp.addtime andFormatterStr:@"YYYY年MM月dd日 HH:mm"];
+    cell.boxInfoLb.text = [NSString stringWithFormat:@"您%@寄送的%@,%@", timeStr, exp.express_type, exp.status];
+    if ([exp.express_number length] > 0) {
+        cell.expInfoLb.text = [NSString stringWithFormat:@"%@  单号:%@", exp.express_company, exp.express_number];
+    }
+    
     return cell;
 }
 

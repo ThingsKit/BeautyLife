@@ -31,6 +31,7 @@
     
     usermodel = [UserModel Instance];
     self.nameLb.text = [usermodel getUserValueForKey:@"name"];
+    self.telLb.text = [NSString stringWithFormat:@"(%@)", [usermodel getUserValueForKey:@"tel"]];
     
     EGOImageView *faceEGOImageView = [[EGOImageView alloc] initWithPlaceholderImage:[UIImage imageNamed:@"userface.png"]];
     faceEGOImageView.imageURL = [NSURL URLWithString:[[UserModel Instance] getUserValueForKey:@"avatar"]];
@@ -66,9 +67,8 @@
                                                    if ([carport_number isEqualToString:@"NT"]) {
                                                        carport_number = @"租用车位";
                                                    }
-                                                   self.parkInfoLb.text = [NSString stringWithFormat:@"%@  %@  %@", [usermodel getUserValueForKey:@"tel"], feeInfo.car_number, carport_number];
-                                                   
                                                    monthFee = [feeInfo.park_fee doubleValue] * [feeInfo.discount doubleValue];
+                                                   self.parkInfoLb.text = [NSString stringWithFormat:@"%@  %@  ￥%0.2f/月", feeInfo.car_number, carport_number, monthFee];
                                                    //获得已缴月份
                                                    int endFeeMonth = [[feeInfo.fee_enddate substringWithRange:NSMakeRange(0, 4)] intValue] *12 + [[feeInfo.fee_enddate substringWithRange:NSMakeRange(5, 2)] intValue];
                                                    //获得当前月份

@@ -10,6 +10,10 @@
 #import "MySendExpressCell.h"
 
 @interface MySendExpressView : UIViewController<UITableViewDataSource, UITableViewDelegate>
+{
+    NSArray *myOutExpressData;
+    MBProgressHUD *hud;
+}
 
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 @property (weak, nonatomic) IBOutlet UITableView *myExpressTable;

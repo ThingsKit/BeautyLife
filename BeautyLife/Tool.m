@@ -541,6 +541,18 @@
     return user;
 }
 
++ (AlipayInfo *)readJsonStrToAliPay:(NSString *)str
+{
+    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSDictionary *detailDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if ( detailDic == nil) {
+        return nil;
+    }
+    AlipayInfo *alipay = [RMMapper objectWithClass:[AlipayInfo class] fromDictionary:detailDic];
+    return alipay;
+}
+
 + (NSMutableArray *)readJsonStrToRegionArray:(NSString *)str
 {
     NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
@@ -675,6 +687,18 @@
     }
     NSMutableArray *feeInfoArray = [RMMapper mutableArrayOfClass:[CarFeeInfo class] fromArrayOfDictionary:feeJsonArray];
     return feeInfoArray;
+}
+
++ (NSMutableArray *)readJsonStrToMyOutBox:(NSString *)str
+{
+    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSArray *myJsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if ( myJsonArray == nil || [myJsonArray count] <= 0) {
+        return nil;
+    }
+    NSMutableArray *myArray = [RMMapper mutableArrayOfClass:[OutExpress class] fromArrayOfDictionary:myJsonArray];
+    return myArray;
 }
 
 @end

@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		048570E619A39D9600AB28FC /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 048570E319A39D9600AB28FC /* libcrypto.a */; };
-		048570E719A39D9600AB28FC /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 048570E419A39D9600AB28FC /* libssl.a */; };
-		048570E819A39D9600AB28FC /* AlixPaylib_arc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 048570E519A39D9600AB28FC /* AlixPaylib_arc.a */; };
 		04952CAB199313620030534B /* conv_cell_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 04952CAA199313620030534B /* conv_cell_left.png */; };
 		04952CAD1993142A0030534B /* conv_cell_loc.png in Resources */ = {isa = PBXBuildFile; fileRef = 04952CAC1993142A0030534B /* conv_cell_loc.png */; };
 		04952CBB199321F80030534B /* BusinessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952CB9199321F80030534B /* BusinessCell.m */; };
@@ -312,11 +309,16 @@
 		1448EDC019A43AFF00361C51 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448EDAF19A43AFF00361C51 /* SBJsonParser.m */; };
 		1448EDC119A43AFF00361C51 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448EDB119A43AFF00361C51 /* SBJsonWriter.m */; };
 		1448EDC219A43AFF00361C51 /* PayOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448EDB319A43AFF00361C51 /* PayOrder.m */; };
+		1448EDC519A441AD00361C51 /* AlipayInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448EDC419A441AD00361C51 /* AlipayInfo.m */; };
+		1448EDC819A445B200361C51 /* OutExpress.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448EDC719A445B200361C51 /* OutExpress.m */; };
 		145049EF199CEFF100C24440 /* ADVDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145049ED199CEFF100C24440 /* ADVDetailView.m */; };
 		145049F0199CEFF100C24440 /* ADVDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145049EE199CEFF100C24440 /* ADVDetailView.xib */; };
 		145049F3199D080E00C24440 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 145049F2199D080E00C24440 /* News.m */; };
 		145049F6199D189C00C24440 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 145049F4199D189C00C24440 /* blueArrow.png */; };
 		145049F7199D189C00C24440 /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 145049F5199D189C00C24440 /* blueArrow@2x.png */; };
+		145236B419A47673008B89D5 /* AlixPaylib_arc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 145236B119A47673008B89D5 /* AlixPaylib_arc.a */; };
+		145236B519A47673008B89D5 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 145236B219A47673008B89D5 /* libssl.a */; };
+		145236B619A47673008B89D5 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 145236B319A47673008B89D5 /* libcrypto.a */; };
 		146F7C27199F9CD700926CA2 /* RepairsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 146F7C26199F9CD700926CA2 /* RepairsList.m */; };
 		146F7C2A199FB26500926CA2 /* RepairsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 146F7C29199FB26500926CA2 /* RepairsItem.m */; };
 		146F7C2E199FB48200926CA2 /* RepairsItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 146F7C2C199FB48200926CA2 /* RepairsItemView.m */; };
@@ -408,9 +410,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		048570E319A39D9600AB28FC /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
-		048570E419A39D9600AB28FC /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
-		048570E519A39D9600AB28FC /* AlixPaylib_arc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlixPaylib_arc.a; sourceTree = "<group>"; };
 		04952CAA199313620030534B /* conv_cell_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = conv_cell_left.png; sourceTree = "<group>"; };
 		04952CAC1993142A0030534B /* conv_cell_loc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = conv_cell_loc.png; sourceTree = "<group>"; };
 		04952CB8199321F80030534B /* BusinessCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessCell.h; sourceTree = "<group>"; };
@@ -936,6 +935,10 @@
 		1448EDB319A43AFF00361C51 /* PayOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayOrder.m; sourceTree = "<group>"; };
 		1448EDB519A43AFF00361C51 /* DataSigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSigner.h; sourceTree = "<group>"; };
 		1448EDB619A43AFF00361C51 /* DataVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataVerifier.h; sourceTree = "<group>"; };
+		1448EDC319A441AD00361C51 /* AlipayInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlipayInfo.h; sourceTree = "<group>"; };
+		1448EDC419A441AD00361C51 /* AlipayInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlipayInfo.m; sourceTree = "<group>"; };
+		1448EDC619A445B200361C51 /* OutExpress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutExpress.h; sourceTree = "<group>"; };
+		1448EDC719A445B200361C51 /* OutExpress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutExpress.m; sourceTree = "<group>"; };
 		145049EC199CEFF100C24440 /* ADVDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADVDetailView.h; sourceTree = "<group>"; };
 		145049ED199CEFF100C24440 /* ADVDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADVDetailView.m; sourceTree = "<group>"; };
 		145049EE199CEFF100C24440 /* ADVDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADVDetailView.xib; sourceTree = "<group>"; };
@@ -943,6 +946,9 @@
 		145049F2199D080E00C24440 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
 		145049F4199D189C00C24440 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
 		145049F5199D189C00C24440 /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
+		145236B119A47673008B89D5 /* AlixPaylib_arc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlixPaylib_arc.a; sourceTree = "<group>"; };
+		145236B219A47673008B89D5 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		145236B319A47673008B89D5 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		146F7C25199F9CD700926CA2 /* RepairsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepairsList.h; sourceTree = "<group>"; };
 		146F7C26199F9CD700926CA2 /* RepairsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepairsList.m; sourceTree = "<group>"; };
 		146F7C28199FB26500926CA2 /* RepairsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepairsItem.h; sourceTree = "<group>"; };
@@ -1075,13 +1081,13 @@
 				1445BA9419862EE100C4417C /* TencentWeiboConnection.framework in Frameworks */,
 				1445BA3719862C5900C4417C /* libxml2.dylib in Frameworks */,
 				1445BA3519862C4F00C4417C /* libicucore.dylib in Frameworks */,
-				048570E719A39D9600AB28FC /* libssl.a in Frameworks */,
+				145236B519A47673008B89D5 /* libssl.a in Frameworks */,
 				1445BA3319862C4100C4417C /* MessageUI.framework in Frameworks */,
+				145236B619A47673008B89D5 /* libcrypto.a in Frameworks */,
 				1445BA3119862C3800C4417C /* CoreLocation.framework in Frameworks */,
 				1445BA2F19862C2B00C4417C /* OpenGLES.framework in Frameworks */,
-				048570E619A39D9600AB28FC /* libcrypto.a in Frameworks */,
 				1445BA9319862EE100C4417C /* SinaWeiboConnection.framework in Frameworks */,
-				048570E819A39D9600AB28FC /* AlixPaylib_arc.a in Frameworks */,
+				145236B419A47673008B89D5 /* AlixPaylib_arc.a in Frameworks */,
 				1445BA2D19862C2200C4417C /* CoreTelephony.framework in Frameworks */,
 				1445BA9E19862EE100C4417C /* libTCWeiboSDK.a in Frameworks */,
 				1445BAF01986304700C4417C /* libbaidumapapi.a in Frameworks */,
@@ -1093,8 +1099,8 @@
 				1445BA2119862BE300C4417C /* libsqlite3.dylib in Frameworks */,
 				1445B8CB1986269500C4417C /* CoreGraphics.framework in Frameworks */,
 				1445B8CD1986269500C4417C /* UIKit.framework in Frameworks */,
-				1445B8C91986269500C4417C /* Foundation.framework in Frameworks */,
 				1445BA181986294A00C4417C /* KeyboardManager.framework in Frameworks */,
+				1445B8C91986269500C4417C /* Foundation.framework in Frameworks */,
 				1445BA9619862EE100C4417C /* AGCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1226,9 +1232,6 @@
 		1445B8C71986269500C4417C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				048570E319A39D9600AB28FC /* libcrypto.a */,
-				048570E419A39D9600AB28FC /* libssl.a */,
-				048570E519A39D9600AB28FC /* AlixPaylib_arc.a */,
 				1445BA4819862CC700C4417C /* SystemConfiguration.framework */,
 				1445BA4619862CB600C4417C /* QuartzCore.framework */,
 				1445BA4419862CAE00C4417C /* libz.dylib */,
@@ -1264,7 +1267,6 @@
 				1445B8D71986269500C4417C /* AppDelegate.h */,
 				1445B8D81986269500C4417C /* AppDelegate.mm */,
 				1445B8DA1986269500C4417C /* Images.xcassets */,
-				1448ED9A19A43AFE00361C51 /* alipay */,
 				149ED4A81987733F0097F2AF /* MainPage */,
 				14EF642F1987EBA20006257D /* StewardPage */,
 				1419F405198881BA00D3E5E3 /* LifePage */,
@@ -1274,6 +1276,7 @@
 				1445BA4B19862DC700C4417C /* Helper */,
 				1445BAAB1986303600C4417C /* BaiduMapSDK */,
 				1445BAF21986315C00C4417C /* BaiduPush */,
+				1448ED9A19A43AFE00361C51 /* alipay */,
 				1437BD4F1993417600E467DC /* AMRatingControl */,
 				1445BA6F19862EE100C4417C /* ShareSDK */,
 				1445B8FB1986276A00C4417C /* ZjSwitch */,
@@ -1873,6 +1876,10 @@
 				141D62EB19A108BF008B0945 /* PropertyFeeInfo.m */,
 				14B652BF19A2E1A300E49EFF /* CarFeeInfo.h */,
 				14B652C019A2E1A300E49EFF /* CarFeeInfo.m */,
+				1448EDC319A441AD00361C51 /* AlipayInfo.h */,
+				1448EDC419A441AD00361C51 /* AlipayInfo.m */,
+				1448EDC619A445B200361C51 /* OutExpress.h */,
+				1448EDC719A445B200361C51 /* OutExpress.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1975,6 +1982,9 @@
 		1448ED9A19A43AFE00361C51 /* alipay */ = {
 			isa = PBXGroup;
 			children = (
+				145236B119A47673008B89D5 /* AlixPaylib_arc.a */,
+				145236B219A47673008B89D5 /* libssl.a */,
+				145236B319A47673008B89D5 /* libcrypto.a */,
 				1448ED9B19A43AFE00361C51 /* AlipayRsaLib.a */,
 				1448ED9C19A43AFE00361C51 /* AlipayUtils.h */,
 				1448ED9D19A43AFE00361C51 /* AlipayUtils.m */,
@@ -2599,6 +2609,7 @@
 				1445B9A3198627A400C4417C /* ASIDataCompressor.m in Sources */,
 				1445BA5D19862E0E00C4417C /* ImageStore.m in Sources */,
 				1445B9661986278A00C4417C /* PSTGridLayoutInfo.m in Sources */,
+				1448EDC519A441AD00361C51 /* AlipayInfo.m in Sources */,
 				1445B9EC198628E400C4417C /* MBProgressHUD.m in Sources */,
 				1445BA1F1986298900C4417C /* SGFocusImageItem.m in Sources */,
 				1445BA051986290500C4417C /* AFHTTPClient.m in Sources */,
@@ -2645,6 +2656,7 @@
 				1445B9A4198627A400C4417C /* ASIDataDecompressor.m in Sources */,
 				1445B9C31986281900C4417C /* NSData+Base64.m in Sources */,
 				1445B9651986278A00C4417C /* PSTCollectionViewUpdateItem.m in Sources */,
+				1448EDC819A445B200361C51 /* OutExpress.m in Sources */,
 				1445BAAA19862F1A00C4417C /* UserModel.m in Sources */,
 				1448EDBE19A43AFF00361C51 /* SBJSON.m in Sources */,
 				14B9ACE1198F5C3500F67E97 /* MyRepairsCell.m in Sources */,
@@ -2838,6 +2850,8 @@
 					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
 					Framework,
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeautyLife/BeautyLife-Prefix.pch";
@@ -2883,6 +2897,8 @@
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/Extend/QQConnectSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/UI",
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
 					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
