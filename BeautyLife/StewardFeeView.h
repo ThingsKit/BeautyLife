@@ -35,4 +35,6 @@
 
 - (IBAction)showPresetAction:(id)sender;
 
+- (IBAction)payFeeAction:(UIButton *)sender;
+
 @end
