@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MySendExpressCell.h"
+#import "MyInBoxView.h"
 
 @interface MySendExpressView : UIViewController<UITableViewDataSource, UITableViewDelegate>
 {
@@ -15,6 +16,8 @@
     MBProgressHUD *hud;
 }
 
+@property (weak, nonatomic) IBOutlet UILabel *inboxNumLb;
+@property (weak, nonatomic) IBOutlet UILabel *inboxBtnLb;
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 @property (weak, nonatomic) IBOutlet UITableView *myExpressTable;
 

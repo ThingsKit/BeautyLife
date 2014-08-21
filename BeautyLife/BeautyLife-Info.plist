@@ -34,6 +34,26 @@
 				<string>BeautyLifeAlipay</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLIconFile</key>
+			<string>mainlogo@2x</string>
+			<key>CFBundleURLName</key>
+			<string>com.greenorange.BeautyLife</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wxea1423239d0491ff</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wb1434319718，wb801525635</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>

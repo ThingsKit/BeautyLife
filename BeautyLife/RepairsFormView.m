@@ -155,7 +155,7 @@
 - (IBAction)submitAction:(id)sender {
     NSString *descStr = self.descTv.text;
     if (cateValue == nil || [cateValue length] == 0) {
-        [Tool showCustomHUD:@"请选择保修类型" andView:self.view  andImage:@"37x-Failure.png" andAfterDelay:1];
+        [Tool showCustomHUD:@"请选择报修类型" andView:self.view  andImage:@"37x-Failure.png" andAfterDelay:1];
         return;
     }
     if (descStr == nil || [descStr length] == 0) {

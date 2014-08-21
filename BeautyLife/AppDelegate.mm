@@ -24,6 +24,11 @@ BMKMapManager* _mapManager;
     [UserModel Instance].isNetworkRunning = [CheckNetwork isExistenceNetwork];
     //显示系统托盘
     [application setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+    
+    //初始化ShareSDK
+    [ShareSDK registerApp:@"2cc31fa9badc"];
+    [self initializePlat];
+    
     //获取并保存用户信息
     [self saveUserInfo];
     [self saveAlipayKeyInfo];
@@ -216,7 +221,7 @@ BMKMapManager* _mapManager;
 }
 
 
-//独立客户端回调函数
+//支付宝独立客户端回调函数
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
     NSString * query = [[url query] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSLog(@"uoe:%@",query);
@@ -278,6 +283,34 @@ BMKMapManager* _mapManager;
 	}
     
 	return result;
+}
+
+//初始化分享
+- (void)initializePlat
+{
+    /**
+     连接新浪微博开放平台应用以使用相关功能，此应用需要引用SinaWeiboConnection.framework
+     http://open.weibo.com上注册新浪微博开放平台应用，并将相关信息填写到以下字段
+     **/
+    [ShareSDK connectSinaWeiboWithAppKey:@"1434319718"
+                               appSecret:@"c1affea9508aa4d0f8ac8d580d092592"
+                             redirectUri:@"http://house.nwclhn.com"];
+    
+    /**
+     连接腾讯微博开放平台应用以使用相关功能，此应用需要引用TencentWeiboConnection.framework
+     http://dev.t.qq.com上注册腾讯微博开放平台应用，并将相关信息填写到以下字段
+     
+     如果需要实现SSO，需要导入libWeiboSDK.a，并引入WBApi.h，将WBApi类型传入接口
+     **/
+    [ShareSDK connectTencentWeiboWithAppKey:@"801525635"
+                                  appSecret:@"c1affea9508aa4d0f8ac8d580d092592"
+                                redirectUri:@"http://house.nwclhn.com"
+                                   wbApiCls:[WeiboApi class]];
+    /**
+     连接微信应用以使用相关功能，此应用需要引用WeChatConnection.framework和微信官方SDK
+     http://open.weixin.qq.com上注册应用，并将相关信息填写以下字段
+     **/
+    [ShareSDK connectWeChatWithAppId:@"wxea1423239d0491ff" wechatCls:[WXApi class]];
 }
 
 @end

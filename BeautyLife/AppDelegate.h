@@ -14,6 +14,8 @@
 #import <sys/xattr.h>
 #import "LifePageView.h"
 #import "SettingView.h"
+#import "WXApi.h"
+#import "WeiboApi.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, BMKGeneralDelegate>
 

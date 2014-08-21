@@ -70,7 +70,8 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5XS-yg-3sh">
                     <rect key="frame" x="63" y="234" width="194" height="42"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="saveinfobtn.png">
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="完      成" backgroundImage="savebtnbg.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -85,6 +86,6 @@
     </objects>
     <resources>
         <image name="areaBtnBg.png" width="555" height="72"/>
-        <image name="saveinfobtn.png" width="194" height="42"/>
+        <image name="savebtnbg.png" width="194" height="42"/>
     </resources>
 </document>

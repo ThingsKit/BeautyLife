@@ -130,7 +130,7 @@
             [[UserModel Instance] saveAccount:self.mobileTf.text andPwd:self.pwdTf.text];
             [[UserModel Instance] saveValue:self.mobileTf.text ForKey:@"tel"];
             UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"注册提醒"
-                                                         message:[NSString stringWithFormat:@"%@，%@", errorMessage, @"并已登录"]
+                                                         message:errorMessage
                                                         delegate:nil
                                                cancelButtonTitle:@"确定"
                                                otherButtonTitles:nil];

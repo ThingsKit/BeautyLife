@@ -100,6 +100,8 @@
 		141D988F199A497700E15C61 /* CityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 141D988E199A497700E15C61 /* CityModel.m */; };
 		141D9892199A49A300E15C61 /* RegionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 141D9891199A49A300E15C61 /* RegionModel.m */; };
 		141D9896199A635C00E15C61 /* AreaListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 141D9895199A635C00E15C61 /* AreaListModel.m */; };
+		1421EA3719A4DB6C00FD21BF /* AddInboxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421EA3519A4DB6C00FD21BF /* AddInboxView.m */; };
+		1421EA3819A4DB6C00FD21BF /* AddInboxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1421EA3619A4DB6C00FD21BF /* AddInboxView.xib */; };
 		142277CB1989D5EC007242A2 /* UserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 142277C91989D5EC007242A2 /* UserInfoView.m */; };
 		142277CC1989D5EC007242A2 /* UserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 142277CA1989D5EC007242A2 /* UserInfoView.xib */; };
 		142277CE1989D7AC007242A2 /* userface.png in Resources */ = {isa = PBXBuildFile; fileRef = 142277CD1989D7AC007242A2 /* userface.png */; };
@@ -296,6 +298,7 @@
 		1445BB021986315C00C4417C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445BAFB1986315C00C4417C /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1445BB031986315C00C4417C /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1445BAFC1986315C00C4417C /* libBPush.a */; };
 		1445BB041986315C00C4417C /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445BAFE1986315C00C4417C /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1447195C19A5E1C600957066 /* savebtnbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1447195B19A5E1C600957066 /* savebtnbg@2x.png */; };
 		1448A1E0199EF74900C3A1EE /* RepairsCate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448A1DF199EF74900C3A1EE /* RepairsCate.m */; };
 		1448EDB719A43AFF00361C51 /* AlipayRsaLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1448ED9B19A43AFE00361C51 /* AlipayRsaLib.a */; };
 		1448EDB819A43AFF00361C51 /* AlipayUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448ED9D19A43AFE00361C51 /* AlipayUtils.m */; };
@@ -319,6 +322,10 @@
 		145236B419A47673008B89D5 /* AlixPaylib_arc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 145236B119A47673008B89D5 /* AlixPaylib_arc.a */; };
 		145236B519A47673008B89D5 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 145236B219A47673008B89D5 /* libssl.a */; };
 		145236B619A47673008B89D5 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 145236B319A47673008B89D5 /* libcrypto.a */; };
+		145236BA19A477F1008B89D5 /* MyInBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145236B819A477F1008B89D5 /* MyInBoxView.m */; };
+		145236BB19A477F1008B89D5 /* MyInBoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145236B919A477F1008B89D5 /* MyInBoxView.xib */; };
+		145236BD19A47D60008B89D5 /* addmyinbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 145236BC19A47D60008B89D5 /* addmyinbox@2x.png */; };
+		145236BF19A485D7008B89D5 /* ExpressCompany.plist in Resources */ = {isa = PBXBuildFile; fileRef = 145236BE19A485D7008B89D5 /* ExpressCompany.plist */; };
 		146F7C27199F9CD700926CA2 /* RepairsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 146F7C26199F9CD700926CA2 /* RepairsList.m */; };
 		146F7C2A199FB26500926CA2 /* RepairsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 146F7C29199FB26500926CA2 /* RepairsItem.m */; };
 		146F7C2E199FB48200926CA2 /* RepairsItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 146F7C2C199FB48200926CA2 /* RepairsItemView.m */; };
@@ -523,6 +530,9 @@
 		141D9891199A49A300E15C61 /* RegionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionModel.m; sourceTree = "<group>"; };
 		141D9894199A635C00E15C61 /* AreaListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaListModel.h; sourceTree = "<group>"; };
 		141D9895199A635C00E15C61 /* AreaListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaListModel.m; sourceTree = "<group>"; };
+		1421EA3419A4DB6C00FD21BF /* AddInboxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddInboxView.h; sourceTree = "<group>"; };
+		1421EA3519A4DB6C00FD21BF /* AddInboxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddInboxView.m; sourceTree = "<group>"; };
+		1421EA3619A4DB6C00FD21BF /* AddInboxView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddInboxView.xib; sourceTree = "<group>"; };
 		142277C81989D5EC007242A2 /* UserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoView.h; sourceTree = "<group>"; };
 		142277C91989D5EC007242A2 /* UserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoView.m; sourceTree = "<group>"; };
 		142277CA1989D5EC007242A2 /* UserInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoView.xib; sourceTree = "<group>"; };
@@ -907,6 +917,7 @@
 		1445BAFC1986315C00C4417C /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
 		1445BAFD1986315C00C4417C /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
 		1445BAFE1986315C00C4417C /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		1447195B19A5E1C600957066 /* savebtnbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "savebtnbg@2x.png"; sourceTree = "<group>"; };
 		1448A1DE199EF74900C3A1EE /* RepairsCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepairsCate.h; sourceTree = "<group>"; };
 		1448A1DF199EF74900C3A1EE /* RepairsCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepairsCate.m; sourceTree = "<group>"; };
 		1448ED9B19A43AFE00361C51 /* AlipayRsaLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlipayRsaLib.a; sourceTree = "<group>"; };
@@ -949,6 +960,11 @@
 		145236B119A47673008B89D5 /* AlixPaylib_arc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlixPaylib_arc.a; sourceTree = "<group>"; };
 		145236B219A47673008B89D5 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		145236B319A47673008B89D5 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		145236B719A477F1008B89D5 /* MyInBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInBoxView.h; sourceTree = "<group>"; };
+		145236B819A477F1008B89D5 /* MyInBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInBoxView.m; sourceTree = "<group>"; };
+		145236B919A477F1008B89D5 /* MyInBoxView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyInBoxView.xib; sourceTree = "<group>"; };
+		145236BC19A47D60008B89D5 /* addmyinbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addmyinbox@2x.png"; sourceTree = "<group>"; };
+		145236BE19A485D7008B89D5 /* ExpressCompany.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ExpressCompany.plist; sourceTree = "<group>"; };
 		146F7C25199F9CD700926CA2 /* RepairsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepairsList.h; sourceTree = "<group>"; };
 		146F7C26199F9CD700926CA2 /* RepairsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepairsList.m; sourceTree = "<group>"; };
 		146F7C28199FB26500926CA2 /* RepairsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepairsItem.h; sourceTree = "<group>"; };
@@ -1099,8 +1115,8 @@
 				1445BA2119862BE300C4417C /* libsqlite3.dylib in Frameworks */,
 				1445B8CB1986269500C4417C /* CoreGraphics.framework in Frameworks */,
 				1445B8CD1986269500C4417C /* UIKit.framework in Frameworks */,
-				1445BA181986294A00C4417C /* KeyboardManager.framework in Frameworks */,
 				1445B8C91986269500C4417C /* Foundation.framework in Frameworks */,
+				1445BA181986294A00C4417C /* KeyboardManager.framework in Frameworks */,
 				1445BA9619862EE100C4417C /* AGCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1307,6 +1323,7 @@
 				1445B8D11986269500C4417C /* InfoPlist.strings */,
 				1445B8D41986269500C4417C /* main.m */,
 				1445B8D61986269500C4417C /* BeautyLife-Prefix.pch */,
+				145236BE19A485D7008B89D5 /* ExpressCompany.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -2034,6 +2051,8 @@
 		149ED4A7198773170097F2AF /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				1447195B19A5E1C600957066 /* savebtnbg@2x.png */,
+				145236BC19A47D60008B89D5 /* addmyinbox@2x.png */,
 				146F7C35199FBB9B00926CA2 /* ritem-1@2x.png */,
 				146F7C36199FBB9B00926CA2 /* ritem-2@2x.png */,
 				146F7C37199FBB9B00926CA2 /* ritem-3@2x.png */,
@@ -2239,6 +2258,12 @@
 				14B905861991DBB00087B09D /* MySendExpressCell.h */,
 				14B905871991DBB00087B09D /* MySendExpressCell.m */,
 				14B905881991DBB10087B09D /* MySendExpressCell.xib */,
+				145236B719A477F1008B89D5 /* MyInBoxView.h */,
+				145236B819A477F1008B89D5 /* MyInBoxView.m */,
+				145236B919A477F1008B89D5 /* MyInBoxView.xib */,
+				1421EA3419A4DB6C00FD21BF /* AddInboxView.h */,
+				1421EA3519A4DB6C00FD21BF /* AddInboxView.m */,
+				1421EA3619A4DB6C00FD21BF /* AddInboxView.xib */,
 			);
 			name = StewardPage;
 			sourceTree = "<group>";
@@ -2374,6 +2399,7 @@
 				04CAC3CE198C92540031E956 /* conv_order_map@2x.png in Resources */,
 				1419F42419889CFB00D3E5E3 /* setting_register@2x.png in Resources */,
 				14B56D0319912D0000F7C601 /* NewsTableView.xib in Resources */,
+				1447195C19A5E1C600957066 /* savebtnbg@2x.png in Resources */,
 				142277CE1989D7AC007242A2 /* userface.png in Resources */,
 				04CED7431990B6EA00E35D7C /* jingxuan0.png in Resources */,
 				149ED4C8198781750097F2AF /* tab_my@2x.png in Resources */,
@@ -2382,6 +2408,7 @@
 				04CAC3DC198CC29C0031E956 /* online_huoche@2x.png in Resources */,
 				1445BB001986315C00C4417C /* BPushConfig.plist in Resources */,
 				142277E8198A1CC5007242A2 /* StewardFeeFrameView.xib in Resources */,
+				1421EA3819A4DB6C00FD21BF /* AddInboxView.xib in Resources */,
 				149ED4CB198781750097F2AF /* tab_main@2x.png in Resources */,
 				142277D61989DD0D007242A2 /* backBtn.png in Resources */,
 				14EF642E1987EB960006257D /* StewardPageView.xib in Resources */,
@@ -2416,6 +2443,7 @@
 				04CAC3DD198CC29C0031E956 /* online_jipiao@2x.png in Resources */,
 				04CAC3BB198C78CB0031E956 /* conv_ tour@2x.png in Resources */,
 				04952CE619936C110030534B /* goods_add@2x.png in Resources */,
+				145236BB19A477F1008B89D5 /* MyInBoxView.xib in Resources */,
 				143069501999B7DF00A1F1B1 /* 37x-Checkmark.png in Resources */,
 				149ED4B1198776750097F2AF /* topimage.png in Resources */,
 				04CAC3CC198C92540031E956 /* conv_order_online@2x.png in Resources */,
@@ -2483,6 +2511,7 @@
 				14343CF0199DBBB600947080 /* detail_hotline@2x.png in Resources */,
 				149ED4C319877E990097F2AF /* message@2x.png in Resources */,
 				14B905851991D7910087B09D /* MySendExpressView.xib in Resources */,
+				145236BD19A47D60008B89D5 /* addmyinbox@2x.png in Resources */,
 				1445B8DB1986269500C4417C /* Images.xcassets in Resources */,
 				1445BA6D19862E5A00C4417C /* NotifyCheck@2x.png in Resources */,
 				04CAC3CD198C92540031E956 /* conv_order_share.png in Resources */,
@@ -2492,6 +2521,7 @@
 				14A32A2C198CBB2600497E5C /* telorderbtn@2x.png in Resources */,
 				14A32A2D198CBB2600497E5C /* onlineorderbtn@2x.png in Resources */,
 				04CAC3D5198CBDF10031E956 /* recharge_bg@2x.png in Resources */,
+				145236BF19A485D7008B89D5 /* ExpressCompany.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2607,6 +2637,7 @@
 				1445B9C51986281900C4417C /* NSString+Base64.m in Sources */,
 				1445B9D91986288400C4417C /* EGOCache.m in Sources */,
 				1445B9A3198627A400C4417C /* ASIDataCompressor.m in Sources */,
+				1421EA3719A4DB6C00FD21BF /* AddInboxView.m in Sources */,
 				1445BA5D19862E0E00C4417C /* ImageStore.m in Sources */,
 				1445B9661986278A00C4417C /* PSTGridLayoutInfo.m in Sources */,
 				1448EDC519A441AD00361C51 /* AlipayInfo.m in Sources */,
@@ -2663,6 +2694,7 @@
 				1445B9AB198627A400C4417C /* Reachability.m in Sources */,
 				145049EF199CEFF100C24440 /* ADVDetailView.m in Sources */,
 				1448EDC119A43AFF00361C51 /* SBJsonWriter.m in Sources */,
+				145236BA19A477F1008B89D5 /* MyInBoxView.m in Sources */,
 				1445B9B8198627D000C4417C /* RMMapper.m in Sources */,
 				1445B9761986278A00C4417C /* UIButton+WebCache.m in Sources */,
 				1445BAA919862F1A00C4417C /* SettingModel.m in Sources */,
@@ -2852,6 +2884,8 @@
 					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
 					Framework,
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeautyLife/BeautyLife-Prefix.pch";
@@ -2897,6 +2931,8 @@
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/Extend/QQConnectSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK",
 					"$(PROJECT_DIR)/BeautyLife/ShareSDK/UI",
+					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
+					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",
 					Framework,
 					"$(PROJECT_DIR)/BeautyLife/IQKeyboardManager",

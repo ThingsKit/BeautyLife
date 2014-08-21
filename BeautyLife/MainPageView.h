@@ -14,6 +14,7 @@
 #import "SGFocusImageFrame.h"
 #import "SGFocusImageItem.h"
 #import "ADVDetailView.h"
+#import "MyInBoxView.h"
 
 @interface MainPageView : UIViewController<SGFocusImageFrameDelegate, UIActionSheetDelegate>
 {
@@ -27,8 +28,11 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *advIv;
 @property (strong, nonatomic) IBOutlet UILabel *menuBg;
+@property (weak, nonatomic) IBOutlet UIButton *inboxBtn;
 
 #pragma mark -按钮点击事件
+- (IBAction)inBoxAction:(id)sender;
+- (IBAction)shareAction:(id)sender;
 
 #pragma mark 便民服务
 - (IBAction)clickService:(UIButton *)sender;

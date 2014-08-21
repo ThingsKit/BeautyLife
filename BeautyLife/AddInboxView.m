@@ -1,18 +1,18 @@
 //
-//  ExpressView.m
+//  AddInboxView.m
 //  BeautyLife
 //
-//  Created by Seven on 14-8-6.
+//  Created by Seven on 14-8-20.
 //  Copyright (c) 2014年 Seven. All rights reserved.
 //
 
-#import "ExpressView.h"
+#import "AddInboxView.h"
 
-@interface ExpressView ()
+@interface AddInboxView ()
 
 @end
 
-@implementation ExpressView
+@implementation AddInboxView
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -20,7 +20,7 @@
     if (self) {
         UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 44)];
         titleLabel.font = [UIFont boldSystemFontOfSize:18];
-        titleLabel.text = @"预约寄件";
+        titleLabel.text = @"我的快递";
         titleLabel.backgroundColor = [UIColor clearColor];
         titleLabel.textColor = [UIColor whiteColor];
         titleLabel.textAlignment = UITextAlignmentCenter;
@@ -43,37 +43,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //适配iOS7uinavigationbar遮挡问题
-    if(IS_IOS7)
-    {
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-        self.automaticallyAdjustsScrollViewInsets = NO;
-    }
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.width, self.view.frame.size.height);
     [Tool roundView:self.bgView andCornerRadius:3.0];
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.width, self.view.frame.size.height - 56);
+    [Tool roundView:self.telBg andCornerRadius:3.0];
     
-    UserModel *usermodel = [UserModel Instance];
-    self.nameLb.text = [usermodel getUserValueForKey:@"name"];
-    EGOImageView *faceEGOImageView = [[EGOImageView alloc] initWithPlaceholderImage:[UIImage imageNamed:@"userface.png"]];
-    faceEGOImageView.imageURL = [NSURL URLWithString:[[UserModel Instance] getUserValueForKey:@"avatar"]];
-    faceEGOImageView.frame = CGRectMake(0.0f, 0.0f, 50.0f, 50.0f);
-    [self.faceIv addSubview:faceEGOImageView];
-    self.userInfoLb.text = [NSString stringWithFormat:@"%@    %@", [usermodel getUserValueForKey:@"tel"], [usermodel getUserValueForKey:@"house_number"]];
     typeData = [[NSArray alloc] initWithObjects:@"包裹", @"文件", @"大件", nil];
     typeStr = [typeData objectAtIndex:0];
-    [self.typeBtn setTitle:[typeData objectAtIndex:0] forState:UIControlStateNormal];
+    [self.expTypeBtn setTitle:[typeData objectAtIndex:0] forState:UIControlStateNormal];
     
-    self.inboxNumLb.text = [usermodel getUserValueForKey:@"inboxnum"];
-    //邮件提醒事件注册
-    UITapGestureRecognizer *inboxTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(inboxClick)];
-	[self.inboxBtnLb addGestureRecognizer:inboxTap];
-}
-
-- (void)inboxClick
-{
-    MyInBoxView *inboxView = [[MyInBoxView alloc] init];
-    inboxView.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:inboxView animated:YES];
+    expComData = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ExpressCompany.plist" ofType:nil]];
+    NSDictionary *expCom = [expComData objectAtIndex:0];
+    expComName = [expCom valueForKey:@"name"];
+    expComCode = [expCom valueForKey:@"code"];
+    [self.expComBtn setTitle:[expCom valueForKey:@"name"] forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,54 +64,66 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBar.hidden = NO;
+- (IBAction)expComAction:(id)sender {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"\n\n\n\n\n\n\n\n\n\n"
+                                                             delegate:self
+                                                    cancelButtonTitle:nil
+                                               destructiveButtonTitle:nil
+                                                    otherButtonTitles:@"确  定", nil];
+    actionSheet.tag = 0;
+    [actionSheet showInView:self.view];
+    UIPickerView *comPicker = [[UIPickerView alloc] init];
+    comPicker.tag = 0;
+    comPicker.delegate = self;
+    comPicker.showsSelectionIndicator = YES;
+    [actionSheet addSubview:comPicker];
 }
 
-- (IBAction)mySendExpressAction:(id)sender {
-    MySendExpressView *mySendExpress = [[MySendExpressView alloc] init];
-    [self.navigationController pushViewController:mySendExpress animated:YES];
+- (IBAction)expTypeAction:(id)sender {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"\n\n\n\n\n\n\n\n\n\n"
+                                                             delegate:self
+                                                    cancelButtonTitle:nil
+                                               destructiveButtonTitle:nil
+                                                    otherButtonTitles:@"确  定", nil];
+    actionSheet.tag = 0;
+    [actionSheet showInView:self.view];
+    UIPickerView *typePicker = [[UIPickerView alloc] init];
+    typePicker.tag = 1;
+    typePicker.delegate = self;
+    typePicker.showsSelectionIndicator = YES;
+    [actionSheet addSubview:typePicker];
 }
 
-- (IBAction)sendAction:(id)sender {
-    self.sendBtn.enabled = NO;
-    NSString *descStr = self.descTv.text;
-    if (descStr == nil || [descStr length] == 0) {
-        [Tool showCustomHUD:@"请填写描述" andView:self.view  andImage:@"37x-Failure.png" andAfterDelay:1];
+- (IBAction)addAction:(id)sender {
+    self.addBtn.enabled = NO;
+    NSString *expNumStr = self.expNumLb.text;
+    if (expNumStr == nil || [expNumStr length] == 0) {
+        [Tool showCustomHUD:@"请填写快递单号" andView:self.view  andImage:@"37x-Failure.png" andAfterDelay:1];
         return;
     }
     UserModel *usermodel = [UserModel Instance];
-    NSString *apiUrl = [NSString stringWithFormat:@"%@%@", api_base_url, api_addmyoutbox];
+    NSString *apiUrl = [NSString stringWithFormat:@"%@%@", api_base_url, api_addmyinbox];
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:apiUrl]];
     [request setUseCookiePersistence:[[UserModel Instance] isLogin]];
     [request setPostValue:appkey forKey:@"APPKey"];
     [request setPostValue:[usermodel getUserValueForKey:@"cid"] forKey:@"cid"];
     [request setPostValue:[usermodel getUserValueForKey:@"build_id"] forKey:@"build_id"];
     [request setPostValue:[usermodel getUserValueForKey:@"house_number"] forKey:@"house_number"];
+    [request setPostValue:expComName forKey:@"express_company"];
+    [request setPostValue:expNumStr forKey:@"express_number"];
     [request setPostValue:typeStr forKey:@"express_type"];
-    [request setPostValue:descStr forKey:@"remark"];
     request.delegate = self;
     [request setDidFailSelector:@selector(requestFailed:)];
     [request setDidFinishSelector:@selector(requestSubmit:)];
     [request startAsynchronous];
-    request.hud = [[MBProgressHUD alloc] initWithView:self.view];
-    [Tool showHUD:@"寄件预约" andView:self.view andHUD:request.hud];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request
 {
-    if (request.hud) {
-        [request.hud hide:NO];
-    }
+
 }
 - (void)requestSubmit:(ASIHTTPRequest *)request
 {
-    if (request.hud) {
-        [request.hud hide:YES];
-    }
-    
     [request setUseCookiePersistence:YES];
     NSData *data = [request.responseString dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error;
@@ -149,8 +143,8 @@
     switch (errorCode) {
         case 1:
         {
-            [Tool showCustomHUD:@"寄件预约成功" andView:self.view  andImage:@"37x-Checkmark.png" andAfterDelay:3];
-            self.descTv.text = @"";
+            [Tool showCustomHUD:@"添加成功" andView:self.view  andImage:@"37x-Checkmark.png" andAfterDelay:3];
+            self.expNumLb.text = @"";
         }
             break;
         case 0:
@@ -159,21 +153,7 @@
         }
             break;
     }
-    self.sendBtn.enabled = YES;
-}
-
-- (IBAction)selectTypeAction:(id)sender {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"\n\n\n\n\n\n\n\n\n\n"
-                                                             delegate:self
-                                                    cancelButtonTitle:nil
-                                               destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"确  定", nil];
-    actionSheet.tag = 0;
-    [actionSheet showInView:self.view];
-    UIPickerView *catePicker = [[UIPickerView alloc] init];
-    catePicker.delegate = self;
-    catePicker.showsSelectionIndicator = YES;
-    [actionSheet addSubview:catePicker];
+    self.addBtn.enabled = YES;
 }
 
 //返回显示的列数
@@ -185,7 +165,16 @@
 //返回当前列显示的行数
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return [typeData count];
+    if (pickerView.tag == 0) {
+        return [expComData count];
+    }
+    else if (pickerView.tag == 1) {
+        return [typeData count];
+    }
+    else
+    {
+        return 0;
+    }
 }
 
 #pragma mark Picker Delegate Methods
@@ -193,13 +182,30 @@
 //返回当前行的内容,此处是将数组中数值添加到滚动的那个显示栏上
 -(NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return [typeData objectAtIndex:row];
+    if (pickerView.tag == 0) {
+        NSDictionary *expCom = [expComData objectAtIndex:row];
+        return [expCom valueForKey:@"name"];
+    }
+    else if (pickerView.tag == 1) {
+        return [typeData objectAtIndex:row];
+    }
+    else
+    {
+        return nil;
+    }
 }
 
 -(void) pickerView: (UIPickerView *)pickerView didSelectRow: (NSInteger)row inComponent: (NSInteger)component
 {
-    [self.typeBtn setTitle:[typeData objectAtIndex:row] forState:UIControlStateNormal];
+    if (pickerView.tag == 0) {
+        NSDictionary *expCom = [expComData objectAtIndex:row];
+        expComName = [expCom valueForKey:@"name"];
+        expComCode = [expCom valueForKey:@"code"];
+        [self.expComBtn setTitle:[expCom valueForKey:@"name"] forState:UIControlStateNormal];
+    }
+    else if (pickerView.tag == 1) {
+        [self.expTypeBtn setTitle:[typeData objectAtIndex:row] forState:UIControlStateNormal];
+    }
+    
 }
-
-
 @end

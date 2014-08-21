@@ -10,6 +10,8 @@
                 <outlet property="bgView" destination="rqX-Wx-WuD" id="EIg-tO-CnU"/>
                 <outlet property="descTv" destination="wwt-po-swu" id="6o7-bw-vvf"/>
                 <outlet property="faceIv" destination="LVj-iz-OhM" id="DDo-9p-C2J"/>
+                <outlet property="inboxBtnLb" destination="XN3-UA-ssL" id="26v-Og-YEf"/>
+                <outlet property="inboxNumLb" destination="7o8-qF-NYB" id="Nqc-fV-kKr"/>
                 <outlet property="nameLb" destination="8om-7Z-vQB" id="hIK-Vf-VQU"/>
                 <outlet property="scrollView" destination="RRx-Pd-CVW" id="x6V-eX-27e"/>
                 <outlet property="sendBtn" destination="ilK-Wk-21N" id="nWT-KL-cSO"/>
@@ -145,7 +147,14 @@
                     <rect key="frame" x="10" y="0.0" width="300" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快递到达通知：您有2件新快递到达物管中心" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XN3-UA-ssL">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7o8-qF-NYB">
+                    <rect key="frame" x="132" y="5" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快递到达通知：您有       件新快递到达物管中心" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XN3-UA-ssL">
                     <rect key="frame" x="10" y="5" width="300" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>

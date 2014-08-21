@@ -55,9 +55,8 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5bU-YS-Tkm">
                             <rect key="frame" x="62" y="269" width="196" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="registerbtn.png">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                            <state key="normal" title="立  即  登  录" backgroundImage="savebtnbg.png"/>
                             <connections>
                                 <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="VC2-xv-Q0S"/>
                             </connections>
@@ -72,6 +71,6 @@
     </objects>
     <resources>
         <image name="beautylifelogo.png" width="116" height="75"/>
-        <image name="registerbtn.png" width="196" height="40"/>
+        <image name="savebtnbg.png" width="194" height="42"/>
     </resources>
 </document>

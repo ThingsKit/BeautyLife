@@ -37,6 +37,7 @@
     [Tool roundView:self.menuBg andCornerRadius:3.0];
     hud = [[MBProgressHUD alloc] initWithView:self.view];
     [self initMainADV];
+    [self getInBoxRemind];
 }
 
 - (void)initMainADV
@@ -110,6 +111,44 @@
 {
     //    NSLog(@"%s \n scrollToIndex===>%d",__FUNCTION__,index);
     advIndex = index;
+}
+
+- (void)getInBoxRemind
+{
+    if ([[UserModel Instance] isLogin]) {
+        //如果有网络连接
+        if ([UserModel Instance].isNetworkRunning) {
+            NSMutableString *tempUrl = [NSMutableString stringWithFormat:@"%@%@?APPKey=%@&userid=%@", api_base_url, api_getinboxremindy, appkey, [[UserModel Instance] getUserValueForKey:@"id"]];
+            NSString *cid = [[UserModel Instance] getUserValueForKey:@"cid"];
+            if (cid != nil && [cid length] > 0) {
+                [tempUrl appendString:[NSString stringWithFormat:@"&cid=%@", cid]];
+            }
+            NSString *url = [NSString stringWithString:tempUrl];
+            [[AFOSCClient sharedClient]getPath:url parameters:Nil
+                                       success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                           @try {
+                                               if (operation.responseString) {
+                                                   [[UserModel Instance] saveValue:operation.responseString ForKey:@"inboxnum"];
+                                                   [self.inboxBtn setTitle:operation.responseString forState:UIControlStateNormal];
+                                               }
+                                               
+                                           }
+                                           @catch (NSException *exception) {
+                                               [NdUncaughtExceptionHandler TakeException:exception];
+                                           }
+                                           @finally {
+
+                                           }
+                                       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                           if ([UserModel Instance].isNetworkRunning == NO) {
+                                               return;
+                                           }
+                                           if ([UserModel Instance].isNetworkRunning) {
+                                               [Tool ToastNotification:@"错误 网络无连接" andView:self.view andLoading:NO andIsBottom:NO];
+                                           }
+                                       }];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -224,4 +263,19 @@
     [Tool processLoginNotice:actionSheet andButtonIndex:buttonIndex andNav:self.navigationController andParent:nil];
 }
 
+- (IBAction)inBoxAction:(id)sender {
+    MyInBoxView *inboxView = [[MyInBoxView alloc] init];
+    inboxView.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:inboxView animated:YES];
+}
+
+- (IBAction)shareAction:(id)sender {
+    Advertisement *adv = [advDatas objectAtIndex:advIndex];
+    NSDictionary *contentDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                adv.title , @"title",
+                                adv.content, @"summary",
+                                adv.pic, @"thumb",
+                                nil];
+    [Tool shareAction:sender andShowView:self.view andContent:contentDic];
+}
 @end

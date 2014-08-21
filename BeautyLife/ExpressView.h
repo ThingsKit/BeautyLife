@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MySendExpressView.h"
 #import "EGOImageView.h"
+#import "MyInBoxView.h"
 
 @interface ExpressView : UIViewController<UIActionSheetDelegate, UIPickerViewDelegate>
 {
@@ -16,6 +17,8 @@
     NSString *typeStr;
 }
 
+@property (weak, nonatomic) IBOutlet UILabel *inboxNumLb;
+@property (weak, nonatomic) IBOutlet UILabel *inboxBtnLb;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 @property (weak, nonatomic) IBOutlet UIImageView *faceIv;

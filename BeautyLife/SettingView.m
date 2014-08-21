@@ -39,17 +39,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
-    
     if (!IS_IOS7) {
         [self.tableSettings setBackgroundColor:[Tool getBackgroundColor]];
     }
 
+    [self initSettingData];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:Notification_RefreshSetting object:nil];
+}
+
+- (void)initSettingData
+{
+    bool islogin = [[UserModel Instance] isLogin];
     self.settingsInSection = [[NSMutableDictionary alloc] initWithCapacity:3];
     NSArray *first = [[NSArray alloc] initWithObjects:
                       [[SettingModel alloc] initWith:@"注册" andImg:@"setting_register" andTag:1 andTitle2:nil],
-                      [[SettingModel alloc] initWith: @"登录" andImg:@"setting_login" andTag:2 andTitle2:nil],
+                      [[SettingModel alloc] initWith: islogin?@"注销":@"登录" andImg:islogin?@"setting_logout":@"setting_login" andTag:2 andTitle2:nil],
                       [[SettingModel alloc] initWith: @"个人信息" andImg:@"setting_info" andTag:3 andTitle2:nil],
                       [[SettingModel alloc] initWith: @"修改密码" andImg:@"setting_update" andTag:4 andTitle2:nil],
                       nil];
@@ -63,13 +67,18 @@
     NSArray *third = [[NSArray alloc] initWithObjects:
                       [[SettingModel alloc] initWith:@"版本更新" andImg:@"setting_update" andTag:10 andTitle2:nil],
                       [[SettingModel alloc] initWith:@"推送消息" andImg:@"setting_push" andTag:11 andTitle2:nil],
-                      [[SettingModel alloc] initWith:@"注销" andImg:@"setting_logout" andTag:12 andTitle2:nil],
                       nil];
+    
+    [self.settingsInSection setObject:first forKey:@"帐号"];
+    [self.settingsInSection setObject:third forKey:@"设置"];
+    [self.settingsInSection setObject:second forKey:@"我的"];
+    self.settings = [[NSArray alloc] initWithObjects:@"帐号",@"我的",@"设置",nil];
+}
 
-        [self.settingsInSection setObject:first forKey:@"帐号"];
-        [self.settingsInSection setObject:third forKey:@"设置"];
-        [self.settingsInSection setObject:second forKey:@"我的"];
-        self.settings = [[NSArray alloc] initWithObjects:@"帐号",@"我的",@"设置",nil];
+- (void)refresh
+{
+    [self initSettingData];
+    [tableSettings reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -104,17 +113,18 @@
         case 2:
         {
             if ([[UserModel Instance] isLogin]) {
-                UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"温馨提示"
-                                                             message:@"您已登录"
-                                                            delegate:nil
-                                                   cancelButtonTitle:@"确定"
-                                                   otherButtonTitles:nil];
-                [av show];
-                return;
+                [ASIHTTPRequest setSessionCookies:nil];
+                [ASIHTTPRequest clearSession];
+                [[UserModel Instance] saveIsLogin:NO];
+                [self refresh];
+                [Tool showCustomHUD:@"注销成功" andView:self.view andImage:@"37x-Checkmark.png" andAfterDelay:2];
             }
-            LoginView *loginView = [[LoginView alloc] init];
-            loginView.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:loginView animated:YES];
+            else
+            {
+                LoginView *loginView = [[LoginView alloc] init];
+                loginView.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:loginView animated:YES];
+            }
         }
             break;
         case 3:
@@ -131,9 +141,9 @@
             break;
         case 4:
         {
-            ChooseAreaView *chooseView = [[ChooseAreaView alloc] init];
-            chooseView.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:chooseView animated:YES];
+//            ChooseAreaView *chooseView = [[ChooseAreaView alloc] init];
+//            chooseView.hidesBottomBarWhenPushed = YES;
+//            [self.navigationController pushViewController:chooseView animated:YES];
         }
             break;
         case 5:

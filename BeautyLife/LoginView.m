@@ -143,6 +143,8 @@
                                                cancelButtonTitle:@"确定"
                                                otherButtonTitles:nil];
             [av show];
+            //通知刷新设置
+            [[NSNotificationCenter defaultCenter] postNotificationName:Notification_RefreshSetting object:nil];
             [self.navigationController popViewControllerAnimated:YES];
         }
             break;
