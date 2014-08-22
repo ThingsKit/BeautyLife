@@ -154,6 +154,10 @@
 }
 
 - (IBAction)expressAction:(id)sender {
+    if ([UserModel Instance].isLogin == NO) {
+        [Tool noticeLogin:self.view andDelegate:self andTitle:@""];
+        return;
+    }
     ExpressView *expressView = [[ExpressView alloc] init];
     expressView.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:expressView animated:YES];

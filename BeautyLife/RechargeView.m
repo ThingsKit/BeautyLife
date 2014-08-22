@@ -59,15 +59,38 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)huocheAction:(id)sender {
+    RechargeDetailView *detailView = [[RechargeDetailView alloc] init];
+    detailView.titleStr = @"火车票";
+    detailView.urlStr = @"http://touch.qunar.com/h5/train/?from=touchindex";
+    [self.navigationController pushViewController:detailView animated:YES];
 }
-*/
 
+- (IBAction)jipiaoAction:(id)sender {
+    RechargeDetailView *detailView = [[RechargeDetailView alloc] init];
+    detailView.titleStr = @"机票";
+    detailView.urlStr = @"http://touch.qunar.com/h5/flight/";
+    [self.navigationController pushViewController:detailView animated:YES];
+}
+
+- (IBAction)yidongAction:(id)sender {
+    RechargeDetailView *detailView = [[RechargeDetailView alloc] init];
+    detailView.titleStr = @"移动充值";
+    detailView.urlStr = @"http://wap.10086.cn/czjf/czjf.jsp";
+    [self.navigationController pushViewController:detailView animated:YES];
+}
+
+- (IBAction)liantongAction:(id)sender {
+    RechargeDetailView *detailView = [[RechargeDetailView alloc] init];
+    detailView.titleStr = @"联通充值";
+    detailView.urlStr = @"http://wap.10010.com/t/home.htm";
+    [self.navigationController pushViewController:detailView animated:YES];
+}
+
+- (IBAction)dianxinAction:(id)sender {
+    RechargeDetailView *detailView = [[RechargeDetailView alloc] init];
+    detailView.titleStr = @"电信充值";
+    detailView.urlStr = @"http://wapzt.189.cn";
+    [self.navigationController pushViewController:detailView animated:YES];
+}
 @end

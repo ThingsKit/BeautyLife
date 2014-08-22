@@ -245,6 +245,10 @@
 }
 
 - (IBAction)expressAction:(id)sender {
+    if ([UserModel Instance].isLogin == NO) {
+        [Tool noticeLogin:self.view andDelegate:self andTitle:@""];
+        return;
+    }
     ExpressView *expressView = [[ExpressView alloc] init];
     expressView.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:expressView animated:YES];
@@ -264,6 +268,10 @@
 }
 
 - (IBAction)inBoxAction:(id)sender {
+    if ([UserModel Instance].isLogin == NO) {
+        [Tool noticeLogin:self.view andDelegate:self andTitle:@""];
+        return;
+    }
     MyInBoxView *inboxView = [[MyInBoxView alloc] init];
     inboxView.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:inboxView animated:YES];
